@@ -71,8 +71,8 @@ function scrollToTop() {
 //get请求
 $.ajax({
   type: 'get',
-  // url: 'https://apis.map.qq.com/ws/location/v1/ip',
-  url: 'https://apis.map.qq.com/ws/location/v1/ip?key=',
+  url: 'https://apis.map.qq.com/ws/location/v1/ip',
+  // url: 'https://apis.map.qq.com/ws/location/v1/ip?key=',
   data: {
     key: 'GTZBZ-ST4CQ-75V5R-2FW3P-2OYRV-BTBXG',  // 这里要写你的KEY!!!
     output: 'jsonp',
