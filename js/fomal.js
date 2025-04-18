@@ -71,8 +71,8 @@ function scrollToTop() {
 //get请求
 $.ajax({
   type: 'get',
-  url: 'https://apis.map.qq.com/ws/location/v1/ip',
-  // url: 'https://apis.map.qq.com/ws/location/v1/ip?key=',
+  // url: 'https://apis.map.qq.com/ws/location/v1/ip',
+  url: 'https://apis.map.qq.com/ws/location/v1/ip?key=',
   data: {
     key: 'GTZBZ-ST4CQ-75V5R-2FW3P-2OYRV-BTBXG',  // 这里要写你的KEY!!!
     output: 'jsonp',
@@ -100,8 +100,8 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-  let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
-  // let dist = getDistance(105.843623,29.167805, ipLoacation.result.location.lng, ipLoacation.result.location.lat);
+  // let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+  let dist = getDistance(105.84362352,29.167805433, ipLoacation.result.location.lng, ipLoacation.result.location.lat);
   let pos = ipLoacation.result.ad_info.nation;
   let ip;
   let posdesc;
