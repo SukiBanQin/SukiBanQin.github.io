@@ -4,13 +4,6 @@ p#ghbdages{
     /* height: 52px; */
 }
 
-/* heo 加载动画头像 */
-.loading-img {
-  background: url(https://sukibanqinblog.s3.bitiful.net/images%2Flogo.webp)
-    no-repeat center center;
-  background-size: cover;
-}
-
 @font-face {
   /* 为载入的字体取名字(随意) */
   font-family: 'YZSOFT';	

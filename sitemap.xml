@@ -47,6 +47,15 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/box/nav/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/tags/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/box/nav/index.html</loc>
+    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -74,7 +83,16 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/box/gallery/index.html</loc>
+    <loc>https://www.ibanqin.com/life/games/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/life/movies/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -84,6 +102,24 @@
   
   <url>
     <loc>https://www.ibanqin.com/life/music/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/social/fcircle/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/box/gallery/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -110,43 +146,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/life/movies/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/personal/love/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/life/games/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/social/fcircle/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
