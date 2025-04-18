@@ -1,0 +1,39 @@
+/*底部徽标和文字的距离缩进*/
+p#ghbdages{
+    margin: 0px 0px;
+    /* height: 52px; */
+}
+
+/* heo 加载动画头像 */
+.loading-img {
+  background: url(https://sukibanqinblog.s3.bitiful.net/images%2Flogo.webp)
+    no-repeat center center;
+  background-size: cover;
+}
+
+@font-face {
+  /* 为载入的字体取名字(随意) */
+  font-family: 'YZSOFT';	
+  /* 字体文件地址(相对或者绝对路径都可以) */
+  src: url(https://sukibanqinblog.s3.bitiful.net/others%2Fwordfile%2FY-B008YeZiGongChangDanDanHei-2.ttf);
+  /* 定义加粗样式(加粗多少) */
+  font-weight: normal;
+  /* 定义字体样式(斜体/非斜体) */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+
+@font-face {
+  /* 为载入的字体取名字(随意) */
+  font-family: 'Consola';	
+  /* 字体文件地址(相对或者绝对路径都可以) */
+  src: url(https://sukibanqinblog.s3.bitiful.net/others%2Fwordfile%2Fconsola-1.ttf);
+  /* 定义加粗样式(加粗多少) */
+  font-weight: normal;
+  /* 定义字体样式(斜体/非斜体) */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+
