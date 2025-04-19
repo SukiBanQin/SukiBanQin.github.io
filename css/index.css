@@ -5188,14 +5188,14 @@ mjx-container[display],
 }
 @media screen and (max-width: 800px) {
   #web_bg {
-    background: var(--mobileday-bg);
+    background: url(https://sukibanqinblog.s3.bitiful.net/images%2Fmobileimage%2Fsky_girl.webp);
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
   [data-theme="dark"] #web_bg {
-    background: var(--mobilenight-bg);
+    background: url(https://sukibanqinblog.s3.bitiful.net/images%2Fmobileimage%2Frailway_girl.webp);
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
