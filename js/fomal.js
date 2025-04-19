@@ -54,7 +54,7 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | Fomalhaut🥝")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | 坂琴的小窝🍜")[0];
 }
 
 function scrollToTop() {
@@ -1115,27 +1115,39 @@ function changeMouseMode() {
 var now1 = new Date();
 
 function createtime1() {
-  var grt = new Date("08/09/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  var grt = new Date("01/25/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
   now1.setTime(now1.getTime() + 250);
   var days = (now1 - grt) / 1000 / 60 / 60 / 24;
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到Fomalhaut🥝の小家!`,
-    `Future is now 🍭🍭🍭`,
+    `欢迎来到坂琴的小窝🍜`,
+    `想要变得越来越好`,
     `
         
-███████  ██████  ███    ███  █████  ██      ██   ██  █████  ██    ██ ████████ 
-██      ██    ██ ████  ████ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██    
-█████   ██    ██ ██ ████ ██ ███████ ██      ███████ ███████ ██    ██    ██    
-██      ██    ██ ██  ██  ██ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██    
-██       ██████  ██      ██ ██   ██ ███████ ██   ██ ██   ██  ██████     ██   
+BBBBBBBBBBBBBBBBB                                           QQQQQQQQQ       iiii                   
+B::::::::::::::::B                                        QQ:::::::::QQ    i::::i                  
+B::::::BBBBBB:::::B                                     QQ:::::::::::::QQ   iiii                   
+BB:::::B     B:::::B                                   Q:::::::QQQ:::::::Q                         
+  B::::B     B:::::B  aaaaaaaaaaaaa  nnnn  nnnnnnnn    Q::::::O   Q::::::Qiiiiiiinnnn  nnnnnnnn    
+  B::::B     B:::::B  a::::::::::::a n:::nn::::::::nn  Q:::::O     Q:::::Qi:::::in:::nn::::::::nn  
+  B::::BBBBBB:::::B   aaaaaaaaa:::::an::::::::::::::nn Q:::::O     Q:::::Q i::::in::::::::::::::nn 
+  B:::::::::::::BB             a::::ann:::::::::::::::nQ:::::O     Q:::::Q i::::inn:::::::::::::::n
+  B::::BBBBBB:::::B     aaaaaaa:::::a  n:::::nnnn:::::nQ:::::O     Q:::::Q i::::i  n:::::nnnn:::::n
+  B::::B     B:::::B  aa::::::::::::a  n::::n    n::::nQ:::::O     Q:::::Q i::::i  n::::n    n::::n
+  B::::B     B:::::B a::::aaaa::::::a  n::::n    n::::nQ:::::O  QQQQ:::::Q i::::i  n::::n    n::::n
+  B::::B     B:::::Ba::::a    a:::::a  n::::n    n::::nQ::::::O Q::::::::Q i::::i  n::::n    n::::n
+BB:::::BBBBBB::::::Ba::::a    a:::::a  n::::n    n::::nQ:::::::QQ::::::::Qi::::::i n::::n    n::::n
+B:::::::::::::::::B a:::::aaaa::::::a  n::::n    n::::n QQ::::::::::::::Q i::::::i n::::n    n::::n
+B::::::::::::::::B   a::::::::::aa:::a n::::n    n::::n   QQ:::::::::::Q  i::::::i n::::n    n::::n
+BBBBBBBBBBBBBBBBB     aaaaaaaaaa  aaaa nnnnnn    nnnnnn     QQQQQQQQ::::QQiiiiiiii nnnnnn    nnnnnn
+                                                                    Q:::::Q                        
                                               
 `,
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2022 By Fomalhaut",
+    "©2025 By 坂琴的小窝🍜",
   ];
 
   setTimeout(
@@ -1174,7 +1186,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+      "%c ⚡ Powered by 坂琴的小窝🍜 %c 你正在访问坂琴的小窝🍜",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -1284,8 +1296,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| Fomalhaut🥝") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('Fomalhaut🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| 坂琴的小窝🍜") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('坂琴的小窝🍜的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
@@ -1323,11 +1335,11 @@ var titleTime;
 document.addEventListener('visibilitychange', function () {
   if (document.hidden) {
     //离开当前页面时标签显示内容
-    document.title = '👀跑哪里去了~';
+    document.title = '不要走！快回来！`(*>﹏<*)′~';
     clearTimeout(titleTime);
   } else {
     //返回当前页面时标签显示内容
-    document.title = '🐖抓到你啦～';
+    document.title = '好耶！你回来啦～ヾ(•ω•`)o';
     //两秒后变回正常标题
     titleTime = setTimeout(function () {
       document.title = OriginTitile;
