@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ibanqin.com/posts/792b5c3e.html</loc>
+    
+    <lastmod>2025-04-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/7896669f.html</loc>
+    
+    <lastmod>2025-04-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/social/link/index.html</loc>
     
     <lastmod>2025-04-20</lastmod>
@@ -92,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/792b5c3e.html</loc>
-    
-    <lastmod>2025-04-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/personal/life/index.html</loc>
     
     <lastmod>2025-04-18</lastmod>
@@ -128,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/personal/love/index.html</loc>
+    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -137,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
+    <loc>https://www.ibanqin.com/personal/love/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -187,6 +196,13 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/tags/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2025-04-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -197,6 +213,13 @@
   
   <url>
     <loc>https://www.ibanqin.com/categories/%E5%85%B6%E4%BB%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
