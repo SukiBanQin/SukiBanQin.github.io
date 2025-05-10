@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ibanqin.com/box/gallery/cover/index.html</loc>
+    
+    <lastmod>2025-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/social/link/index.html</loc>
     
     <lastmod>2025-05-10</lastmod>
@@ -101,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/box/gallery/cover/index.html</loc>
-    
-    <lastmod>2025-04-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/box/gallery/index.html</loc>
     
     <lastmod>2025-04-19</lastmod>
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
+    <loc>https://www.ibanqin.com/tags/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/index.html</loc>
+    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -209,13 +209,6 @@
 
   
   <url>
-    <loc>https://www.ibanqin.com/tags/%E6%97%A5%E8%AE%B0/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -223,7 +216,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/java/</loc>
+    <loc>https://www.ibanqin.com/tags/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -244,6 +237,13 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/tags/java/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/tags/Hexo%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -253,14 +253,14 @@
 
   
   <url>
-    <loc>https://www.ibanqin.com/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://www.ibanqin.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://www.ibanqin.com/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
