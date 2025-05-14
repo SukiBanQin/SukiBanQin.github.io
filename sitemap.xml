@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/personal/love/index.html</loc>
+    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/personal/bb/index.html</loc>
+    <loc>https://www.ibanqin.com/personal/love/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -227,7 +227,7 @@
 
   
   <url>
-    <loc>https://www.ibanqin.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
+    <loc>https://www.ibanqin.com/tags/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -248,7 +248,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://www.ibanqin.com/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -262,14 +262,14 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://www.ibanqin.com/tags/java/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/java/</loc>
+    <loc>https://www.ibanqin.com/tags/%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -278,7 +278,7 @@
 
   
   <url>
-    <loc>https://www.ibanqin.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://www.ibanqin.com/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -292,7 +292,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://www.ibanqin.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
