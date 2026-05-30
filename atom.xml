@@ -6,7 +6,7 @@
   <link href="https://www.ibanqin.com/atom.xml" rel="self"/>
   
   <link href="https://www.ibanqin.com/"/>
-  <updated>2026-05-29T18:22:39.739Z</updated>
+  <updated>2026-05-30T16:39:08.980Z</updated>
   <id>https://www.ibanqin.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用到的3DSMAX快捷键</title>
+    <link href="https://www.ibanqin.com/posts/bd4086d7.html"/>
+    <id>https://www.ibanqin.com/posts/bd4086d7.html</id>
+    <published>2026-05-30T16:14:50.000Z</published>
+    <updated>2026-05-30T16:39:08.980Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-3DSMAX快捷键">1. 3DSMAX快捷键</h2><p>3DSMAX 快捷键，3DMAX 快捷键，3DSMAX 常用快捷键</p><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">顶视图 T</span><br><span class="line">前视图 F</span><br><span class="line">左视图 L</span><br><span class="line">透视图 P</span><br><span class="line">正交视图 U</span><br><span class="line">最大化和最小化视口切换 alt + w</span><br><span class="line">模型缩放到视口中心 Z</span><br><span class="line"></span><br><span class="line">缩放 滚轮移动/ctrl + alt + 鼠标中键按下上下移动</span><br><span class="line">平移 鼠标中键按下移动</span><br><span class="line">旋转 alt + 鼠标中键</span><br><span class="line"></span><br><span class="line">栅格 G</span><br><span class="line">统计数据 <span class="number">7</span></span><br><span class="line"><span class="symbol">Viewcube</span> ctrl + alt + v</span><br><span class="line"></span><br><span class="line">配置视口 &gt; 显示性能 &gt; 纹理贴图改成<span class="number">4096</span></span><br><span class="line">配置视口 &gt; 统计数据 &gt; 三角形计数：总计 + 选择</span><br><span class="line"></span><br><span class="line">线框 <span class="built_in">F3</span></span><br><span class="line">边面 <span class="built_in">F4</span></span><br><span class="line">面模式下切换线框和面显示<span class="built_in">F2</span></span><br><span class="line"></span><br><span class="line">有意识把数字变成<span class="number">4</span>的倍数</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">🫓学习 3DSMAX用到的快捷键</summary>
+    
+    
+    
+    <category term="3D建模和渲染" scheme="https://www.ibanqin.com/categories/3D%E5%BB%BA%E6%A8%A1%E5%92%8C%E6%B8%B2%E6%9F%93/"/>
+    
+    
+    <category term="3DSMAX" scheme="https://www.ibanqin.com/tags/3DSMAX/"/>
+    
+  </entry>
   
   <entry>
     <title>爱和喜欢的区别是什么？</title>
