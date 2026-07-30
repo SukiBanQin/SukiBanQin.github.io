@@ -4106,123 +4106,6 @@ h1.page-title + .tag-cloud-list {
 #nav .site-page:not(.child):hover:after {
   width: 100%;
 }
-.loading-bg {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: var(--loading-color);
-  z-index: 1001;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-#loading-box .loading-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: auto;
-  border: 4px solid #f0f0f2;
-  -webkit-animation-duration: 0.3s;
-  -moz-animation-duration: 0.3s;
-  -o-animation-duration: 0.3s;
-  -ms-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-name: loadingAction;
-  -moz-animation-name: loadingAction;
-  -o-animation-name: loadingAction;
-  -ms-animation-name: loadingAction;
-  animation-name: loadingAction;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  -ms-animation-direction: alternate;
-  animation-direction: alternate;
-}
-#loading-box .loading-image-dot {
-  width: 30px;
-  height: 30px;
-  background: #6bdf8f;
-  position: absolute;
-  border-radius: 50%;
-  border: 6px solid #fff;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(18px, 24px);
-  -moz-transform: translate(18px, 24px);
-  -o-transform: translate(18px, 24px);
-  -ms-transform: translate(18px, 24px);
-  transform: translate(18px, 24px);
-}
-#loading-box.loaded .loading-bg {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  z-index: -1000;
-}
-@-moz-keyframes loadingAction {
-  0% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    opacity: 0.4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-  }
-}
-@-webkit-keyframes loadingAction {
-  0% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    opacity: 0.4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-  }
-}
-@-o-keyframes loadingAction {
-  0% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    opacity: 0.4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-  }
-}
-@keyframes loadingAction {
-  0% {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  100% {
-    opacity: 0.4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-  }
-}
 #pagination .pagination {
   margin-top: 20px;
   text-align: center;
@@ -6578,26 +6461,106 @@ blockquote.pullquote.right {
   /* 为载入的字体取名字(随意) */
   font-family: 'YZSOFT';	
   /* 字体文件地址(相对或者绝对路径都可以) */
-  src: url(https://sukibanqinblog.s3.bitiful.net/others%2Fwordfile%2FY-B008YeZiGongChangDanDanHei-2.ttf);
+  src: url('/assets/fonts/YZSOFT.woff2') format('woff2');
   /* 定义加粗样式(加粗多少) */
   font-weight: normal;
   /* 定义字体样式(斜体/非斜体) */
   font-style: normal;
   /* 定义显示样式 */
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
   /* 为载入的字体取名字(随意) */
   font-family: 'Consola';	
   /* 字体文件地址(相对或者绝对路径都可以) */
-  src: url(https://sukibanqinblog.s3.bitiful.net/others%2Fwordfile%2Fconsola-1.ttf);
+  src: url('/assets/fonts/consola.woff2') format('woff2');
   /* 定义加粗样式(加粗多少) */
   font-weight: normal;
   /* 定义字体样式(斜体/非斜体) */
   font-style: normal;
   /* 定义显示样式 */
-  font-display: block;
+  font-display: swap;
+}
+
+/* Lightweight site notifications (replaces Vue + Element UI notifications). */
+#banqin-toast-container {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  z-index: 2147483647;
+  display: flex;
+  width: min(360px, calc(100vw - 40px));
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.banqin-toast {
+  position: relative;
+  overflow: hidden;
+  padding: 13px 38px 13px 15px;
+  border: 1px solid var(--card-border, rgba(127, 127, 127, .2));
+  border-left: 4px solid var(--theme-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .18);
+  color: var(--font-color);
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events: auto;
+}
+
+.banqin-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.banqin-toast.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.banqin-toast--success {
+  border-left-color: #67c23a;
+}
+
+.banqin-toast--warning {
+  border-left-color: #e6a23c;
+}
+
+.banqin-toast__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.banqin-toast__message {
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.banqin-toast__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: .65;
+}
+
+@media (max-width: 600px) {
+  #banqin-toast-container {
+    top: 18px;
+    left: 14px;
+    width: calc(100vw - 28px);
+  }
 }
 
 /* 特定部件字体调用 */
@@ -9508,7 +9471,6 @@ hr:before {
   scale: 1.05;
   transition: all 0.3s ease-in-out;
 }
-
 
 .search-dialog {
   position: fixed;

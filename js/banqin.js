@@ -344,22 +344,73 @@ function debounce(fn, time) {
   TT = setTimeout(fn, time);
 }
 
+// Lightweight notification component. This avoids loading Vue and Element UI
+// on every page just to display short messages.
+function banqinNotify(options) {
+  const settings = Object.assign({
+    title: "",
+    message: "",
+    type: "success",
+    duration: 5000
+  }, options || {});
+
+  let container = document.getElementById("banqin-toast-container");
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "banqin-toast-container";
+    container.setAttribute("aria-live", "polite");
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement("div");
+  toast.className = "banqin-toast banqin-toast--" + settings.type;
+  toast.setAttribute("role", "status");
+
+  const title = document.createElement("div");
+  title.className = "banqin-toast__title";
+  title.textContent = settings.title;
+
+  const message = document.createElement("div");
+  message.className = "banqin-toast__message";
+  message.textContent = settings.message;
+
+  const close = document.createElement("button");
+  close.className = "banqin-toast__close";
+  close.type = "button";
+  close.setAttribute("aria-label", "关闭提示");
+  close.textContent = "×";
+
+  const removeToast = () => {
+    if (!toast.isConnected) return;
+    toast.classList.add("is-leaving");
+    setTimeout(() => toast.remove(), 260);
+  };
+
+  close.addEventListener("click", removeToast);
+  toast.append(title, message, close);
+  container.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add("is-visible"));
+  setTimeout(removeToast, Math.max(1500, Number(settings.duration) || 5000));
+}
+
+function banqinHolidayAlert(message) {
+  banqinNotify({
+    title: "今日提醒 🎉",
+    message,
+    type: "success",
+    duration: 8000
+  });
+}
+
 // 复制提醒
 document.addEventListener("copy", function () {
   debounce(function () {
-    new Vue({
-      data: function () {
-        this.$notify({
-          title: "哎嘿！复制成功🍬",
-          message: "若要转载最好保留原文链接哦，给你一个大大的赞！",
-          position: 'top-left',
-          offset: 50,
-          showClose: true,
-          type: "success",
-          duration: 5000
-        });
-      }
-    })
+    banqinNotify({
+      title: "哎嘿！复制成功🍬",
+      message: "若要转载最好保留原文链接哦，给你一个大大的赞！",
+      type: "success",
+      duration: 5000
+    });
   }, 300);
 })
 
@@ -368,19 +419,12 @@ document.addEventListener("copy", function () {
 document.onkeydown = function (e) {
   if (123 == e.keyCode || (e.ctrlKey && e.shiftKey && (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) || (e.ctrlKey && 85 === e.keyCode)) {
     debounce(function () {
-      new Vue({
-        data: function () {
-          this.$notify({
-            title: "你已被发现😜",
-            message: "小伙子，扒源记住要遵循GPL协议！",
-            position: 'top-left',
-            offset: 50,
-            showClose: true,
-            type: "warning",
-            duration: 5000
-          });
-        }
-      })
+      banqinNotify({
+        title: "你已被发现😜",
+        message: "小伙子，扒源记住要遵循GPL协议！",
+        type: "warning",
+        duration: 5000
+      });
     }, 300);
   }
 };
@@ -405,19 +449,25 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
       stepsize: .5    // 步距
     };
     const t = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
-      window.setTimeout(e, 1e3 / 60)
+      return window.setTimeout(e, 1e3 / 60)
     }
       ;
+    const cancelT = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.clearTimeout;
     window.requestAnimationFrame = t;
     const i = document.getElementById("snow"),
       n = i.getContext("2d"),
       o = e.flakeCount;
     let a = -100,
       d = -100,
-      s = [];
+      s = [],
+      snowFrameId = null;
     i.width = window.innerWidth,
       i.height = window.innerHeight;
     const h = () => {
+      if (document.hidden || localStorage.getItem("snow") !== "block") {
+        snowFrameId = null;
+        return;
+      }
       n.clearRect(0, 0, i.width, i.height);
       const r = e.minDist;
       for (let t = 0; t < o; t++) {
@@ -446,7 +496,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
           n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
           n.fill()
       }
-      t(h)
+      snowFrameId = t(h)
     }
       , l = e => {
         e.x = Math.floor(Math.random() * i.width),
@@ -458,6 +508,18 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
           e.opacity = .5 * Math.random() + .3
       }
       ;
+    const syncSnowAnimation = () => {
+      const shouldRun = !document.hidden && localStorage.getItem("snow") === "block";
+      if (shouldRun && snowFrameId === null) {
+        snowFrameId = t(h);
+      } else if (!shouldRun && snowFrameId !== null) {
+        cancelT(snowFrameId);
+        snowFrameId = null;
+        n.clearRect(0, 0, i.width, i.height);
+      }
+    };
+    document.addEventListener("visibilitychange", syncSnowAnimation);
+    window.addEventListener("banqin:snow-change", syncSnowAnimation);
     document.addEventListener("mousemove", (e => {
       a = e.clientX,
         d = e.clientY
@@ -488,7 +550,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
             opacity: d
           })
         }
-        h()
+        syncSnowAnimation()
       }
       )()
   }
@@ -508,7 +570,8 @@ function dark() {
     a = "180,184,240",
     r = "226,225,142",
     d = "226,225,224",
-    c = [];
+    c = [],
+    universeFrameId = null;
 
   function f() {
     n = window.innerWidth, e = window.innerHeight, i = .216 * n, s.setAttribute("width", n), s.setAttribute("height", e)
@@ -547,10 +610,40 @@ function dark() {
   f(), window.addEventListener("resize", f, !1), function () {
     h = s.getContext("2d");
     for (var t = 0; t < i; t++) c[t] = new y, c[t].reset();
-    u()
-  }(), function t() {
-    document.getElementsByTagName('html')[0].getAttribute('data-theme') == 'dark' && u(), window.requestAnimationFrame(t)
-  }()
+  }();
+
+  function shouldRunUniverse() {
+    return !document.hidden
+      && localStorage.getItem("universe") === "block"
+      && document.documentElement.getAttribute("data-theme") === "dark";
+  }
+
+  function universeTick() {
+    if (!shouldRunUniverse()) {
+      universeFrameId = null;
+      return;
+    }
+    u();
+    universeFrameId = window.requestAnimationFrame(universeTick);
+  }
+
+  function syncUniverseAnimation() {
+    if (shouldRunUniverse() && universeFrameId === null) {
+      universeFrameId = window.requestAnimationFrame(universeTick);
+    } else if (!shouldRunUniverse() && universeFrameId !== null) {
+      window.cancelAnimationFrame(universeFrameId);
+      universeFrameId = null;
+      h.clearRect(0, 0, n, e);
+    }
+  }
+
+  new MutationObserver(syncUniverseAnimation).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"]
+  });
+  document.addEventListener("visibilitychange", syncUniverseAnimation);
+  window.addEventListener("banqin:universe-change", syncUniverseAnimation);
+  syncUniverseAnimation();
 };
 dark()
 /* 星空特效 end */
@@ -1073,37 +1166,23 @@ function changeMouseMode() {
     mouseMode = "off";
     localStorage.setItem("mouse", "off");
     debounce(function () {
-      new Vue({
-        data: function () {
-          this.$notify({
-            title: "切换右键模式成功🍔",
-            message: "当前鼠标右键已恢复为系统默认！",
-            position: 'top-left',
-            offset: 50,
-            showClose: true,
-            type: "success",
-            duration: 5000
-          });
-        }
-      })
+      banqinNotify({
+        title: "切换右键模式成功🍔",
+        message: "当前鼠标右键已恢复为系统默认！",
+        type: "success",
+        duration: 5000
+      });
     }, 300);
   } else {
     mouseMode = "on";
     localStorage.setItem("mouse", "on");
     debounce(function () {
-      new Vue({
-        data: function () {
-          this.$notify({
-            title: "切换右键模式成功🍔",
-            message: "当前鼠标右键已更换为网站指定样式！",
-            position: 'top-left',
-            offset: 50,
-            showClose: true,
-            type: "success",
-            duration: 5000
-          });
-        }
-      })
+      banqinNotify({
+        title: "切换右键模式成功🍔",
+        message: "当前鼠标右键已更换为网站指定样式！",
+        type: "success",
+        duration: 5000
+      });
     }, 300);
   }
 }
@@ -1237,19 +1316,12 @@ function switchNightMode() {
     document.getElementById('modeicon').setAttribute('xlink:href', '#icon-sun')
     // 延时弹窗提醒
     setTimeout(() => {
-      new Vue({
-        data: function () {
-          this.$notify({
-            title: "关灯啦🌙",
-            message: "当前已成功切换至夜间模式！",
-            position: 'top-left',
-            offset: 50,
-            showClose: true,
-            type: "success",
-            duration: 5000
-          });
-        }
-      })
+      banqinNotify({
+        title: "关灯啦🌙",
+        message: "当前已成功切换至夜间模式！",
+        type: "success",
+        duration: 5000
+      });
     }, 2000)
   } else {
     // 先设置太阳月亮透明度
@@ -1264,19 +1336,12 @@ function switchNightMode() {
     saveToLocal.set('theme', 'light', 2)
     document.querySelector('body').classList.add('DarkMode'), document.getElementById('modeicon').setAttribute('xlink:href', '#icon-moon')
     setTimeout(() => {
-      new Vue({
-        data: function () {
-          this.$notify({
-            title: "开灯啦🌞",
-            message: "当前已成功切换至白天模式！",
-            position: 'top-left',
-            offset: 50,
-            showClose: true,
-            type: "success",
-            duration: 5000
-          });
-        }
-      })
+      banqinNotify({
+        title: "开灯啦🌞",
+        message: "当前已成功切换至白天模式！",
+        type: "success",
+        duration: 5000
+      });
     }, 2000)
   }
   // handle some cases
@@ -1298,20 +1363,12 @@ function share_() {
     var title = document.title;
     var subTitle = title.endsWith("| 坂琴的小窝🍜") ? title.substring(0, title.length - 14) : title;
     navigator.clipboard.writeText('坂琴的小窝🍜的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
-    new Vue({
-      data: function () {
-        this.$notify({
-          title: "成功复制分享信息🎉",
-          message: "您现在可以通过粘贴直接跟小伙伴分享了！",
-          position: 'top-left',
-          offset: 50,
-          showClose: true,
-          type: "success",
-          duration: 5000
-        });
-        // return { visible: false }
-      }
-    })
+    banqinNotify({
+      title: "成功复制分享信息🎉",
+      message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+      type: "success",
+      duration: 5000
+    });
   } catch (err) {
     console.error('复制失败！', err);
   }
@@ -2438,28 +2495,28 @@ y = d.getFullYear();
 if (m == 9 && dd == 18) {
   document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是九一八事变" + (y - 1931).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+    banqinHolidayAlert("今天是九一八事变" + (y - 1931).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 7 && dd == 7) {
   document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是卢沟桥事变" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+    banqinHolidayAlert("今天是卢沟桥事变" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 12 && dd == 13) {
   document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是南京大屠杀" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+    banqinHolidayAlert("今天是南京大屠杀" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 8 && dd == 14) {
   document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今天是世界慰安妇纪念日\n🪔勿忘国耻，振兴中华🪔");
+    banqinHolidayAlert("今天是世界慰安妇纪念日\n🪔勿忘国耻，振兴中华🪔");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2468,80 +2525,80 @@ if (m == 8 && dd == 14) {
 // 节假日
 if (m == 10 && dd <= 3) {//国庆节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
+    banqinHolidayAlert("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 8 && dd == 15) {//搞来玩的，小日子投降
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("小日子已经投降" + (y - 1945).toString() + "年了😃");
+    banqinHolidayAlert("小日子已经投降" + (y - 1945).toString() + "年了😃");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 1 && dd == 1) {//元旦节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire(y.toString() + "年元旦快乐！🎉");
+    banqinHolidayAlert(y.toString() + "年元旦快乐！🎉");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 3 && dd == 8) {//妇女节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("各位女神们，妇女节快乐！👩");
+    banqinHolidayAlert("各位女神们，妇女节快乐！👩");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
 if (m == 4 && dd == 1) {//愚人节，随机谎话
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire(l[Math.floor(Math.random() * l.length)]);
+    banqinHolidayAlert(l[Math.floor(Math.random() * l.length)]);
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 5 && dd == 1) {//劳动节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("劳动节快乐\n为各行各业辛勤工作的人们致敬！");
+    banqinHolidayAlert("劳动节快乐\n为各行各业辛勤工作的人们致敬！");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 5 && dd == 4) {//青年节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("青年节快乐\n青春不是回忆逝去,而是把握现在！");
+    banqinHolidayAlert("青年节快乐\n青春不是回忆逝去,而是把握现在！");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 5 && dd == 20) {//520
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今年是520情人节\n快和你喜欢的人一起过吧！💑");
+    banqinHolidayAlert("今年是520情人节\n快和你喜欢的人一起过吧！💑");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 7 && dd == 1) {//建党节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
+    banqinHolidayAlert("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 8 && dd == 1) {//建军节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝中国人民解放军" + (y - 1927).toString() + "岁生日快乐！");
+    banqinHolidayAlert("祝中国人民解放军" + (y - 1927).toString() + "岁生日快乐！");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 9 && dd == 10) {//教师节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("各位老师们教师节快乐！👩‍🏫");
+    banqinHolidayAlert("各位老师们教师节快乐！👩‍🏫");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 12 && dd == 25) {//圣诞节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("圣诞节快乐！🎄");
+    banqinHolidayAlert("圣诞节快乐！🎄");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if (m == 7 && dd == 30) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 2004).toString() + "岁生日快乐！🍜");
+    banqinHolidayAlert("祝站长" + (y - 2004).toString() + "岁生日快乐！🍜");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2557,13 +2614,13 @@ if (m == 7 && dd == 30) {//站长生日
 
 if ((y == 2023 && m == 4 && dd == 5) || (y == 2024 && m == 4 && dd == 4) || (y == 2025 && m == 4 && dd == 4)) {//清明节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("清明时节雨纷纷,一束鲜花祭故人💐");
+    banqinHolidayAlert("清明时节雨纷纷,一束鲜花祭故人💐");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if ((y == 2023 && m == 12 && dd == 22) || (y == 2024 && m == 12 && dd == 21) || (y == 2025 && m == 12 && dd == 21)) {//冬至
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆");
+    banqinHolidayAlert("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2575,42 +2632,42 @@ var lunar = calendarFormatter.solar2lunar();
 if ((lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初六") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初五") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初四") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初三") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初二") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初一") || (lunar["IMonthCn"] == "腊月" && lunar["IDayCn"] == "三十") || (lunar["IMonthCn"] == "腊月" && lunar["IDayCn"] == "廿九")) {
   //春节，本来只有大年三十到初六，但是有时候除夕是大年二十九，所以也加上了
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire(y.toString() + "年新年快乐\n🎊祝你心想事成，诸事顺利🎊");
+    banqinHolidayAlert(y.toString() + "年新年快乐\n🎊祝你心想事成，诸事顺利🎊");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if ((lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "十五")) {
   //元宵节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("元宵节快乐\n送你一个大大的灯笼🧅");
+    banqinHolidayAlert("元宵节快乐\n送你一个大大的灯笼🧅");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if ((lunar["IMonthCn"] == "五月" && lunar["IDayCn"] == "初五")) {
   //端午节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("端午节快乐\n请你吃一条粽子🍙");
+    banqinHolidayAlert("端午节快乐\n请你吃一条粽子🍙");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if ((lunar["IMonthCn"] == "七月" && lunar["IDayCn"] == "初七")) {
   //七夕节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头");
+    banqinHolidayAlert("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if ((lunar["IMonthCn"] == "八月" && lunar["IDayCn"] == "十五")) {
   //中秋节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("中秋节快乐\n请你吃一块月饼🍪");
+    banqinHolidayAlert("中秋节快乐\n请你吃一块月饼🍪");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
 if ((lunar["IMonthCn"] == "九月" && lunar["IDayCn"] == "初九")) {
   //重阳节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("重阳节快乐\n独在异乡为异客，每逢佳节倍思亲");
+    banqinHolidayAlert("重阳节快乐\n独在异乡为异客，每逢佳节倍思亲");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2841,13 +2898,13 @@ setInterval(() => {
 
 
 /* fps检测 start */
-if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+if (window.localStorage.getItem("fpson") == "1") {
   var rAF = function () {
     return (
       window.requestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
       function (callback) {
-        window.setTimeout(callback, 1000 / 60);
+        return window.setTimeout(callback, 1000 / 60);
       }
     );
   }();
@@ -2855,7 +2912,12 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
   var allFrameCount = 0;
   var lastTime = Date.now();
   var lastFameTime = Date.now();
+  var fpsFrameId = null;
   var loop = function () {
+    if (document.hidden) {
+      fpsFrameId = null;
+      return;
+    }
     var now = Date.now();
     var fs = (now - lastFameTime);
     var fps = Math.round(1000 / fs);
@@ -2885,10 +2947,13 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
       lastTime = now;
     };
 
-    rAF(loop);
+    fpsFrameId = rAF(loop);
   }
 
   loop();
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden && fpsFrameId === null) loop();
+  });
 } else {
   document.getElementById("fps").style = "display:none!important"
 }
@@ -2907,19 +2972,12 @@ if (localStorage.getItem("reset_4") == undefined) {
   }
   clearItem();
   setTimeout(function () {
-    new Vue({
-      data: function () {
-        this.$notify({
-          title: "提示🍒",
-          message: " (｡･∀･)ﾉﾞ由于网站部分设置项更新，当前已为您重置所有设置，祝您愉快！",
-          position: 'top-left',
-          offset: 50,
-          showClose: true,
-          type: "success",
-          duration: 8000
-        });
-      }
-    })
+    banqinNotify({
+      title: "提示🍒",
+      message: " (｡･∀･)ﾉﾞ由于网站部分设置项更新，当前已为您重置所有设置，祝您愉快！",
+      type: "success",
+      duration: 8000
+    });
   }, 1500);
 }
 
@@ -2997,6 +3055,7 @@ setUniverse2(localStorage.getItem("universe"));
 function setUniverse2(c) {
   document.getElementById("universe").style.display = c;
   localStorage.setItem("universe", c);
+  window.dispatchEvent(new Event("banqin:universe-change"));
 }
 function setUniverse() {
   if (document.getElementById("universeSet").checked) {
@@ -3019,12 +3078,13 @@ function setSnow() {
     document.getElementById("snow").style.display = "none";
     localStorage.setItem("snow", "none");
   }
+  window.dispatchEvent(new Event("banqin:snow-change"));
 }
 
 
 // 帧率监测开关
 if (localStorage.getItem("fpson") == undefined) {
-  localStorage.setItem("fpson", "1");
+  localStorage.setItem("fpson", "0");
 }
 function fpssw() {
   if (document.getElementById("fpson").checked) {
@@ -3230,34 +3290,20 @@ function getPicture_() {
     var link = "url(" + document.getElementById("pic-link").value + ")";
     changeBg(link);
     // 提示切换成功
-    new Vue({
-      data: function () {
-        this.$notify({
-          title: "可以啦🍨",
-          message: "切换自定义背景成功！",
-          position: 'top-left',
-          offset: 50,
-          showClose: true,
-          type: "success",
-          duration: 5000
-        });
-      }
-    })
+    banqinNotify({
+      title: "可以啦🍨",
+      message: "切换自定义背景成功！",
+      type: "success",
+      duration: 5000
+    });
   }).catch(() => {
     // 无效的图片链接，提示无效
-    new Vue({
-      data: function () {
-        this.$notify({
-          title: "链接不对🤣",
-          message: "请输入有效的图片链接！",
-          position: 'top-left',
-          offset: 50,
-          showClose: true,
-          type: "warning",
-          duration: 5000
-        });
-      }
-    })
+    banqinNotify({
+      title: "链接不对🤣",
+      message: "请输入有效的图片链接！",
+      type: "warning",
+      duration: 5000
+    });
   })
 }
 // 判断图片链接是否可用
@@ -3497,8 +3543,39 @@ function winResize() {
   }
 }
 
+// WinBox is only needed after the user opens the beautification panel.
+// Load it on demand instead of adding it to every page visit.
+let winboxLoadPromise = null;
+function loadWinBox() {
+  if (typeof WinBox === "function") return Promise.resolve();
+  if (winboxLoadPromise) return winboxLoadPromise;
+
+  winboxLoadPromise = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js";
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error("WinBox failed to load"));
+    document.head.appendChild(script);
+  });
+
+  return winboxLoadPromise;
+}
+
 // 切换状态，窗口已创建则控制窗口显示和隐藏，没窗口则创建窗口
 function toggleWinbox() {
+  loadWinBox().then(toggleWinboxReady).catch(() => {
+    winboxLoadPromise = null;
+    banqinNotify({
+      title: "设置面板加载失败",
+      message: "请检查网络后重试。",
+      type: "warning",
+      duration: 5000
+    });
+  });
+}
+
+function toggleWinboxReady() {
   if (document.querySelector("#meihuaBox")) {
     winbox.toggleClass("hide");
   } else {
@@ -3507,7 +3584,3 @@ function toggleWinbox() {
 }
 
 /* 美化模块 end */
-
-
-
-
