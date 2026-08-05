@@ -1,1 +1,3732 @@
-function percent(){try{rmf.showRightMenu(!1),$(".rmMask").attr("style","display: none")}catch(e){}let e=document.documentElement.scrollTop,t=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)-document.documentElement.clientHeight,n=Math.round(e/t*100),o=document.querySelector("#go-up");n<95?(o.childNodes[0].style.display="none",o.childNodes[1].style.display="block",o.childNodes[1].innerHTML=n+"<span>%</span>"):(o.childNodes[1].style.display="none",o.childNodes[0].style.display="block")}function tonav(){document.getElementById("name-container").setAttribute("style","display:none");var e=$(window).scrollTop();$(window).scroll((function(){var t=$(window).scrollTop();t>e?(document.getElementById("name-container").setAttribute("style",""),document.getElementsByClassName("menus_items")[1].setAttribute("style","display:none!important")):(document.getElementsByClassName("menus_items")[1].setAttribute("style",""),document.getElementById("name-container").setAttribute("style","display:none")),e=t})),document.getElementById("page-name").innerText=document.title.split(" | 坂琴的小窝🍜")[0]}function scrollToTop(){document.getElementsByClassName("menus_items")[1].setAttribute("style",""),document.getElementById("name-container").setAttribute("style","display:none"),btf.scrollToDest(0,500)}function getDistance(e,t,n,o){const{sin:a,cos:i,asin:s,PI:r,hypot:c}=Math;let l=(e,t)=>(e*=r/180,{x:i(t*=r/180)*i(e),y:i(t)*a(e),z:a(t)}),d=l(e,t),b=l(n,o),u=2*s(c(d.x-b.x,d.y-b.y,d.z-b.z)/2)*6371;return Math.round(u)}function showWelcome(){let e,t,n,o=getDistance(105.84362352,29.167805433,ipLoacation.result.location.lng,ipLoacation.result.location.lat),a=ipLoacation.result.ad_info.nation;switch(ipLoacation.result.ad_info.nation){case"日本":t="よろしく，一起去看樱花吗";break;case"美国":t="Let us live in peace!";break;case"英国":t="想同你一起夜乘伦敦眼";break;case"俄罗斯":t="干了这瓶伏特加！";break;case"法国":t="C'est La Vie";break;case"德国":t="Die Zeit verging im Fluge.";break;case"澳大利亚":t="一起去大堡礁吧！";break;case"加拿大":t="拾起一片枫叶赠予你";break;case"中国":switch(a=ipLoacation.result.ad_info.province+" "+ipLoacation.result.ad_info.city+" "+ipLoacation.result.ad_info.district,e=ipLoacation.result.ip,ipLoacation.result.ad_info.province){case"北京市":t="北——京——欢迎你~~~";break;case"天津市":t="讲段相声吧。";break;case"河北省":t="山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山。";break;case"山西省":t="展开坐具长三尺，已占山河五百余。";break;case"内蒙古自治区":t="天苍苍，野茫茫，风吹草低见牛羊。";break;case"辽宁省":t="我想吃烤鸡架！";break;case"吉林省":t="状元阁就是东北烧烤之王。";break;case"黑龙江省":t="很喜欢哈尔滨大剧院。";break;case"上海市":t="众所周知，中国只有两个城市。";break;case"江苏省":switch(ipLoacation.result.ad_info.city){case"南京市":t="这是我挺想去的城市啦。";break;case"苏州市":t="上有天堂，下有苏杭。";break;default:t="散装是必须要散装的。"}break;case"浙江省":t="东风渐绿西湖柳，雁已还人未南归。";break;case"河南省":switch(ipLoacation.result.ad_info.city){case"郑州市":t="豫州之域，天地之中。";break;case"南阳市":t="臣本布衣，躬耕于南阳。此南阳非彼南阳！";break;case"驻马店市":t="峰峰有奇石，石石挟仙气。嵖岈山的花很美哦！";break;case"开封市":t="刚正不阿包青天。";break;case"洛阳市":t="洛阳牡丹甲天下。";break;default:t="可否带我品尝河南烩面啦？"}break;case"安徽省":t="蚌埠住了，芜湖起飞。";break;case"福建省":t="井邑白云间，岩城远带山。";break;case"江西省":t="落霞与孤鹜齐飞，秋水共长天一色。";break;case"山东省":t="遥望齐州九点烟，一泓海水杯中泻。";break;case"湖北省":t="来碗热干面！";break;case"湖南省":t="74751，长沙斯塔克。";break;case"广东省":t="老板来两斤福建人。";break;case"广西壮族自治区":t="桂林山水甲天下。";break;case"海南省":t="朝观日出逐白浪，夕看云起收霞光。";break;case"四川省":t="康康川妹子。";break;case"贵州省":t="茅台，学生，再塞200。";break;case"云南省":t="玉龙飞舞云缠绕，万仞冰川直耸天。";break;case"西藏自治区":t="躺在茫茫草原上，仰望蓝天。";break;case"陕西省":t="来份臊子面加馍。";break;case"甘肃省":t="羌笛何须怨杨柳，春风不度玉门关。";break;case"青海省":t="牛肉干和老酸奶都好好吃。";break;case"宁夏回族自治区":t="大漠孤烟直，长河落日圆。";break;case"新疆维吾尔自治区":t="驼铃古道丝绸路，胡马犹闻唐汉风。";break;case"台湾省":t="我在这头，大陆在那头。";break;case"香港特别行政区":t="永定贼有残留地鬼嚎，迎击光非岁玉。";break;case"澳门特别行政区":t="性感荷官，在线发牌。";break;default:t="带我去你的城市逛逛吧！"}break;default:t="带我去你的国家逛逛吧。"}let i=new Date;n=i.getHours()>=5&&i.getHours()<11?"<span>上午好</span>，一日之计在于晨！":i.getHours()>=11&&i.getHours()<13?"<span>中午好</span>，该摸鱼吃午饭了。":i.getHours()>=13&&i.getHours()<15?"<span>下午好</span>，懒懒地睡个午觉吧！":i.getHours()>=15&&i.getHours()<16?"<span>三点几啦</span>，一起饮茶呀！":i.getHours()>=16&&i.getHours()<19?"<span>夕阳无限好！</span>":i.getHours()>=19&&i.getHours()<24?"<span>晚上好</span>，夜生活嗨起来！":"夜深了，早点休息，少熬夜。";try{document.getElementById("welcome-info").innerHTML=`<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${a}</span> 的小伙伴，${n}您现在距离站长约 <span style="color:var(--theme-color)">${o}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${e}</span>， ${t}</b>`}catch(e){}}function getWeibo(){fetch("").then((e=>e.json())).then((e=>{let t="<style>.weibo-new{background:#ff3852}.weibo-hot{background:#ff9406}.weibo-jyzy{background:#ffc000}.weibo-recommend{background:#00b7ee}.weibo-adrecommend{background:#febd22}.weibo-friend{background:#8fc21e}.weibo-boom{background:#bd0000}.weibo-topic{background:#ff6f49}.weibo-topic-ad{background:#4dadff}.weibo-boil{background:#f86400}#weibo-container{overflow-y:auto;-ms-overflow-style:none;scrollbar-width:none}#weibo-container::-webkit-scrollbar{display:none}.weibo-list-item{display:flex;flex-direction:row;justify-content:space-between;flex-wrap:nowrap}.weibo-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:auto}.weibo-num{float:right}.weibo-hotness{display:inline-block;padding:0 6px;transform:scale(.8) translateX(-3px);color:#fff;border-radius:8px}</style>";t+='<div class="weibo-list">';let n={"爆":"weibo-boom","热":"weibo-hot","沸":"weibo-boil","新":"weibo-new","荐":"weibo-recommend","音":"weibo-jyzy","影":"weibo-jyzy","剧":"weibo-jyzy","综":"weibo-jyzy"};for(let o of e)t+='<div class="weibo-list-item"><div class="weibo-hotness '+n[o.hot||"荐"]+'">'+(o.hot||"荐")+'</div><span class="weibo-title"><a title="'+o.title+'"href="'+o.url+'" target="_blank" rel="external nofollow noreferrer" style="color:#a08ed5">'+o.title+'</a></span><div class="weibo-num"><span>'+o.num+"</span></div></div>";t+="</div>",document.getElementById("weibo-container").innerHTML=t})).catch((function(e){console.log(e)}))}document.addEventListener("pjax:complete",(function(){window.onscroll=percent})),document.addEventListener("DOMContentLoaded",(function(){window.onscroll=percent})),document.addEventListener("pjax:complete",tonav),document.addEventListener("DOMContentLoaded",tonav),$.ajax({type:"get",url:"https://apis.map.qq.com/ws/location/v1/ip",data:{key:"GTZBZ-ST4CQ-75V5R-2FW3P-2OYRV-BTBXG",output:"jsonp"},dataType:"jsonp",success:function(e){ipLoacation=e}}),window.onload=showWelcome,document.addEventListener("pjax:complete",showWelcome),document.addEventListener("pjax:complete",getWeibo),document.addEventListener("DOMContentLoaded",getWeibo);let TT=null;function debounce(e,t){null!==TT&&clearTimeout(TT),TT=setTimeout(e,t)}function banqinNotify(e){const t=Object.assign({title:"",message:"",type:"success",duration:5e3},e||{});let n=document.getElementById("banqin-toast-container");n||(n=document.createElement("div"),n.id="banqin-toast-container",n.setAttribute("aria-live","polite"),document.body.appendChild(n));const o=document.createElement("div");o.className="banqin-toast banqin-toast--"+t.type,o.setAttribute("role","status");const a=document.createElement("div");a.className="banqin-toast__title",a.textContent=t.title;const i=document.createElement("div");i.className="banqin-toast__message",i.textContent=t.message;const s=document.createElement("button");s.className="banqin-toast__close",s.type="button",s.setAttribute("aria-label","关闭提示"),s.textContent="×";const r=()=>{o.isConnected&&(o.classList.add("is-leaving"),setTimeout((()=>o.remove()),260))};s.addEventListener("click",r),o.append(a,i,s),n.appendChild(o),requestAnimationFrame((()=>o.classList.add("is-visible"))),setTimeout(r,Math.max(1500,Number(t.duration)||5e3))}function banqinHolidayAlert(e){banqinNotify({title:"今日提醒 🎉",message:e,type:"success",duration:8e3})}function dark(){window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var e,t,n,o,a=.05,i=document.getElementById("universe"),s=!0,r="226,225,224",c=[],l=null;function d(){e=window.innerWidth,t=window.innerHeight,n=.216*e,i.setAttribute("width",e),i.setAttribute("height",t)}function b(){this.reset=function(){this.giant=u(3),this.comet=!this.giant&&!s&&u(10),this.x=m(0,e-10),this.y=m(0,t),this.r=m(1.1,2.6),this.dx=m(a,6*a)+(this.comet+1-1)*a*m(50,120)+.1,this.dy=-m(a,6*a)-(this.comet+1-1)*a*m(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=m(.2,1-.4*(this.comet+1-1)),this.do=m(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>e||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(o.beginPath(),this.giant)o.fillStyle="rgba(180,184,240,"+this.opacity+")",o.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){o.fillStyle="rgba("+r+","+this.opacity+")",o.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var e=0;e<30;e++)o.fillStyle="rgba("+r+","+(this.opacity-this.opacity/20*e)+")",o.rect(this.x-this.dx/4*e,this.y-this.dy/4*e-2,2,2),o.fill()}else o.fillStyle="rgba(226,225,142,"+this.opacity+")",o.rect(this.x,this.y,this.r,this.r);o.closePath(),o.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>e-e/4||this.y<0)&&(this.fadingOut=!0)},setTimeout((function(){s=!1}),50)}function u(e){return Math.floor(1e3*Math.random())+1<10*e}function m(e,t){return Math.random()*(t-e)+e}function f(){return!document.hidden&&"block"===localStorage.getItem("universe")&&"dark"===document.documentElement.getAttribute("data-theme")}function g(){f()?(function(){o.clearRect(0,0,e,t);for(var n=c.length,a=0;a<n;a++){var i=c[a];i.move(),i.fadeIn(),i.fadeOut(),i.draw()}}(),l=window.requestAnimationFrame(g)):l=null}function p(){f()&&null===l?l=window.requestAnimationFrame(g):f()||null===l||(window.cancelAnimationFrame(l),l=null,o.clearRect(0,0,e,t))}d(),window.addEventListener("resize",d,!1),function(){o=i.getContext("2d");for(var e=0;e<n;e++)c[e]=new b,c[e].reset()}(),new MutationObserver(p).observe(document.documentElement,{attributes:!0,attributeFilter:["data-theme"]}),document.addEventListener("visibilitychange",p),window.addEventListener("banqin:universe-change",p),p()}function owoBig(){let e=1,t="",n=document.createElement("div"),o=document.querySelector("body");n.id="owo-big",o.appendChild(n);let a=new MutationObserver((a=>{for(let i=0;i<a.length;i++){let s=a[i].addedNodes,r="";2==s.length&&"OwO-body"==s[1].className&&(r=s[1],document.body.clientWidth<=768&&r.addEventListener("contextmenu",(e=>e.preventDefault())),r.onmouseover=a=>{e&&"IMG"==a.target.tagName&&(e=0,t=setTimeout((()=>{let e=3*a.path[0].clientHeight,t=3*a.path[0].clientWidth,i=a.x-a.offsetX-(t-a.path[0].clientWidth)/2,s=a.y-a.offsetY;i+t>o.clientWidth&&(i-=i+t-o.clientWidth+10),i<0&&(i=10),n.style.cssText=`display:flex; height:${e}px; width:${t}px; left:${i}px; top:${s}px;`,n.innerHTML=`<img src="${a.target.src}">`}),300))},r.onmouseout=()=>{n.style.display="none",e=1,clearTimeout(t)})}}));a.observe(document.getElementById("post-comment"),{subtree:!0,childList:!0})}function randomPost(){fetch("/baidusitemap.xml").then((e=>e.text())).then((e=>(new window.DOMParser).parseFromString(e,"text/xml"))).then((e=>{let t=e.querySelectorAll("url loc");for(;;){let e=t[Math.floor(Math.random()*t.length)].innerHTML;if(location.href!=e)return void(location.href=e)}}))}if(document.addEventListener("copy",(function(){debounce((function(){banqinNotify({title:"哎嘿！复制成功🍬",message:"若要转载最好保留原文链接哦，给你一个大大的赞！",type:"success",duration:5e3})}),300)})),document.onkeydown=function(e){(123==e.keyCode||e.ctrlKey&&e.shiftKey&&(74===e.keyCode||73===e.keyCode||67===e.keyCode)||e.ctrlKey&&85===e.keyCode)&&debounce((function(){banqinNotify({title:"你已被发现😜",message:"小伙子，扒源记住要遵循GPL协议！",type:"warning",duration:5e3})}),300)},window&&(()=>{let e={flakeCount:window.matchMedia("(max-width: 768px)").matches?24:50,minDist:150,color:"255, 255, 255",size:1.5,speed:.5,opacity:.7,stepsize:.5};const t=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame||function(e){return window.setTimeout(e,1e3/60)},n=window.cancelAnimationFrame||window.mozCancelAnimationFrame||window.webkitCancelAnimationFrame||window.clearTimeout;window.requestAnimationFrame=t;const o=document.getElementById("snow");if(!o)return;const a=o.getContext("2d"),i=e.flakeCount;let s=-100,r=-100,c=[],l=null;o.width=window.innerWidth,o.height=window.innerHeight;const d=()=>!document.hidden&&"block"===localStorage.getItem("snow")&&"dark"!==document.documentElement.getAttribute("data-theme"),b=()=>{if(!d())return a.clearRect(0,0,o.width,o.height),void(l=null);a.clearRect(0,0,o.width,o.height);const n=e.minDist;for(let t=0;t<i;t++){let i=c[t];const l=s,d=r,b=i.x,m=i.y,f=Math.sqrt((l-b)*(l-b)+(d-m)*(d-m));if(f<n){const e=(l-b)/f,t=(d-m)/f,o=n/(f*f)/2;i.velX-=o*e,i.velY-=o*t}else i.velX*=.98,i.velY<i.speed&&i.speed-i.velY>.01&&(i.velY+=.01*(i.speed-i.velY)),i.velX+=Math.cos(i.step+=.05)*i.stepSize;a.fillStyle="rgba("+e.color+", "+i.opacity+")",i.y+=i.velY,i.x+=i.velX,(i.y>=o.height||i.y<=0)&&u(i),(i.x>=o.width||i.x<=0)&&u(i),a.beginPath(),a.arc(i.x,i.y,i.size,0,2*Math.PI),a.fill()}l=t(b)},u=e=>{e.x=Math.floor(Math.random()*o.width),e.y=0,e.size=3*Math.random()+2,e.speed=1*Math.random()+.5,e.velY=e.speed,e.velX=0,e.opacity=.5*Math.random()+.3},m=()=>{const e=d();o.style.display=e?"block":"none",e&&null===l?l=t(b):e||(null!==l&&n(l),l=null,a.clearRect(0,0,o.width,o.height))};new MutationObserver(m).observe(document.documentElement,{attributes:!0,attributeFilter:["data-theme"]}),document.addEventListener("visibilitychange",m),window.addEventListener("banqin:snow-change",m),document.addEventListener("mousemove",(e=>{s=e.clientX,r=e.clientY})),window.addEventListener("resize",(()=>{o.width=window.innerWidth,o.height=window.innerHeight})),(()=>{for(let t=0;t<i;t++){const t=Math.floor(Math.random()*o.width),n=Math.floor(Math.random()*o.height),a=3*Math.random()+e.size,i=1*Math.random()+e.speed,s=.5*Math.random()+e.opacity;c.push({speed:i,velX:0,velY:i,x:t,y:n,size:a,stepSize:Math.random()/30*e.stepsize,step:0,angle:180,opacity:s})}m()})()})(),dark(),document.addEventListener("pjax:complete",(function(){document.getElementById("post-comment")&&owoBig()})),document.addEventListener("DOMContentLoaded",(function(){document.getElementById("post-comment")&&owoBig()})),document.body.clientWidth>992){function getBasicInfo(){var e=$(window).height(),t=$("body")[0].scrollHeight,n=$(window).scrollTop();return{ViewH:e,DocH:t,ScrollTop:n,Band_H:n/(t-e)*100,S_V:t-e}}function show(e){e.ScrollTop>.001?$(".neko").css("display","block"):$(".neko").css("display","none")}!function(e){e.fn.nekoScroll=function(t){var n=e.extend({top:"0",scroWidth:"6px",z_index:9999,zoom:.9,borderRadius:"5px",right:"55.6px",nekoImg:"https://bu.dusays.com/2022/07/20/62d812db74be9.png",hoverMsg:"春天啦~",color:"var(--theme-color)",during:500,blog_body:"body"},t),o=""!==this.prop("className")?"."+this.prop("className"):""!==this.prop("id")?"#"+this.prop("id"):this.prop("nodeName");0==e(".neko").length&&this.after('<div class="neko" id='+n.nekoname+' data-msg="'+n.hoverMsg+'"></div>');let a=getBasicInfo();return e(o).css({position:"fixed",width:n.scroWidth,top:n.top,height:a.Band_H*n.zoom*a.ViewH*.01+"px","z-index":n.z_index,"background-color":n.bgcolor,"border-radius":n.borderRadius,right:n.right,"background-image":"url("+n.scImg+")","background-image":"-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)","border-radius":"2em","background-size":"contain"}),e("#"+n.nekoname).css({position:"fixed",top:a.Band_H*n.zoom*a.ViewH*.01-50+"px","z-index":10*n.z_index,right:n.right,"background-image":"url("+n.nekoImg+")"}),show(getBasicInfo()),e(window).scroll((function(){let t=getBasicInfo();show(t),e(o).css({position:"fixed",width:n.scroWidth,top:n.top,height:t.Band_H*n.zoom*t.ViewH*.01+"px","z-index":n.z_index,"background-color":n.bgcolor,"border-radius":n.borderRadius,right:n.right,"background-image":"url("+n.scImg+")","background-image":"-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)","border-radius":"2em","background-size":"contain"}),e("#"+n.nekoname).css({position:"fixed",top:t.Band_H*n.zoom*t.ViewH*.01-50+"px","z-index":10*n.z_index,right:n.right,"background-image":"url("+n.nekoImg+")"}),t.ScrollTop==t.S_V?e("#"+n.nekoname).addClass("showMsg"):(e("#"+n.nekoname).removeClass("showMsg"),e("#"+n.nekoname).attr("data-msg",n.hoverMsg))})),this.click((function(e){btf.scrollToDest(0,500)})),e("#"+n.nekoname).click((function(){btf.scrollToDest(0,500)})),this}}(jQuery),$(document).ready((function(){$("#myscoll").nekoScroll({bgcolor:"rgb(0 0 0 / .5)",borderRadius:"2em",zoom:.9})}))}function setMask(){return null!=document.getElementsByClassName("rmMask")[0]?document.getElementsByClassName("rmMask")[0]:(mask=document.createElement("div"),mask.className="rmMask",mask.style.width=window.innerWidth+"px",mask.style.height=window.innerHeight+"px",mask.style.background="#fff",mask.style.opacity=".0",mask.style.position="fixed",mask.style.top="0",mask.style.left="0",mask.style.zIndex=998,document.body.appendChild(mask),document.getElementById("rightMenu").style.zIndex=19198,mask)}function insertAtCursor(e,t){if(document.selection)e.focus(),sel=document.selection.createRange(),sel.text=t,sel.select();else if(e.selectionStart||"0"==e.selectionStart){var n=e.selectionStart,o=e.selectionEnd,a=e.scrollTop;e.value=e.value.substring(0,n)+t+e.value.substring(o,e.value.length),a>0&&(e.scrollTop=a),e.focus(),e.selectionStart=n+t.length,e.selectionEnd=n+t.length}else e.value+=t,e.focus()}let rmf={};function popupMenu(){window.oncontextmenu=function(e){if("off"==mouseMode)return!0;$(".rightMenu-group.hide").hide(),rmf.syncReadModeMenu(),document.getSelection().toString()&&$("#menu-text").show(),(document.getElementById("post")||document.getElementById("page"))&&$("#menu-post").show();var t=window.document.body;t=e.target,/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/.test(window.getSelection().toString())&&"A"!=t.tagName&&$("#menu-too").show(),"A"==t.tagName?($("#menu-to").show(),rmf.open=function(){-1==t.href.indexOf("http://")&&-1==t.href.indexOf("https://")||-1!=t.href.indexOf("yisous.xyz")?pjax.loadUrl(t.href):location.href=t.href},rmf.openWithNewTab=function(){window.open(t.href,"_blank","noopener,noreferrer")},rmf.copyLink=function(){let e=t.href,n=document.createElement("textarea");n.value=e,document.body.appendChild(n),n.select(),document.execCommand("Copy"),document.body.removeChild(n)}):"IMG"==t.tagName?($("#menu-img").show(),rmf.openWithNewTab=function(){const e=t.currentSrc||t.src,n=window.open("about:blank","_blank");if(!n)return void banqinNotify({title:"无法打开新窗口",message:"请允许本站打开弹出式窗口后重试。",type:"warning",duration:5e3});n.opener=null,n.document.title=t.alt||"图片预览",n.document.documentElement.style.background="#111",n.document.body.style.cssText="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#111;";const o=n.document.createElement("img");o.src=e,o.alt=t.alt||"",o.style.cssText="display:block;max-width:100%;max-height:100vh;object-fit:contain;",n.document.body.appendChild(o)},rmf.click=function(){t.click()},rmf.copyLink=function(){let e=t.src,n=document.createElement("textarea");n.value=e,document.body.appendChild(n),n.select(),document.execCommand("Copy"),document.body.removeChild(n)},rmf.saveAs=function(){const e=document.createElement("a"),n=t.currentSrc||t.src;let o="image";try{o=decodeURIComponent(new URL(n,window.location.href).pathname.split("/").pop())||o}catch(e){}e.href=n,e.download=o,e.rel="noopener noreferrer",document.body.appendChild(e),e.click(),e.remove()}):"TEXTAREA"!=t.tagName&&"INPUT"!=t.tagName||($("#menu-paste").show(),rmf.paste=function(){navigator.permissions.query({name:"clipboard-read"}).then((e=>{"granted"==e.state||"prompt"==e.state?navigator.clipboard.readText().then((e=>{console.log(e),insertAtCursor(t,e)})):Snackbar.show({text:"请允许读取剪贴板！",pos:"top-center",showAction:!1})}))});let n=e.clientX+10,o=e.clientY,a=$("#rightMenu").width(),i=$("#rightMenu").height();return n+a>window.innerWidth&&(n-=a+10),o+i>window.innerHeight&&(o-=o+i-window.innerHeight),mask=setMask(),$(".rightMenu-item").click((()=>{$(".rmMask").attr("style","display: none")})),$(window).resize((()=>{rmf.showRightMenu(!1),$(".rmMask").attr("style","display: none")})),mask.onclick=()=>{$(".rmMask").attr("style","display: none")},rmf.showRightMenu(!0,o,n),$(".rmMask").attr("style","display: flex"),!1},window.addEventListener("click",(function(){rmf.showRightMenu(!1)}))}rmf.showRightMenu=function(e,t=0,n=0){let o=$("#rightMenu");o.css("top",t+"px").css("left",n+"px"),e?o.show():o.hide()},rmf.copyWordsLink=function(){let e=window.location.href,t=document.createElement("textarea");t.value=e,document.body.appendChild(t),t.select(),document.execCommand("Copy"),document.body.removeChild(t)},rmf.syncReadModeMenu=function(){const e=document.getElementById("menu-readmode");if(!e)return;const t=document.body.classList.contains("read-mode"),n=e.querySelector("span"),o=e.querySelector("i");n&&(n.textContent=t?"退出阅读模式":"阅读模式"),o&&(o.className=t?"fa fa-sign-out-alt":"fa fa-book")},rmf.exitReadMode=function(){document.body.classList.remove("read-mode"),document.querySelectorAll(".exit-readmode").forEach((e=>e.remove())),rmf.syncReadModeMenu()},rmf.switchReadMode=function(){const e=document.body;if(e.classList.contains("read-mode"))return void rmf.exitReadMode();e.classList.add("read-mode");let t=document.querySelector(".exit-readmode");t||(t=document.createElement("button"),t.type="button",t.className="fas fa-sign-out-alt exit-readmode",t.setAttribute("aria-label","退出阅读模式"),t.addEventListener("click",rmf.exitReadMode),e.appendChild(t)),rmf.syncReadModeMenu()},document.addEventListener("pjax:complete",(function(){document.body.classList.contains("read-mode")||document.querySelectorAll(".exit-readmode").forEach((e=>e.remove())),rmf.syncReadModeMenu()})),rmf.copySelect=function(){document.execCommand("Copy",!1,null)},rmf.scrollToTop=function(){document.getElementsByClassName("menus_items")[1].setAttribute("style",""),document.getElementById("name-container").setAttribute("style","display:none"),btf.scrollToDest(0,500)},document.body.addEventListener("touchmove",(function(){}),{passive:!1}),navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)||popupMenu();const box=document.documentElement;function addLongtabListener(e,t){let n=0;e.ontouchstart=()=>{n=0,n=setTimeout((()=>{t(),n=0}),380)},e.ontouchmove=()=>{clearTimeout(n),n=0},e.ontouchend=()=>{n&&clearTimeout(n)}}addLongtabListener(box,popupMenu),rmf.fullScreen=function(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()},null==localStorage.getItem("mouse")&&localStorage.setItem("mouse","on");var mouseMode=localStorage.getItem("mouse");function changeMouseMode(){"on"==localStorage.getItem("mouse")?(mouseMode="off",localStorage.setItem("mouse","off"),debounce((function(){banqinNotify({title:"切换右键模式成功🍔",message:"当前鼠标右键已恢复为系统默认！",type:"success",duration:5e3})}),300)):(mouseMode="on",localStorage.setItem("mouse","on"),debounce((function(){banqinNotify({title:"切换右键模式成功🍔",message:"当前鼠标右键已更换为网站指定样式！",type:"success",duration:5e3})}),300))}var now1=new Date;function createtime1(){var e=new Date("01/25/2022 00:00:00");now1.setTime(now1.getTime()+250);var t=(now1-e)/1e3/60/60/24,n=["欢迎来到坂琴的小窝🍜","想要变得越来越好","\n        \nBBBBBBBBBBBBBBBBB                                           QQQQQQQQQ       iiii                   \nB::::::::::::::::B                                        QQ:::::::::QQ    i::::i                  \nB::::::BBBBBB:::::B                                     QQ:::::::::::::QQ   iiii                   \nBB:::::B     B:::::B                                   Q:::::::QQQ:::::::Q                         \n  B::::B     B:::::B  aaaaaaaaaaaaa  nnnn  nnnnnnnn    Q::::::O   Q::::::Qiiiiiiinnnn  nnnnnnnn    \n  B::::B     B:::::B  a::::::::::::a n:::nn::::::::nn  Q:::::O     Q:::::Qi:::::in:::nn::::::::nn  \n  B::::BBBBBB:::::B   aaaaaaaaa:::::an::::::::::::::nn Q:::::O     Q:::::Q i::::in::::::::::::::nn \n  B:::::::::::::BB             a::::ann:::::::::::::::nQ:::::O     Q:::::Q i::::inn:::::::::::::::n\n  B::::BBBBBB:::::B     aaaaaaa:::::a  n:::::nnnn:::::nQ:::::O     Q:::::Q i::::i  n:::::nnnn:::::n\n  B::::B     B:::::B  aa::::::::::::a  n::::n    n::::nQ:::::O     Q:::::Q i::::i  n::::n    n::::n\n  B::::B     B:::::B a::::aaaa::::::a  n::::n    n::::nQ:::::O  QQQQ:::::Q i::::i  n::::n    n::::n\n  B::::B     B:::::Ba::::a    a:::::a  n::::n    n::::nQ::::::O Q::::::::Q i::::i  n::::n    n::::n\nBB:::::BBBBBB::::::Ba::::a    a:::::a  n::::n    n::::nQ:::::::QQ::::::::Qi::::::i n::::n    n::::n\nB:::::::::::::::::B a:::::aaaa::::::a  n::::n    n::::n QQ::::::::::::::Q i::::::i n::::n    n::::n\nB::::::::::::::::B   a::::::::::aa:::a n::::n    n::::n   QQ:::::::::::Q  i::::::i n::::n    n::::n\nBBBBBBBBBBBBBBBBB     aaaaaaaaaa  aaaa nnnnnn    nnnnnn     QQQQQQQQ::::QQiiiiiiii nnnnnn    nnnnnn\n                                                                    Q:::::Q                        \n                                              \n","小站已经苟活",Math.floor(t),"天啦!","©2025 By 坂琴的小窝🍜"];setTimeout(console.log.bind(console,`\n%c${n[0]} %c ${n[1]} %c ${n[2]} %c${n[3]}%c ${n[4]}%c ${n[5]}\n\n%c ${n[6]}\n`,"color:#39c5bb","","color:#39c5bb","color:#39c5bb","","color:#39c5bb",""))}function createtime2(){var e=["NCC2-036","调用前置摄像头拍照成功，识别为「大聪明」","Photo captured: "," 🤪 "];setTimeout(console.log.bind(console,`%c ${e[0]} %c ${e[1]} %c \n${e[2]} %c\n${e[3]}`,"color:white; background-color:#10bcc0","","",'background:url("https://unpkg.zhimg.com/anzhiyu-assets@latest/image/common/tinggge.gif") no-repeat;font-size:450%')),setTimeout(console.log.bind(console,"%c WELCOME %c 欢迎光临，大聪明","color:white; background-color:#23c682","")),setTimeout(console.warn.bind(console,"%c ⚡ Powered by 坂琴的小窝🍜 %c 你正在访问坂琴的小窝🍜","color:white; background-color:#f0ad4e","")),setTimeout(console.log.bind(console,"%c W23-12 %c 系统监测到你已打开控制台","color:white; background-color:#4f90d9","")),setTimeout(console.warn.bind(console,"%c S013-782 %c 你现在正处于监控中","color:white; background-color:#d9534f",""))}function switchNightMode(){document.querySelector("body").insertAdjacentHTML("beforeend",'<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"><div id="sun"></div><div id="moon"></div></div></div>'),setTimeout((function(){document.querySelector("body").classList.contains("DarkMode")?(document.querySelector("body").classList.remove("DarkMode"),localStorage.setItem("isDark","0"),document.getElementById("modeicon").setAttribute("xlink:href","#icon-moon")):(document.querySelector("body").classList.add("DarkMode"),localStorage.setItem("isDark","1"),document.getElementById("modeicon").setAttribute("xlink:href","#icon-sun")),setTimeout((function(){document.getElementsByClassName("Cuteen_DarkSky")[0].style.transition="opacity 3s",document.getElementsByClassName("Cuteen_DarkSky")[0].style.opacity="0",setTimeout((function(){document.getElementsByClassName("Cuteen_DarkSky")[0].remove()}),1e3)}),2e3)})),"light"==("dark"===document.documentElement.getAttribute("data-theme")?"dark":"light")?(document.getElementById("sun").style.opacity="1",document.getElementById("moon").style.opacity="0",setTimeout((function(){document.getElementById("sun").style.opacity="0",document.getElementById("moon").style.opacity="1"}),1e3),activateDarkMode(),saveToLocal.set("theme","dark",2),document.getElementById("modeicon").setAttribute("xlink:href","#icon-sun"),setTimeout((()=>{banqinNotify({title:"关灯啦🌙",message:"当前已成功切换至夜间模式！",type:"success",duration:5e3})}),2e3)):(document.getElementById("sun").style.opacity="0",document.getElementById("moon").style.opacity="1",setTimeout((function(){document.getElementById("sun").style.opacity="1",document.getElementById("moon").style.opacity="0"}),1e3),activateLightMode(),saveToLocal.set("theme","light",2),document.querySelector("body").classList.add("DarkMode"),document.getElementById("modeicon").setAttribute("xlink:href","#icon-moon"),setTimeout((()=>{banqinNotify({title:"开灯啦🌞",message:"当前已成功切换至白天模式！",type:"success",duration:5e3})}),2e3)),"function"==typeof utterancesTheme&&utterancesTheme(),"object"==typeof FB&&window.loadFBComment(),window.DISQUS&&document.getElementById("disqus_thread").children.length&&setTimeout((()=>window.disqusReset()),200)}function share_(){let e=window.location.origin+window.location.pathname;try{var t=document.title,n=t.endsWith("| 坂琴的小窝🍜")?t.substring(0,t.length-14):t;navigator.clipboard.writeText("坂琴的小窝🍜的站内分享\n标题："+n+"\n链接："+e+"\n欢迎来访！🍭🍭🍭"),banqinNotify({title:"成功复制分享信息🎉",message:"您现在可以通过粘贴直接跟小伙伴分享了！",type:"success",duration:5e3})}catch(e){console.error("复制失败！",e)}}function share(){debounce(share_,300)}createtime1(),createtime2(),console.log=function(){},console.error=function(){},console.warn=function(){};var titleTime,OriginTitile=document.title;document.addEventListener("visibilitychange",(function(){document.hidden?(document.title="不要走！快回来！`(*>﹏<*)′~",clearTimeout(titleTime)):(document.title="好耶！你回来啦～ヾ(•ω•`)o",titleTime=setTimeout((function(){document.title=OriginTitile}),2e3))}));var lunarInfo=[19416,19168,42352,21717,53856,55632,91476,22176,39632,21970,19168,42422,42192,53840,119381,46400,54944,44450,38320,84343,18800,42160,46261,27216,27968,109396,11104,38256,21234,18800,25958,54432,59984,28309,23248,11104,100067,37600,116951,51536,54432,120998,46416,22176,107956,9680,37584,53938,43344,46423,27808,46416,86869,19872,42416,83315,21168,43432,59728,27296,44710,43856,19296,43748,42352,21088,62051,55632,23383,22176,38608,19925,19152,42192,54484,53840,54616,46400,46752,103846,38320,18864,43380,42160,45690,27216,27968,44870,43872,38256,19189,18800,25776,29859,59984,27480,23232,43872,38613,37600,51552,55636,54432,55888,30034,22176,43959,9680,37584,51893,43344,46240,47780,44368,21977,19360,42416,86390,21168,43312,31060,27296,44368,23378,19296,42726,42208,53856,60005,54576,23200,30371,38608,19195,19152,42192,118966,53840,54560,56645,46496,22224,21938,18864,42359,42160,43600,111189,27936,44448,84835,37744,18936,18800,25776,92326,59984,27424,108228,43744,41696,53987,51552,54615,54432,55888,23893,22176,42704,21972,21200,43448,43344,46240,46758,44368,21920,43940,42416,21168,45683,26928,29495,27296,44368,84821,19296,42352,21732,53600,59752,54560,55968,92838,22224,19168,43476,41680,53584,62034,54560],solarMonth=[31,28,31,30,31,30,31,31,30,31,30,31],Gan=["甲","乙","丙","丁","戊","己","庚","辛","壬","癸"],Zhi=["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"],Animals=["鼠","牛","虎","兔","龙","蛇","马","羊","猴","鸡","狗","猪"],solarTerm=["小寒","大寒","立春","雨水","惊蛰","春分","清明","谷雨","立夏","小满","芒种","夏至","小暑","大暑","立秋","处暑","白露","秋分","寒露","霜降","立冬","小雪","大雪","冬至"],sTermInfo=["9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c3598082c95f8c965cc920f","97bd0b06bdb0722c965ce1cfcc920f","b027097bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c359801ec95f8c965cc920f","97bd0b06bdb0722c965ce1cfcc920f","b027097bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c359801ec95f8c965cc920f","97bd0b06bdb0722c965ce1cfcc920f","b027097bd097c36b0b6fc9274c91aa","9778397bd19801ec9210c965cc920e","97b6b97bd19801ec95f8c965cc920f","97bd09801d98082c95f8e1cfcc920f","97bd097bd097c36b0b6fc9210c8dc2","9778397bd197c36c9210c9274c91aa","97b6b97bd19801ec95f8c965cc920e","97bd09801d98082c95f8e1cfcc920f","97bd097bd097c36b0b6fc9210c8dc2","9778397bd097c36c9210c9274c91aa","97b6b97bd19801ec95f8c965cc920e","97bcf97c3598082c95f8e1cfcc920f","97bd097bd097c36b0b6fc9210c8dc2","9778397bd097c36c9210c9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c3598082c95f8c965cc920f","97bd097bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c3598082c95f8c965cc920f","97bd097bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c359801ec95f8c965cc920f","97bd097bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c359801ec95f8c965cc920f","97bd097bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf97c359801ec95f8c965cc920f","97bd097bd07f595b0b6fc920fb0722","9778397bd097c36b0b6fc9210c8dc2","9778397bd19801ec9210c9274c920e","97b6b97bd19801ec95f8c965cc920f","97bd07f5307f595b0b0bc920fb0722","7f0e397bd097c36b0b6fc9210c8dc2","9778397bd097c36c9210c9274c920e","97b6b97bd19801ec95f8c965cc920f","97bd07f5307f595b0b0bc920fb0722","7f0e397bd097c36b0b6fc9210c8dc2","9778397bd097c36c9210c9274c91aa","97b6b97bd19801ec9210c965cc920e","97bd07f1487f595b0b0bc920fb0722","7f0e397bd097c36b0b6fc9210c8dc2","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf7f1487f595b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf7f1487f595b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf7f1487f531b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c965cc920e","97bcf7f1487f531b0b0bb0b6fb0722","7f0e397bd07f595b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b97bd19801ec9210c9274c920e","97bcf7f0e47f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","9778397bd097c36b0b6fc9210c91aa","97b6b97bd197c36c9210c9274c920e","97bcf7f0e47f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","9778397bd097c36b0b6fc9210c8dc2","9778397bd097c36c9210c9274c920e","97b6b7f0e47f531b0723b0b6fb0722","7f0e37f5307f595b0b0bc920fb0722","7f0e397bd097c36b0b6fc9210c8dc2","9778397bd097c36b0b70c9274c91aa","97b6b7f0e47f531b0723b0b6fb0721","7f0e37f1487f595b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc9210c8dc2","9778397bd097c36b0b6fc9274c91aa","97b6b7f0e47f531b0723b0b6fb0721","7f0e27f1487f595b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","9778397bd097c36b0b6fc9274c91aa","97b6b7f0e47f531b0723b0787b0721","7f0e27f0e47f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","9778397bd097c36b0b6fc9210c91aa","97b6b7f0e47f149b0723b0787b0721","7f0e27f0e47f531b0723b0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","9778397bd097c36b0b6fc9210c8dc2","977837f0e37f149b0723b0787b0721","7f07e7f0e47f531b0723b0b6fb0722","7f0e37f5307f595b0b0bc920fb0722","7f0e397bd097c35b0b6fc9210c8dc2","977837f0e37f14998082b0787b0721","7f07e7f0e47f531b0723b0b6fb0721","7f0e37f1487f595b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc9210c8dc2","977837f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","977837f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd097c35b0b6fc920fb0722","977837f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","977837f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","977837f0e37f14998082b0787b06bd","7f07e7f0e47f149b0723b0787b0721","7f0e27f0e47f531b0b0bb0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","977837f0e37f14998082b0723b06bd","7f07e7f0e37f149b0723b0787b0721","7f0e27f0e47f531b0723b0b6fb0722","7f0e397bd07f595b0b0bc920fb0722","977837f0e37f14898082b0723b02d5","7ec967f0e37f14998082b0787b0721","7f07e7f0e47f531b0723b0b6fb0722","7f0e37f1487f595b0b0bb0b6fb0722","7f0e37f0e37f14898082b0723b02d5","7ec967f0e37f14998082b0787b0721","7f07e7f0e47f531b0723b0b6fb0722","7f0e37f1487f531b0b0bb0b6fb0722","7f0e37f0e37f14898082b0723b02d5","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e37f1487f531b0b0bb0b6fb0722","7f0e37f0e37f14898082b072297c35","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e37f0e37f14898082b072297c35","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e37f0e366aa89801eb072297c35","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f149b0723b0787b0721","7f0e27f1487f531b0b0bb0b6fb0722","7f0e37f0e366aa89801eb072297c35","7ec967f0e37f14998082b0723b06bd","7f07e7f0e47f149b0723b0787b0721","7f0e27f0e47f531b0723b0b6fb0722","7f0e37f0e366aa89801eb072297c35","7ec967f0e37f14998082b0723b06bd","7f07e7f0e37f14998083b0787b0721","7f0e27f0e47f531b0723b0b6fb0722","7f0e37f0e366aa89801eb072297c35","7ec967f0e37f14898082b0723b02d5","7f07e7f0e37f14998082b0787b0721","7f07e7f0e47f531b0723b0b6fb0722","7f0e36665b66aa89801e9808297c35","665f67f0e37f14898082b0723b02d5","7ec967f0e37f14998082b0787b0721","7f07e7f0e47f531b0723b0b6fb0722","7f0e36665b66a449801e9808297c35","665f67f0e37f14898082b0723b02d5","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e36665b66a449801e9808297c35","665f67f0e37f14898082b072297c35","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e26665b66a449801e9808297c35","665f67f0e37f1489801eb072297c35","7ec967f0e37f14998082b0787b06bd","7f07e7f0e47f531b0723b0b6fb0721","7f0e27f1487f531b0b0bb0b6fb0722"],nStr1=["日","一","二","三","四","五","六","七","八","九","十"],nStr2=["初","十","廿","卅"],nStr3=["正","二","三","四","五","六","七","八","九","十","冬","腊"];function lYearDays(e){var t,n=348;for(t=32768;t>8;t>>=1)n+=lunarInfo[e-1900]&t?1:0;return n+leapDays(e)}function leapMonth(e){return 15&lunarInfo[e-1900]}function leapDays(e){return leapMonth(e)?65536&lunarInfo[e-1900]?30:29:0}function monthDays(e,t){return t>12||t<1?-1:lunarInfo[e-1900]&65536>>t?30:29}function solarDays(e,t){if(t>12||t<1)return-1;var n=t-1;return 1===n?e%4==0&&e%100!=0||e%400==0?29:28:solarMonth[n]}function toGanZhiYear(e){var t=(e-3)%10,n=(e-3)%12;return 0===t&&(t=10),0===n&&(n=12),Gan[t-1]+Zhi[n-1]}function toAstro(e,t){return"魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯".substr(2*e-(t<[20,19,21,21,21,22,23,23,23,23,22,22][e-1]?2:0),2)+"座"}function toGanZhi(e){return Gan[e%10]+Zhi[e%12]}function getTerm(e,t){if(e<1900||e>2100)return-1;if(t<1||t>24)return-1;var n=sTermInfo[e-1900],o=[parseInt("0x"+n.substr(0,5)).toString(),parseInt("0x"+n.substr(5,5)).toString(),parseInt("0x"+n.substr(10,5)).toString(),parseInt("0x"+n.substr(15,5)).toString(),parseInt("0x"+n.substr(20,5)).toString(),parseInt("0x"+n.substr(25,5)).toString()],a=[o[0].substr(0,1),o[0].substr(1,2),o[0].substr(3,1),o[0].substr(4,2),o[1].substr(0,1),o[1].substr(1,2),o[1].substr(3,1),o[1].substr(4,2),o[2].substr(0,1),o[2].substr(1,2),o[2].substr(3,1),o[2].substr(4,2),o[3].substr(0,1),o[3].substr(1,2),o[3].substr(3,1),o[3].substr(4,2),o[4].substr(0,1),o[4].substr(1,2),o[4].substr(3,1),o[4].substr(4,2),o[5].substr(0,1),o[5].substr(1,2),o[5].substr(3,1),o[5].substr(4,2)];return parseInt(a[t-1])}function toChinaMonth(e){return e>12||e<1?-1:nStr3[e-1]+"月"}function toChinaDay(e){var t;switch(e){case 10:t="初十";break;case 20:t="二十";break;case 30:t="三十";break;default:t=nStr2[Math.floor(e/10)],t+=nStr1[e%10]}return t}function getAnimal(e){return Animals[(e-4)%12]}function solar2lunar(e,t,n){if(e<1900||e>2100)return-1;if(1900===e&&1===t&&n<31)return-1;var o,a,i=null,s=0;e=(i=e?new Date(e,parseInt(t)-1,n):new Date).getFullYear(),t=i.getMonth()+1,n=i.getDate();var r=(Date.UTC(i.getFullYear(),i.getMonth(),i.getDate())-Date.UTC(1900,0,31))/864e5;for(o=1900;o<2101&&r>0;o++)r-=s=lYearDays(o);r<0&&(r+=s,o--);var c=new Date,l=!1;c.getFullYear()===e&&c.getMonth()+1===t&&c.getDate()===n&&(l=!0);var d=i.getDay(),b=nStr1[d];0===d&&(d=7);var u=o;a=leapMonth(o);var m=!1;for(o=1;o<13&&r>0;o++)a>0&&o===a+1&&!1===m?(--o,m=!0,s=leapDays(u)):s=monthDays(u,o),!0===m&&o===a+1&&(m=!1),r-=s;0===r&&a>0&&o===a+1&&(m?m=!1:(m=!0,--o)),r<0&&(r+=s,--o);var f=o,g=r+1,p=t-1,h=toGanZhiYear(u),y=getTerm(e,2*t-1),w=getTerm(e,2*t),v=toGanZhi(12*(e-1900)+t+11);n>=y&&(v=toGanZhi(12*(e-1900)+t+12));var I=!1,k=null;y===n&&(I=!0,k=solarTerm[2*t-2]),w===n&&(I=!0,k=solarTerm[2*t-1]);var S=toGanZhi(Date.UTC(e,p,1,0,0,0,0)/864e5+25567+10+n-1),B=toAstro(t,n);return{lYear:u,lMonth:f,lDay:g,Animal:getAnimal(u),IMonthCn:(m?"闰":"")+toChinaMonth(f),IDayCn:toChinaDay(g),cYear:e,cMonth:t,cDay:n,gzYear:h,gzMonth:v,gzDay:S,isToday:l,isLeap:m,nWeek:d,ncWeek:"星期"+b,isTerm:I,Term:k,astro:B}}var calendarFormatter={solar2lunar:function(e,t,n){return solar2lunar(e,t,n)},lunar2solar:function(e,t,n,o){if((o=!!o)&&leapMonth!==t)return-1;if(2100===e&&12===t&&n>1||1900===e&&1===t&&n<31)return-1;var a=monthDays(e,t),i=a;if(o&&(i=leapDays(e,t)),e<1900||e>2100||n>i)return-1;for(var s=0,r=1900;r<e;r++)s+=lYearDays(r);var c=0,l=!1;for(r=1;r<t;r++)c=leapMonth(e),l||c<=r&&c>0&&(s+=leapDays(e),l=!0),s+=monthDays(e,r);o&&(s+=a);var d=Date.UTC(1900,1,30,0,0,0),b=new Date(864e5*(s+n-31)+d);return solar2lunar(b.getUTCFullYear(),b.getUTCMonth()+1,b.getUTCDate())}},d=new Date;m=d.getMonth()+1,dd=d.getDate(),y=d.getFullYear(),9==m&&18==dd&&(document.getElementsByTagName("html")[0].setAttribute("style","filter: grayscale(60%);"),"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("今天是九一八事变"+(y-1931).toString()+"周年纪念日\n🪔勿忘国耻，振兴中华🪔"),sessionStorage.setItem("isPopupWindow","1"))),7==m&&7==dd&&(document.getElementsByTagName("html")[0].setAttribute("style","filter: grayscale(60%);"),"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("今天是卢沟桥事变"+(y-1937).toString()+"周年纪念日\n🪔勿忘国耻，振兴中华🪔"),sessionStorage.setItem("isPopupWindow","1"))),12==m&&13==dd&&(document.getElementsByTagName("html")[0].setAttribute("style","filter: grayscale(60%);"),"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("今天是南京大屠杀"+(y-1937).toString()+"周年纪念日\n🪔勿忘国耻，振兴中华🪔"),sessionStorage.setItem("isPopupWindow","1"))),8==m&&14==dd&&(document.getElementsByTagName("html")[0].setAttribute("style","filter: grayscale(60%);"),"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("今天是世界慰安妇纪念日\n🪔勿忘国耻，振兴中华🪔"),sessionStorage.setItem("isPopupWindow","1"))),10==m&&dd<=3&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("祝祖国"+(y-1949).toString()+"岁生日快乐！"),sessionStorage.setItem("isPopupWindow","1")),8==m&&15==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("小日子已经投降"+(y-1945).toString()+"年了😃"),sessionStorage.setItem("isPopupWindow","1")),1==m&&1==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert(y.toString()+"年元旦快乐！🎉"),sessionStorage.setItem("isPopupWindow","1")),3==m&&8==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("各位女神们，妇女节快乐！👩"),sessionStorage.setItem("isPopupWindow","1")),l=["非常抱歉，因为不可控原因，博客将于明天停止运营！","好消息，日本没了！","美国垮了，原因竟然是川普！","微软垮了！","你的电脑已经过载，建议立即关机！","你知道吗？站长很喜欢你哦！","一分钟有61秒哦","你喜欢的人跟别人跑了！"],4==m&&1==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert(l[Math.floor(Math.random()*l.length)]),sessionStorage.setItem("isPopupWindow","1")),5==m&&1==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("劳动节快乐\n为各行各业辛勤工作的人们致敬！"),sessionStorage.setItem("isPopupWindow","1")),5==m&&4==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("青年节快乐\n青春不是回忆逝去,而是把握现在！"),sessionStorage.setItem("isPopupWindow","1")),5==m&&20==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("今年是520情人节\n快和你喜欢的人一起过吧！💑"),sessionStorage.setItem("isPopupWindow","1")),7==m&&1==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("祝中国共产党"+(y-1921).toString()+"岁生日快乐！"),sessionStorage.setItem("isPopupWindow","1")),8==m&&1==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("祝中国人民解放军"+(y-1927).toString()+"岁生日快乐！"),sessionStorage.setItem("isPopupWindow","1")),9==m&&10==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("各位老师们教师节快乐！👩‍🏫"),sessionStorage.setItem("isPopupWindow","1")),12==m&&25==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("圣诞节快乐！🎄"),sessionStorage.setItem("isPopupWindow","1")),7==m&&30==dd&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("祝站长"+(y-2004).toString()+"岁生日快乐！🍜"),sessionStorage.setItem("isPopupWindow","1")),(2023==y&&4==m&&5==dd||2024==y&&4==m&&4==dd||2025==y&&4==m&&4==dd)&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("清明时节雨纷纷,一束鲜花祭故人💐"),sessionStorage.setItem("isPopupWindow","1")),(2023==y&&12==m&&22==dd||2024==y&&12==m&&21==dd||2025==y&&12==m&&21==dd)&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆"),sessionStorage.setItem("isPopupWindow","1"));var CURSOR,lunar=calendarFormatter.solar2lunar();("正月"==lunar.IMonthCn&&"初六"==lunar.IDayCn||"正月"==lunar.IMonthCn&&"初五"==lunar.IDayCn||"正月"==lunar.IMonthCn&&"初四"==lunar.IDayCn||"正月"==lunar.IMonthCn&&"初三"==lunar.IDayCn||"正月"==lunar.IMonthCn&&"初二"==lunar.IDayCn||"正月"==lunar.IMonthCn&&"初一"==lunar.IDayCn||"腊月"==lunar.IMonthCn&&"三十"==lunar.IDayCn||"腊月"==lunar.IMonthCn&&"廿九"==lunar.IDayCn)&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert(y.toString()+"年新年快乐\n🎊祝你心想事成，诸事顺利🎊"),sessionStorage.setItem("isPopupWindow","1")),"正月"==lunar.IMonthCn&&"十五"==lunar.IDayCn&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("元宵节快乐\n送你一个大大的灯笼🧅"),sessionStorage.setItem("isPopupWindow","1")),"五月"==lunar.IMonthCn&&"初五"==lunar.IDayCn&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("端午节快乐\n请你吃一条粽子🍙"),sessionStorage.setItem("isPopupWindow","1")),"七月"==lunar.IMonthCn&&"初七"==lunar.IDayCn&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头"),sessionStorage.setItem("isPopupWindow","1")),"八月"==lunar.IMonthCn&&"十五"==lunar.IDayCn&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("中秋节快乐\n请你吃一块月饼🍪"),sessionStorage.setItem("isPopupWindow","1")),"九月"==lunar.IMonthCn&&"初九"==lunar.IDayCn&&"1"!=sessionStorage.getItem("isPopupWindow")&&(banqinHolidayAlert("重阳节快乐\n独在异乡为异客，每逢佳节倍思亲"),sessionStorage.setItem("isPopupWindow","1")),Math.lerp=(e,t,n)=>(1-n)*e+n*t;const getStyle2=(e,t)=>{try{return window.getComputedStyle?window.getComputedStyle(e)[t]:e.currentStyle[t]}catch(e){}return""},map=new Map;map.set("red","rgb(241, 71, 71)"),map.set("orange","rgb(241, 162, 71)"),map.set("yellow","rgb(241, 238, 71)"),map.set("purple","rgb(179, 71, 241)"),map.set("blue","rgb(102, 204, 255)"),map.set("gray","rgb(226, 226, 226)"),map.set("green","rgb(57, 197, 187)"),map.set("whitegray","rgb(241, 241, 241)"),map.set("pink","rgb(237, 112, 155)"),map.set("black","rgb(0, 0, 0)"),map.set("darkblue","rgb(97, 100, 159)"),map.set("heoblue","rgb(66, 90, 239)");class Cursor{constructor(){this.pos={curr:null,prev:null},this.pt=[],this.create(),this.init(),this.render()}move(e,t){this.cursor.style.left=`${e}px`,this.cursor.style.top=`${t}px`}create(){this.cursor||(this.cursor=document.createElement("div"),this.cursor.id="cursor",this.cursor.classList.add("hidden"),document.body.append(this.cursor));var e=document.getElementsByTagName("*");for(let t=0;t<e.length;t++)"pointer"==getStyle2(e[t],"cursor")&&this.pt.push(e[t].outerHTML);var t=map.get(localStorage.getItem("themeColor"));document.body.appendChild(this.scr=document.createElement("style")),this.scr.innerHTML="* {cursor: url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='"+t+"'/></svg>\") 4 4, auto}"}refresh(){this.scr.remove(),this.cursor.classList.remove("hover"),this.cursor.classList.remove("active"),this.pos={curr:null,prev:null},this.pt=[],this.create(),this.init(),this.render()}init(){document.onmouseover=e=>this.pt.includes(e.target.outerHTML)&&this.cursor.classList.add("hover"),document.onmouseout=e=>this.pt.includes(e.target.outerHTML)&&this.cursor.classList.remove("hover"),document.onmousemove=e=>{null==this.pos.curr&&this.move(e.clientX-8,e.clientY-8),this.pos.curr={x:e.clientX-8,y:e.clientY-8},this.cursor.classList.remove("hidden")},document.onmouseenter=e=>this.cursor.classList.remove("hidden"),document.onmouseleave=e=>this.cursor.classList.add("hidden"),document.onmousedown=e=>this.cursor.classList.add("active"),document.onmouseup=e=>this.cursor.classList.remove("active")}render(){this.pos.prev?(this.pos.prev.x=Math.lerp(this.pos.prev.x,this.pos.curr.x,.15),this.pos.prev.y=Math.lerp(this.pos.prev.y,this.pos.curr.y,.15),this.move(this.pos.prev.x,this.pos.prev.y)):this.pos.prev=this.pos.curr,requestAnimationFrame((()=>this.render()))}}CURSOR=new Cursor;var now=new Date;function createtime(){now.setTime(now.getTime()+1e3);var e=new Date("01/25/2022 00:00:00"),t=Math.trunc(234e8+(now-e)/1e3*17),n=(t/1496e5).toFixed(6),o=new Date("01/25/2022 00:00:00"),a=(now-o)/1e3/60/60/24,i=Math.floor(a),s=(now-o)/1e3/60/60-24*i,r=Math.floor(s);1==String(r).length&&(r="0"+r);var c=(now-o)/1e3/60-1440*i-60*r,l=Math.floor(c);1==String(l).length&&(l="0"+l);var d=(now-o)/1e3-86400*i-3600*r-60*l,b=Math.round(d);1==String(b).length&&(b="0"+b);let u="";u=r<18&&r>=9?`<img class='boardsign' src='https://img.shields.io/badge/坂琴的窝-营业中-6adea8?style=social&logo=cakephp' title='今天也要努力学习哦~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${i} 天 ${r} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${n} 个天文单位 🚀</div>`:`<img class='boardsign' src='https://img.shields.io/badge/坂琴的窝-下班了该睡觉了~-6adea8?style=social&logo=coffeescript' title='该睡觉了（￣︶￣）↗　'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${i} 天 ${r} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${n} 个天文单位 🚀</div>`,document.getElementById("workboard")&&(document.getElementById("workboard").innerHTML=u)}setInterval((()=>{createtime()}),1e3);var fpsFrameId=null,fpsMonitorEnabled=!1,fpsFrameCount=0,fpsLastSampleTime=Date.now();function fpsStatusText(e){return e<=5?'<span style="color:#bd0000">卡成ppt🤢</span>':e<=15?'<span style="color:red">电竞级帧率😖</span>':e<=25?'<span style="color:orange">有点难受😨</span>':e<35?'<span style="color:#9338e6">不太流畅🙄</span>':e<=45?'<span style="color:#08b7e4">还不错哦😁</span>':'<span style="color:#39c5bb">十分流畅🤣</span>'}function fpsLoop(){if(!fpsMonitorEnabled||document.hidden)return void(fpsFrameId=null);const e=Date.now();if(fpsFrameCount++,e-fpsLastSampleTime>=1e3){const t=Math.round(1e3*fpsFrameCount/(e-fpsLastSampleTime)),n=document.getElementById("fps");n&&(n.innerHTML=`FPS:${t} ${fpsStatusText(t)}`),fpsFrameCount=0,fpsLastSampleTime=e}fpsFrameId=window.requestAnimationFrame(fpsLoop)}function startFpsMonitor(){const e=document.getElementById("fps");e&&e.style.removeProperty("display"),fpsMonitorEnabled=!0,fpsFrameCount=0,fpsLastSampleTime=Date.now(),document.hidden||null!==fpsFrameId||(fpsFrameId=window.requestAnimationFrame(fpsLoop))}function stopFpsMonitor(){fpsMonitorEnabled=!1,null!==fpsFrameId&&window.cancelAnimationFrame(fpsFrameId),fpsFrameId=null;const e=document.getElementById("fps");e&&(e.style.setProperty("display","none","important"),e.textContent="")}if(document.addEventListener("visibilitychange",(function(){document.hidden&&null!==fpsFrameId?(window.cancelAnimationFrame(fpsFrameId),fpsFrameId=null):!document.hidden&&fpsMonitorEnabled&&null===fpsFrameId&&(fpsFrameCount=0,fpsLastSampleTime=Date.now(),fpsFrameId=window.requestAnimationFrame(fpsLoop))})),"1"==window.localStorage.getItem("fpson")?startFpsMonitor():stopFpsMonitor(),null==localStorage.getItem("reset_4")){localStorage.setItem("reset_4","1");for(var i=1;i<=3;i++)localStorage.removeItem("reset_"+i);clearItem(),setTimeout((function(){banqinNotify({title:"提示🍒",message:" (｡･∀･)ﾉﾞ由于网站部分设置项更新，当前已为您重置所有设置，祝您愉快！",type:"success",duration:8e3})}),1500)}function clearItem(){localStorage.removeItem("blogbg"),localStorage.removeItem("universe"),localStorage.removeItem("blur"),localStorage.removeItem("fpson"),localStorage.removeItem("transNum"),localStorage.removeItem("blurRad"),localStorage.removeItem("font"),localStorage.removeItem("themeColor"),localStorage.removeItem("rs"),localStorage.removeItem("mouse"),localStorage.removeItem("light"),localStorage.removeItem("snow"),"function"==typeof stopFpsMonitor&&stopFpsMonitor()}function setFont(e){localStorage.setItem("font",e),"default"==e?(document.documentElement.style.setProperty("--global-font","-apple-system"),document.body.style.fontFamily="-apple-system, Consolas_1, BlinkMacSystemFont, 'Segoe UI' , 'Helvetica Neue' , Lato, Roboto, 'PingFang SC' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif"):(document.documentElement.style.setProperty("--global-font",e),document.body.style.fontFamily="var(--global-font),-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif");try{setFontBorder()}catch(e){}}function setFontBorder(){var e="swf_"+localStorage.getItem("font"),t=document.getElementById(e);t&&(t.style.border="2px solid var(--theme-color)",Array.prototype.forEach.call(document.getElementsByClassName("swf"),(function(t){t.id!=e&&(t.style.border="2px solid var(--border-color)")})))}function setColor(e){document.getElementById("themeColor").innerText=":root{--theme-color:"+map.get(e)+" !important}",localStorage.setItem("themeColor",e),CURSOR.refresh();var t=map.get(e),n="rgba"+t.substring(3,t.length-1)+", 0.7)",o="rgba"+t.substring(3,t.length-1)+", 0.5)";document.documentElement.style.setProperty("--text-bg-hover",n),document.documentElement.style.setProperty("--high-trans-color",o)}function setUniverse2(e){document.getElementById("universe").style.display=e,localStorage.setItem("universe",e),window.dispatchEvent(new Event("banqin:universe-change"))}function setUniverse(){document.getElementById("universeSet").checked?setUniverse2("block"):setUniverse2("none")}function setSnow(){document.getElementById("snowSet").checked?(document.getElementById("snow").style.display="block",localStorage.setItem("snow","block")):(document.getElementById("snow").style.display="none",localStorage.setItem("snow","none")),window.dispatchEvent(new Event("banqin:snow-change"))}function fpssw(){const e=document.getElementById("fpson").checked;localStorage.setItem("fpson",e?"1":"0"),e?startFpsMonitor():stopFpsMonitor()}function reload(){window.location.reload()}function toggleRightside(){document.getElementById("rightSideSet").checked?(localStorage.setItem("rs","block"),document.getElementById("rightSide").innerText=":root{--rightside-display: block}"):(localStorage.setItem("rs","none"),document.getElementById("rightSide").innerText=":root{--rightside-display: none}")}null==localStorage.getItem("font")&&localStorage.setItem("font","YZSOFT"),setFont(localStorage.getItem("font")),null==localStorage.getItem("themeColor")&&localStorage.setItem("themeColor","green"),setColor(localStorage.getItem("themeColor")),null==localStorage.getItem("universe")&&localStorage.setItem("universe","block"),setUniverse2(localStorage.getItem("universe")),null==localStorage.getItem("snow")&&localStorage.setItem("snow","none"),document.getElementById("snow").style.display=localStorage.getItem("snow"),null==localStorage.getItem("fpson")&&localStorage.setItem("fpson","0"),null==localStorage.getItem("rs")&&localStorage.setItem("rs","block"),"block"==localStorage.getItem("rs")?document.getElementById("rightSide").innerText=":root{--rightside-display: block}":document.getElementById("rightSide").innerText=":root{--rightside-display: none}",null==localStorage.getItem("transNum")&&localStorage.setItem("transNum",95);var curTransNum=localStorage.getItem("transNum"),curTransMini=curTransNum;function applyTransparency(e){const t=Math.max(0,Math.min(100,Number(e)||0))/100,n=`rgba(253, 253, 253, ${t})`,o=`rgba(25, 25, 25, ${t})`;document.documentElement.style.setProperty("--trans-light",n,"important"),document.documentElement.style.setProperty("--trans-dark",o,"important");const a=document.getElementById("transPercent");a&&(a.textContent=`:root{--trans-light:${n} !important;--trans-dark:${o} !important;}`)}function setTrans(){var e=document.getElementById("transSet").value,t=document.querySelector(".transValue");t&&(t.textContent="透明度 (0%-100%): "+e+"%"),localStorage.setItem("transNum",e),curTransMini=e,curTransNum=e;const n=document.querySelector("#rang_trans");n&&(n.style.width=curTransMini+"%"),applyTransparency(e)}applyTransparency(curTransNum),null==localStorage.getItem("blurRad")&&localStorage.setItem("blurRad",20);var curBlur=localStorage.getItem("blurRad"),miniBlur=curBlur;function applyBlurRadius(e){const t=`blur(${Math.max(0,Math.min(100,Number(e)||0))}px) saturate(120%)`;document.documentElement.style.setProperty("--blur-num",t,"important");const n=document.getElementById("blurNum");n&&(n.textContent=`:root{--blur-num:${t} !important;}`)}function setBlurNum(){var e=document.getElementById("blurSet").value,t=document.querySelector(".blurValue");t&&(t.textContent="模糊半径 (开启模糊生效 0px-100px): "+e+"px"),localStorage.setItem("blurRad",e),miniBlur=curBlur=e;const n=document.querySelector("#rang_blur");n&&(n.style.width=miniBlur+"%"),applyBlurRadius(curBlur)}function applyBlurState(e){const t=e?"var(--blur-num)":"none";document.documentElement.style.setProperty("--backdrop-filter",t,"important");const n=document.getElementById("settingStyle");n&&(n.textContent=`:root{--backdrop-filter:${t} !important;}`)}function setBlur(){document.getElementById("blur").checked?(localStorage.setItem("blur",1),applyBlurState(!0)):(localStorage.setItem("blur",0),applyBlurState(!1))}applyBlurRadius(curBlur),null==localStorage.getItem("blur")&&localStorage.setItem("blur",0),applyBlurState(1==localStorage.getItem("blur"));var defineColor=localStorage.getItem("blogbg")&&"#"==localStorage.getItem("blogbg").charAt(0)?localStorage.getItem("blogbg"):"#F4D88A";function changeBgColor(){changeBg(document.querySelector("#define_colors").value)}let bingDayBg=screen.width<=768?"url(https://bing.img.run/m.php)":"url(https://bing.img.run/1920x1080.php)",bingHistoryBg=screen.width<=768?"url(https://bing.img.run/rand_m.php)":"url(https://bing.img.run/rand.php)",EEEDog="url(https://api.yimian.xyz/img?type=moe&size=1920x1080)",seovx="url(https://cdn.seovx.com/?mom=302)",picsum="url(https://picsum.photos/1920/1080.webp)",waiBizhi="url(https://api.ixiaowai.cn/gqapi/gqapi.php)",btstu="url(http://api.btstu.cn/sjbz/?lx=suiji)",unsplash="url(https://source.unsplash.com/random/1920x1080/)";if(null!=localStorage.getItem("blogbg"))setBg(localStorage.getItem("blogbg"));else{const e=document.getElementById("defineBg");e&&(e.textContent="")}function normalizeBackgroundValue(e){const t=String(e||"").trim();if(!t)return null;if(/^#[0-9a-f]{3,8}$/i.test(t))return t;if(/^url\((.|\s)*\)$/i.test(t))return t;try{const e=new URL(t,window.location.href);return["http:","https:"].includes(e.protocol)?`url(${JSON.stringify(e.href)})`:null}catch(e){return null}}function changeBg(e){const t=normalizeBackgroundValue(e);return!!t&&(defineColor="#"==t.charAt(0)?t:"#F4D88A",setBg(t),localStorage.setItem("blogbg",t),!0)}function setBg(e){const t=normalizeBackgroundValue(e);if(!t)return;const n="#"===t.charAt(0)?t:`${t} center / cover no-repeat`,o=document.getElementById("defineBg");o&&(o.textContent=`#web_bg{background:${n} !important;background-attachment:local !important;}`);const a=document.getElementById("web_bg");a&&(a.style.setProperty("background",n,"important"),a.style.setProperty("background-attachment","local","important"))}function getPicture(){debounce(getPicture_,300)}function getPicture_(){const e=document.getElementById("pic-link"),t=e?e.value.trim():"";let n=null;try{n=new URL(t,window.location.href)}catch(e){}n&&["http:","https:"].includes(n.protocol)?checkImgExists(n.href).then((()=>{changeBg(n.href),banqinNotify({title:"可以啦🍨",message:"切换自定义背景成功！",type:"success",duration:5e3})})).catch((()=>{banqinNotify({title:"链接不对🤣",message:"请输入有效的图片链接！",type:"warning",duration:5e3})})):banqinNotify({title:"链接不对🤣",message:"请输入以 http:// 或 https:// 开头的有效图片链接！",type:"warning",duration:5e3})}function checkImgExists(e){return new Promise((function(t,n){var o=new Image;o.src=e,o.onload=function(e){t(e)},o.onerror=function(e){n(e)}}))}function setLight(){document.getElementById("lightSet").checked?(changeLight(!0),localStorage.setItem("light","true")):(changeLight(!1),localStorage.setItem("light","false"))}function changeLight(e){document.getElementById("site-name")&&(document.getElementById("site-name").style.animation=e?"light_15px 10s linear infinite":"none"),document.getElementById("site-title")&&(document.getElementById("site-title").style.animation=e?"light_15px 10s linear infinite":"none"),document.getElementById("site-subtitle")&&(document.getElementById("site-subtitle").style.animation=e?"light_10px 10s linear infinite":"none"),document.getElementById("post-info")&&(document.getElementById("post-info").style.animation=e?"light_5px 10s linear infinite":"none"),document.getElementById("menu_shadow").innerText=e?":root{--menu-shadow: 0 0 1px var(--theme-color);}":":root{--menu-shadow: none;}"}document.addEventListener("pjax:complete",(function(){const e=localStorage.getItem("blogbg");e&&setBg(e)})),null==localStorage.getItem("light")&&localStorage.setItem("light","true"),document.addEventListener("pjax:complete",(function(){changeLight("true"==localStorage.getItem("light"))})),document.addEventListener("DOMContentLoaded",(function(){changeLight("true"==localStorage.getItem("light"))}));var winbox="";function createWinbox(){let e=document.createElement("div");document.body.appendChild(e),winbox=WinBox({id:"meihuaBox",index:99,title:"美化设置",x:"left",y:"center",minwidth:"300px",height:"60%",background:"var(--theme-color)",onmaximize:()=>{e.innerHTML="<style>body::-webkit-scrollbar {display: none;} div#meihuaBox {width: 100% !important;}</style>"},onrestore:()=>{e.innerHTML=""}}),winResize(),window.addEventListener("resize",winResize),winbox.body.innerHTML=`\n<div class="settings" style="display: block;">\n<div id="article-container" style="padding:12px;">\n<br>\n<center><p><button onclick="reset()" style="background:linear-gradient(to right, #fc354c, #0abfbc);display:block;width:40%;padding:15px 0;border-radius:30px;color:white;font-size:1.1em;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认设置</button></p></center>\n\n<h2>一、显示偏好</h2>\n<p class="settings-help">透明度作用于首页卡片、侧栏和正文容器；模糊半径需要同时开启“模糊效果”后才会显示。</p>\n\n<div class="transValue" style="font-weight:bold;padding-left:10px">透明度 (0%-100%): ${curTransNum}%</div>\n<div class="range">\n  <input id="transSet" type="range" min="0" max="100" step="1" value=${curTransNum} oninput="setTrans()">\n  <p class="rang_width" id="rang_trans" style="width:${curTransMini}%"></p>\n</div>\n\n<div class="blurValue" style="font-weight:bold;padding-left:10px">模糊半径 (开启模糊生效 0px-100px): ${curBlur} px</div>\n<div class="range">\n  <input id="blurSet" type="range" min="0" max="100" step="1" value="${curBlur}" oninput="setBlurNum()">\n  <p class="rang_width" id="rang_blur" style="width:${miniBlur}%"></p>\n</div>\n\n\n<div class="settings-toggle-grid">\n  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">星空特效 (夜间模式)</span><input type="checkbox" id="universeSet" onchange="setUniverse()"></label>\n  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">霓虹灯 (夜间模式)</span><input type="checkbox" id="lightSet" onchange="setLight()"></label>\n  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">模糊效果 (消耗性能)</span><input type="checkbox" id="blur" onchange="setBlur()"></label>\n  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">侧边栏 (默认开)</span><input type="checkbox" id="rightSideSet" onchange="toggleRightside()"></label>\n  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">帧率监测</span><input type="checkbox" id="fpson" onchange="fpssw()"></label>\n  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">雪花特效 (白天模式)</span><input type="checkbox" id="snowSet" onchange="setSnow()"></label>\n</div>\n\n<h2>二、主题色设置</h2>\n<div class="content" style="display:flex"><input type="radio" id="red" name="colors" value=" "\n        onclick="setColor('red')"><input type="radio" id="orange" name="colors" value=" "\n        onclick="setColor('orange')"><input type="radio" id="yellow" name="colors" value=" "\n        onclick="setColor('yellow')"><input type="radio" id="green" name="colors" value=" "\n        onclick="setColor('green')"><input type="radio" id="blue" name="colors" value=" "\n        onclick="setColor('blue')"><input type="radio" id="heoblue" name="colors" value=" "\n        onclick="setColor('heoblue')"><input type="radio" id="darkblue" name="colors" value=" "\n        onclick="setColor('darkblue')"><input type="radio" id="purple" name="colors" value=" "\n        onclick="setColor('purple')"><input type="radio" id="pink" name="colors" value=" "\n        onclick="setColor('pink')" checked="checked"><input type="radio" id="black" name="colors" value=" "\n        onclick="setColor('black')"><input type="radio" id="blackgray" name="colors" value=" "\n        onclick="setColor('blackgray')"></div>\n\n<h2>三、背景设置</h2>\n<center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>\n\n<h3>1. 画廊图片</h3>\n<details class="folding-tag" cyan><summary> 查看画廊图片 </summary>\n              <div class='content'>\n              <div class="bgbox"><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/129971794_p0.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/129971794_p0.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/store.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/store.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/ailisi.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/ailisi.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/yewan_jiaotang.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/yewan_jiaotang.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/summer_night.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/summer_night.webp)')"></a></div>\n              </div>\n            </details>\n \n<h3>2. 自定义背景</h3>\n<details class="folding-tag" cyan><summary> 设置自定义背景 </summary>\n              <div class='content'>\n              <p class="settings-help">填写直链后会立即替换全站背景，并同时应用到电脑/手机与日间/夜间模式。</p><p><center><input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/104088864_p0.webp"></center></p><p><center><button type="button" onclick="getPicture()" style="background:var(--theme-color);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button></center></p>\n              </div>\n            </details>\n\n<br>\n<center><div style="font-size:1.2em;color:var(--theme-color);font-weight:bold;">------ ( •̀ ω •́ )y 到底啦 ------</div></center>\n<br>\n\n</div>\n\n</div>\n\n`,$("#"+localStorage.getItem("themeColor")).attr("checked",!0),1==localStorage.getItem("blur")?document.getElementById("blur").checked=!0:document.getElementById("blur").checked=!1,"block"==localStorage.getItem("universe")?document.getElementById("universeSet").checked=!0:"none"==localStorage.getItem("universe")&&(document.getElementById("universeSet").checked=!1),"1"==localStorage.getItem("fpson")?document.getElementById("fpson").checked=!0:document.getElementById("fpson").checked=!1,"block"==localStorage.getItem("rs")?document.getElementById("rightSideSet").checked=!0:"none"==localStorage.getItem("rs")&&(document.getElementById("rightSideSet").checked=!1),"true"==localStorage.getItem("light")?document.getElementById("lightSet").checked=!0:document.getElementById("lightSet").checked=!1,setFontBorder(),"block"==localStorage.getItem("snow")?document.getElementById("snowSet").checked=!0:"none"==localStorage.getItem("snow")&&(document.getElementById("snowSet").checked=!1)}function resetBg(){localStorage.removeItem("blogbg"),reload()}function reset(){clearItem(),reload()}function winResize(){try{var e=document.documentElement.clientWidth;e<=768?winbox.resize(.95*e+"px","90%").move("center","center"):winbox.resize(.6*e+"px","70%").move("center","center")}catch(e){}}let winboxLoadPromise=null;function loadWinBox(){if("function"==typeof WinBox)return Promise.resolve();if(winboxLoadPromise)return winboxLoadPromise;const e=["https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/winbox.bundle.min.js","https://unpkg.com/winbox@0.2.82/dist/winbox.bundle.min.js"];return winboxLoadPromise=new Promise(((t,n)=>{const o=a=>{if(a>=e.length)return void n(new Error("WinBox failed to load"));const i=document.createElement("script");i.src=e[a],i.async=!0,i.onload=()=>"function"==typeof WinBox?t():o(a+1),i.onerror=()=>{i.remove(),o(a+1)},document.head.appendChild(i)};o(0)})),winboxLoadPromise}function toggleWinbox(){loadWinBox().then((()=>{try{toggleWinboxReady()}catch(e){console.error("设置面板初始化失败",e),banqinNotify({title:"设置面板初始化失败",message:"页面组件发生异常，请刷新后重试。",type:"warning",duration:5e3})}})).catch((()=>{winboxLoadPromise=null,banqinNotify({title:"设置面板加载失败",message:"请检查网络后重试。",type:"warning",duration:5e3})}))}function toggleWinboxReady(){document.querySelector("#meihuaBox")?winbox.toggleClass("hide"):createWinbox()}
+/* 阅读进度 start */
+document.addEventListener('pjax:complete', function () {
+  window.onscroll = percent;
+});
+document.addEventListener('DOMContentLoaded', function () {
+  window.onscroll = percent;
+});
+// 页面百分比
+function percent() {
+
+  // 先让菜单栏消失
+  try {
+    rmf.showRightMenu(false);
+    $('.rmMask').attr('style', 'display: none');
+  } catch (err) {
+
+  }
+
+  let a = document.documentElement.scrollTop, // 卷去高度
+    b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度 减去 可视高度
+    result = Math.round(a / b * 100), // 计算百分比
+    btn = document.querySelector("#go-up"); // 获取按钮
+
+  if (result < 95) { // 如果阅读进度小于95% 就显示百分比
+    btn.childNodes[0].style.display = 'none'
+    btn.childNodes[1].style.display = 'block'
+    btn.childNodes[1].innerHTML = result + '<span>%</span>';
+  } else { // 如果大于95%就显示回到顶部图标
+    btn.childNodes[1].style.display = 'none'
+    btn.childNodes[0].style.display = 'block'
+  }
+}
+/* 阅读进度 end */
+
+//----------------------------------------------------------------
+
+/* 导航栏显示标题 start */
+
+document.addEventListener('pjax:complete', tonav);
+document.addEventListener('DOMContentLoaded', tonav);
+//响应pjax
+function tonav() {
+  document.getElementById("name-container").setAttribute("style", "display:none");
+  var position = $(window).scrollTop();
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > position) {
+      document.getElementById("name-container").setAttribute("style", "");
+      document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");
+    } else {
+      document.getElementsByClassName("menus_items")[1].setAttribute("style", "");
+      document.getElementById("name-container").setAttribute("style", "display:none");
+    }
+    position = scroll;
+  });
+  //修复没有弄右键菜单的童鞋无法回顶部的问题
+  document.getElementById("page-name").innerText = document.title.split(" | 坂琴的小窝🍜")[0];
+}
+
+function scrollToTop() {
+  document.getElementsByClassName("menus_items")[1].setAttribute("style", "");
+  document.getElementById("name-container").setAttribute("style", "display:none");
+  btf.scrollToDest(0, 500);
+}
+
+/* 导航栏显示标题 end */
+
+//----------------------------------------------------------------
+
+/* 欢迎信息 start */
+//get请求
+$.ajax({
+  type: 'get',
+  url: 'https://apis.map.qq.com/ws/location/v1/ip',
+  // url: 'https://apis.map.qq.com/ws/location/v1/ip?key=',
+  data: {
+    key: 'GTZBZ-ST4CQ-75V5R-2FW3P-2OYRV-BTBXG',  // 这里要写你的KEY!!!
+    output: 'jsonp',
+  },
+  dataType: 'jsonp',
+  success: function (res) {
+    ipLoacation = res;
+  }
+})
+function getDistance(e1, n1, e2, n2) {
+  const R = 6371
+  const { sin, cos, asin, PI, hypot } = Math
+  let getPoint = (e, n) => {
+    e *= PI / 180
+    n *= PI / 180
+    return { x: cos(n) * cos(e), y: cos(n) * sin(e), z: sin(n) }
+  }
+
+  let a = getPoint(e1, n1)
+  let b = getPoint(e2, n2)
+  let c = hypot(a.x - b.x, a.y - b.y, a.z - b.z)
+  let r = asin(c / 2) * 2 * R
+  return Math.round(r);
+}
+
+function showWelcome() {
+
+  // let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+  let dist = getDistance(105.84362352,29.167805433, ipLoacation.result.location.lng, ipLoacation.result.location.lat);
+  let pos = ipLoacation.result.ad_info.nation;
+  let ip;
+  let posdesc;
+  //根据国家、省份、城市信息自定义欢迎语
+  switch (ipLoacation.result.ad_info.nation) {
+    case "日本":
+      posdesc = "よろしく，一起去看樱花吗";
+      break;
+    case "美国":
+      posdesc = "Let us live in peace!";
+      break;
+    case "英国":
+      posdesc = "想同你一起夜乘伦敦眼";
+      break;
+    case "俄罗斯":
+      posdesc = "干了这瓶伏特加！";
+      break;
+    case "法国":
+      posdesc = "C'est La Vie";
+      break;
+    case "德国":
+      posdesc = "Die Zeit verging im Fluge.";
+      break;
+    case "澳大利亚":
+      posdesc = "一起去大堡礁吧！";
+      break;
+    case "加拿大":
+      posdesc = "拾起一片枫叶赠予你";
+      break;
+    case "中国":
+      pos = ipLoacation.result.ad_info.province + " " + ipLoacation.result.ad_info.city + " " + ipLoacation.result.ad_info.district;
+      ip = ipLoacation.result.ip;
+      switch (ipLoacation.result.ad_info.province) {
+        case "北京市":
+          posdesc = "北——京——欢迎你~~~";
+          break;
+        case "天津市":
+          posdesc = "讲段相声吧。";
+          break;
+        case "河北省":
+          posdesc = "山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山。";
+          break;
+        case "山西省":
+          posdesc = "展开坐具长三尺，已占山河五百余。";
+          break;
+        case "内蒙古自治区":
+          posdesc = "天苍苍，野茫茫，风吹草低见牛羊。";
+          break;
+        case "辽宁省":
+          posdesc = "我想吃烤鸡架！";
+          break;
+        case "吉林省":
+          posdesc = "状元阁就是东北烧烤之王。";
+          break;
+        case "黑龙江省":
+          posdesc = "很喜欢哈尔滨大剧院。";
+          break;
+        case "上海市":
+          posdesc = "众所周知，中国只有两个城市。";
+          break;
+        case "江苏省":
+          switch (ipLoacation.result.ad_info.city) {
+            case "南京市":
+              posdesc = "这是我挺想去的城市啦。";
+              break;
+            case "苏州市":
+              posdesc = "上有天堂，下有苏杭。";
+              break;
+            default:
+              posdesc = "散装是必须要散装的。";
+              break;
+          }
+          break;
+        case "浙江省":
+          posdesc = "东风渐绿西湖柳，雁已还人未南归。";
+          break;
+        case "河南省":
+          switch (ipLoacation.result.ad_info.city) {
+            case "郑州市":
+              posdesc = "豫州之域，天地之中。";
+              break;
+            case "南阳市":
+              posdesc = "臣本布衣，躬耕于南阳。此南阳非彼南阳！";
+              break;
+            case "驻马店市":
+              posdesc = "峰峰有奇石，石石挟仙气。嵖岈山的花很美哦！";
+              break;
+            case "开封市":
+              posdesc = "刚正不阿包青天。";
+              break;
+            case "洛阳市":
+              posdesc = "洛阳牡丹甲天下。";
+              break;
+            default:
+              posdesc = "可否带我品尝河南烩面啦？";
+              break;
+          }
+          break;
+        case "安徽省":
+          posdesc = "蚌埠住了，芜湖起飞。";
+          break;
+        case "福建省":
+          posdesc = "井邑白云间，岩城远带山。";
+          break;
+        case "江西省":
+          posdesc = "落霞与孤鹜齐飞，秋水共长天一色。";
+          break;
+        case "山东省":
+          posdesc = "遥望齐州九点烟，一泓海水杯中泻。";
+          break;
+        case "湖北省":
+          posdesc = "来碗热干面！";
+          break;
+        case "湖南省":
+          posdesc = "74751，长沙斯塔克。";
+          break;
+        case "广东省":
+          posdesc = "老板来两斤福建人。";
+          break;
+        case "广西壮族自治区":
+          posdesc = "桂林山水甲天下。";
+          break;
+        case "海南省":
+          posdesc = "朝观日出逐白浪，夕看云起收霞光。";
+          break;
+        case "四川省":
+          posdesc = "康康川妹子。";
+          break;
+        case "贵州省":
+          posdesc = "茅台，学生，再塞200。";
+          break;
+        case "云南省":
+          posdesc = "玉龙飞舞云缠绕，万仞冰川直耸天。";
+          break;
+        case "西藏自治区":
+          posdesc = "躺在茫茫草原上，仰望蓝天。";
+          break;
+        case "陕西省":
+          posdesc = "来份臊子面加馍。";
+          break;
+        case "甘肃省":
+          posdesc = "羌笛何须怨杨柳，春风不度玉门关。";
+          break;
+        case "青海省":
+          posdesc = "牛肉干和老酸奶都好好吃。";
+          break;
+        case "宁夏回族自治区":
+          posdesc = "大漠孤烟直，长河落日圆。";
+          break;
+        case "新疆维吾尔自治区":
+          posdesc = "驼铃古道丝绸路，胡马犹闻唐汉风。";
+          break;
+        case "台湾省":
+          posdesc = "我在这头，大陆在那头。";
+          break;
+        case "香港特别行政区":
+          posdesc = "永定贼有残留地鬼嚎，迎击光非岁玉。";
+          break;
+        case "澳门特别行政区":
+          posdesc = "性感荷官，在线发牌。";
+          break;
+        default:
+          posdesc = "带我去你的城市逛逛吧！";
+          break;
+      }
+      break;
+    default:
+      posdesc = "带我去你的国家逛逛吧。";
+      break;
+  }
+
+  //根据本地时间切换欢迎语
+  let timeChange;
+  let date = new Date();
+  if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>上午好</span>，一日之计在于晨！";
+  else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span>中午好</span>，该摸鱼吃午饭了。";
+  else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>下午好</span>，懒懒地睡个午觉吧！";
+  else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<span>三点几啦</span>，一起饮茶呀！";
+  else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好！</span>";
+  else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！";
+  else timeChange = "夜深了，早点休息，少熬夜。";
+
+  try {
+    //自定义文本和需要放的位置
+    document.getElementById("welcome-info").innerHTML =
+      `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
+  } catch (err) {
+    // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
+  }
+}
+window.onload = showWelcome;
+// 如果使用了pjax在加上下面这行代码
+document.addEventListener('pjax:complete', showWelcome);
+
+/* 欢迎信息 end */
+
+//----------------------------------------------------------------
+
+/* 微博热搜 start */
+document.addEventListener('pjax:complete', getWeibo);
+document.addEventListener('DOMContentLoaded', getWeibo);
+
+function getWeibo() {
+  fetch('').then(data => data.json()).then(data => {  // 这里要写上你的API!!!
+    let html = '<style>.weibo-new{background:#ff3852}.weibo-hot{background:#ff9406}.weibo-jyzy{background:#ffc000}.weibo-recommend{background:#00b7ee}.weibo-adrecommend{background:#febd22}.weibo-friend{background:#8fc21e}.weibo-boom{background:#bd0000}.weibo-topic{background:#ff6f49}.weibo-topic-ad{background:#4dadff}.weibo-boil{background:#f86400}#weibo-container{overflow-y:auto;-ms-overflow-style:none;scrollbar-width:none}#weibo-container::-webkit-scrollbar{display:none}.weibo-list-item{display:flex;flex-direction:row;justify-content:space-between;flex-wrap:nowrap}.weibo-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:auto}.weibo-num{float:right}.weibo-hotness{display:inline-block;padding:0 6px;transform:scale(.8) translateX(-3px);color:#fff;border-radius:8px}</style>'
+    html += '<div class="weibo-list">'
+    let hotness = {
+      '爆': 'weibo-boom',
+      '热': 'weibo-hot',
+      '沸': 'weibo-boil',
+      '新': 'weibo-new',
+      '荐': 'weibo-recommend',
+      '音': 'weibo-jyzy',
+      '影': 'weibo-jyzy',
+      '剧': 'weibo-jyzy',
+      '综': 'weibo-jyzy'
+    }
+    for (let item of data) {
+      html += '<div class="weibo-list-item"><div class="weibo-hotness ' + hotness[(item.hot || '荐')] + '">' + (item.hot || '荐') + '</div>'
+        + '<span class="weibo-title"><a title="' + item.title + '"href="' + item.url + '" target="_blank" rel="external nofollow noreferrer" style="color:#a08ed5">' + item.title + '</a></span>'
+        + '<div class="weibo-num"><span>' + item.num + '</span></div></div>'
+    }
+    html += '</div>'
+    document.getElementById('weibo-container').innerHTML = html
+  }).catch(function (error) {
+    console.log(error);
+  });
+}
+
+/* 微博热搜 end */
+
+//----------------------------------------------------------------
+
+/* 禁用f12与按键防抖 start */
+// 防抖全局计时器
+let TT = null;    //time用来控制事件的触发
+// 防抖函数:fn->逻辑 time->防抖时间
+function debounce(fn, time) {
+  if (TT !== null) clearTimeout(TT);
+  TT = setTimeout(fn, time);
+}
+
+// Lightweight notification component. This avoids loading Vue and Element UI
+// on every page just to display short messages.
+function banqinNotify(options) {
+  const settings = Object.assign({
+    title: "",
+    message: "",
+    type: "success",
+    duration: 5000
+  }, options || {});
+
+  let container = document.getElementById("banqin-toast-container");
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "banqin-toast-container";
+    container.setAttribute("aria-live", "polite");
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement("div");
+  toast.className = "banqin-toast banqin-toast--" + settings.type;
+  toast.setAttribute("role", "status");
+
+  const title = document.createElement("div");
+  title.className = "banqin-toast__title";
+  title.textContent = settings.title;
+
+  const message = document.createElement("div");
+  message.className = "banqin-toast__message";
+  message.textContent = settings.message;
+
+  const close = document.createElement("button");
+  close.className = "banqin-toast__close";
+  close.type = "button";
+  close.setAttribute("aria-label", "关闭提示");
+  close.textContent = "×";
+
+  const removeToast = () => {
+    if (!toast.isConnected) return;
+    toast.classList.add("is-leaving");
+    setTimeout(() => toast.remove(), 260);
+  };
+
+  close.addEventListener("click", removeToast);
+  toast.append(title, message, close);
+  container.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add("is-visible"));
+  setTimeout(removeToast, Math.max(1500, Number(settings.duration) || 5000));
+}
+
+function banqinHolidayAlert(message) {
+  banqinNotify({
+    title: "今日提醒 🎉",
+    message,
+    type: "success",
+    duration: 8000
+  });
+}
+
+// 复制提醒
+document.addEventListener("copy", function () {
+  debounce(function () {
+    banqinNotify({
+      title: "哎嘿！复制成功🍬",
+      message: "若要转载最好保留原文链接哦，给你一个大大的赞！",
+      type: "success",
+      duration: 5000
+    });
+  }, 300);
+})
+
+
+// f12提醒但不禁用
+document.onkeydown = function (e) {
+  if (123 == e.keyCode || (e.ctrlKey && e.shiftKey && (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) || (e.ctrlKey && 85 === e.keyCode)) {
+    debounce(function () {
+      banqinNotify({
+        title: "你已被发现😜",
+        message: "小伙子，扒源记住要遵循GPL协议！",
+        type: "warning",
+        duration: 5000
+      });
+    }, 300);
+  }
+};
+/* 禁用f12与按键防抖 end */
+
+//----------------------------------------------------------------
+
+/* 雪花特效 start */
+window && (() => {
+    let e = {
+      flakeCount: window.matchMedia('(max-width: 768px)').matches ? 24 : 50, // 移动端适当减量
+      minDist: 150,   // 最小距离
+      color: "255, 255, 255", // 雪花颜色
+      size: 1.5,  // 雪花大小
+      speed: .5,  // 雪花速度
+      opacity: .7,    // 雪花透明度
+      stepsize: .5    // 步距
+    };
+    const t = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
+      return window.setTimeout(e, 1e3 / 60)
+    }
+      ;
+    const cancelT = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.clearTimeout;
+    window.requestAnimationFrame = t;
+    const i = document.getElementById("snow");
+    if (!i) return;
+    const n = i.getContext("2d"),
+      o = e.flakeCount;
+    let a = -100,
+      d = -100,
+      s = [],
+      snowFrameId = null;
+    i.width = window.innerWidth,
+      i.height = window.innerHeight;
+    const shouldRunSnow = () => !document.hidden
+      && localStorage.getItem("snow") === "block"
+      && document.documentElement.getAttribute("data-theme") !== "dark";
+
+    const h = () => {
+      if (!shouldRunSnow()) {
+        n.clearRect(0, 0, i.width, i.height);
+        snowFrameId = null;
+        return;
+      }
+      n.clearRect(0, 0, i.width, i.height);
+      const r = e.minDist;
+      for (let t = 0; t < o; t++) {
+        let o = s[t];
+        const h = a,
+          w = d,
+          m = o.x,
+          c = o.y,
+          p = Math.sqrt((h - m) * (h - m) + (w - c) * (w - c));
+        if (p < r) {
+          const e = (h - m) / p,
+            t = (w - c) / p,
+            i = r / (p * p) / 2;
+          o.velX -= i * e,
+            o.velY -= i * t
+        } else
+          o.velX *= .98,
+            o.velY < o.speed && o.speed - o.velY > .01 && (o.velY += .01 * (o.speed - o.velY)),
+            o.velX += Math.cos(o.step += .05) * o.stepSize;
+        n.fillStyle = "rgba(" + e.color + ", " + o.opacity + ")",
+          o.y += o.velY,
+          o.x += o.velX,
+          (o.y >= i.height || o.y <= 0) && l(o),
+          (o.x >= i.width || o.x <= 0) && l(o),
+          n.beginPath(),
+          n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
+          n.fill()
+      }
+      snowFrameId = t(h)
+    }
+      , l = e => {
+        e.x = Math.floor(Math.random() * i.width),
+          e.y = 0,
+          e.size = 3 * Math.random() + 2,
+          e.speed = 1 * Math.random() + .5,
+          e.velY = e.speed,
+          e.velX = 0,
+          e.opacity = .5 * Math.random() + .3
+      }
+      ;
+    const syncSnowAnimation = () => {
+      const shouldRun = shouldRunSnow();
+      i.style.display = shouldRun ? "block" : "none";
+      if (shouldRun && snowFrameId === null) {
+        snowFrameId = t(h);
+      } else if (!shouldRun) {
+        if (snowFrameId !== null) cancelT(snowFrameId);
+        snowFrameId = null;
+        n.clearRect(0, 0, i.width, i.height);
+      }
+    };
+    new MutationObserver(syncSnowAnimation).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"]
+    });
+    document.addEventListener("visibilitychange", syncSnowAnimation);
+    window.addEventListener("banqin:snow-change", syncSnowAnimation);
+    document.addEventListener("mousemove", (e => {
+      a = e.clientX,
+        d = e.clientY
+    }
+    )),
+      window.addEventListener("resize", (() => {
+        i.width = window.innerWidth,
+          i.height = window.innerHeight
+      }
+      )),
+      (() => {
+        for (let t = 0; t < o; t++) {
+          const t = Math.floor(Math.random() * i.width)
+            , n = Math.floor(Math.random() * i.height)
+            , o = 3 * Math.random() + e.size
+            , a = 1 * Math.random() + e.speed
+            , d = .5 * Math.random() + e.opacity;
+          s.push({
+            speed: a,
+            velX: 0,
+            velY: a,
+            x: t,
+            y: n,
+            size: o,
+            stepSize: Math.random() / 30 * e.stepsize,
+            step: 0,
+            angle: 180,
+            opacity: d
+          })
+        }
+        syncSnowAnimation()
+      }
+      )()
+  }
+  )();
+
+/* 雪花特效 end */
+
+//----------------------------------------------------------------
+
+/* 星空特效 start */
+function dark() {
+  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  var n, e, i, h, t = .05,
+    s = document.getElementById("universe"),
+    o = !0,
+    a = "180,184,240",
+    r = "226,225,142",
+    d = "226,225,224",
+    c = [],
+    universeFrameId = null;
+
+  function f() {
+    n = window.innerWidth, e = window.innerHeight, i = .216 * n, s.setAttribute("width", n), s.setAttribute("height", e)
+  }
+  function u() {
+    h.clearRect(0, 0, n, e);
+    for (var t = c.length, i = 0; i < t; i++) {
+      var s = c[i];
+      s.move(), s.fadeIn(), s.fadeOut(), s.draw()
+    }
+  }
+  function y() {
+    this.reset = function () {
+      this.giant = m(3), this.comet = !this.giant && !o && m(10), this.x = l(0, n - 10), this.y = l(0, e), this.r = l(1.1, 2.6), this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t, this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120), this.fadingOut = null, this.fadingIn = !0, this.opacity = 0, this.opacityTresh = l(.2, 1 - .4 * (this.comet + 1 - 1)), this.do = l(5e-4, .002) + .001 * (this.comet + 1 - 1)
+    }, this.fadeIn = function () {
+      this.fadingIn && (this.fadingIn = !(this.opacity > this.opacityTresh), this.opacity += this.do)
+    }, this.fadeOut = function () {
+      this.fadingOut && (this.fadingOut = !(this.opacity < 0), this.opacity -= this.do / 2, (this.x > n || this.y < 0) && (this.fadingOut = !1, this.reset()))
+    }, this.draw = function () {
+      if (h.beginPath(), this.giant) h.fillStyle = "rgba(" + a + "," + this.opacity + ")", h.arc(this.x, this.y, 2, 0, 2 * Math.PI, !1); else if (this.comet) {
+        h.fillStyle = "rgba(" + d + "," + this.opacity + ")", h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, !1); for (var t = 0; t < 30; t++)h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")", h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2), h.fill()
+      } else h.fillStyle = "rgba(" + r + "," + this.opacity + ")", h.rect(this.x, this.y, this.r, this.r);
+      h.closePath(), h.fill()
+    }, this.move = function () {
+      this.x += this.dx, this.y += this.dy, !1 === this.fadingOut && this.reset(), (this.x > n - n / 4 || this.y < 0) && (this.fadingOut = !0)
+    }, setTimeout(function () {
+      o = !1
+    }, 50)
+  }
+  function m(t) {
+    return Math.floor(1e3 * Math.random()) + 1 < 10 * t
+  }
+  function l(t, i) {
+    return Math.random() * (i - t) + t
+  }
+  f(), window.addEventListener("resize", f, !1), function () {
+    h = s.getContext("2d");
+    for (var t = 0; t < i; t++) c[t] = new y, c[t].reset();
+  }();
+
+  function shouldRunUniverse() {
+    return !document.hidden
+      && localStorage.getItem("universe") === "block"
+      && document.documentElement.getAttribute("data-theme") === "dark";
+  }
+
+  function universeTick() {
+    if (!shouldRunUniverse()) {
+      universeFrameId = null;
+      return;
+    }
+    u();
+    universeFrameId = window.requestAnimationFrame(universeTick);
+  }
+
+  function syncUniverseAnimation() {
+    if (shouldRunUniverse() && universeFrameId === null) {
+      universeFrameId = window.requestAnimationFrame(universeTick);
+    } else if (!shouldRunUniverse() && universeFrameId !== null) {
+      window.cancelAnimationFrame(universeFrameId);
+      universeFrameId = null;
+      h.clearRect(0, 0, n, e);
+    }
+  }
+
+  new MutationObserver(syncUniverseAnimation).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"]
+  });
+  document.addEventListener("visibilitychange", syncUniverseAnimation);
+  window.addEventListener("banqin:universe-change", syncUniverseAnimation);
+  syncUniverseAnimation();
+};
+dark()
+/* 星空特效 end */
+
+//----------------------------------------------------------------
+
+/* 表情放大 start */
+document.addEventListener('pjax:complete', function () {
+  if (document.getElementById('post-comment')) owoBig();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  if (document.getElementById('post-comment')) owoBig();
+});
+
+// 表情放大
+function owoBig() {
+  let flag = 1, // 设置节流阀
+    owo_time = '', // 设置计时器
+    m = 3; // 设置放大倍数
+  // 创建盒子
+  let div = document.createElement('div'),
+    body = document.querySelector('body');
+  // 设置ID
+  div.id = 'owo-big';
+  // 插入盒子
+  body.appendChild(div)
+
+  // 构造observer
+  let observer = new MutationObserver(mutations => {
+
+    for (let i = 0; i < mutations.length; i++) {
+      let dom = mutations[i].addedNodes,
+        owo_body = '';
+      if (dom.length == 2 && dom[1].className == 'OwO-body') owo_body = dom[1];
+      // 如果需要在评论内容中启用此功能请解除下面的注释
+      // else if (dom.length == 1 && dom[0].className == 'tk-comment') owo_body = dom[0];
+      else continue;
+
+      // 禁用右键（手机端长按会出现右键菜单，为了体验给禁用掉）
+      if (document.body.clientWidth <= 768) owo_body.addEventListener('contextmenu', e => e.preventDefault());
+      // 鼠标移入
+      owo_body.onmouseover = (e) => {
+        if (flag && e.target.tagName == 'IMG') {
+          flag = 0;
+          // 移入300毫秒后显示盒子
+          owo_time = setTimeout(() => {
+            let height = e.path[0].clientHeight * m, // 盒子高
+              width = e.path[0].clientWidth * m, // 盒子宽
+              left = (e.x - e.offsetX) - (width - e.path[0].clientWidth) / 2, // 盒子与屏幕左边距离
+              top = e.y - e.offsetY; // 盒子与屏幕顶部距离
+
+            if ((left + width) > body.clientWidth) left -= ((left + width) - body.clientWidth + 10); // 右边缘检测，防止超出屏幕
+            if (left < 0) left = 10; // 左边缘检测，防止超出屏幕
+            // 设置盒子样式
+            div.style.cssText = `display:flex; height:${height}px; width:${width}px; left:${left}px; top:${top}px;`;
+            // 在盒子中插入图片
+            div.innerHTML = `<img src="${e.target.src}">`
+          }, 300);
+        }
+      };
+      // 鼠标移出隐藏盒子
+      owo_body.onmouseout = () => { div.style.display = 'none', flag = 1, clearTimeout(owo_time); }
+    }
+
+  })
+  observer.observe(document.getElementById('post-comment'), { subtree: true, childList: true })
+}
+/* 表情放大 end */
+
+//----------------------------------------------------------------
+
+/* 随便逛逛 start */
+// 随便逛逛
+// 发现有时会和当前页面重复，加一个判断
+function randomPost() {
+  fetch('/baidusitemap.xml').then(res => res.text()).then(str => (new window.DOMParser()).parseFromString(str, "text/xml")).then(data => {
+    let ls = data.querySelectorAll('url loc');
+    while (true) {
+      let url = ls[Math.floor(Math.random() * ls.length)].innerHTML;
+      if (location.href == url) continue;
+      location.href = url;
+      return;
+    }
+  })
+}
+/* 随便逛逛 end */
+
+//----------------------------------------------------------------
+
+/* 小猫咪 start */
+if (document.body.clientWidth > 992) {
+  function getBasicInfo() {
+    /* 窗口高度 */
+    var ViewH = $(window).height();
+    /* document高度 */
+    var DocH = $("body")[0].scrollHeight;
+    /* 滚动的高度 */
+    var ScrollTop = $(window).scrollTop();
+    /* 可滚动的高度 */
+    var S_V = DocH - ViewH;
+    var Band_H = ScrollTop / (DocH - ViewH) * 100;
+    return {
+      ViewH: ViewH,
+      DocH: DocH,
+      ScrollTop: ScrollTop,
+      Band_H: Band_H,
+      S_V: S_V
+    }
+  };
+  function show(basicInfo) {
+    if (basicInfo.ScrollTop > 0.001) {
+      $(".neko").css('display', 'block');
+    } else {
+      $(".neko").css('display', 'none');
+    }
+  }
+  (function ($) {
+    $.fn.nekoScroll = function (option) {
+      var defaultSetting = {
+        top: '0',
+        scroWidth: 6 + 'px',
+        z_index: 9999,
+        zoom: 0.9,
+        borderRadius: 5 + 'px',
+        right: 55.6 + 'px',
+        nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
+        hoverMsg: "春天啦~",
+        color: "var(--theme-color)",
+        during: 500,
+        blog_body: "body",
+      };
+      var setting = $.extend(defaultSetting, option);
+      var getThis = this.prop("className") !== "" ? "." + this.prop("className") : this.prop("id") !== "" ? "#" +
+        this.prop("id") : this.prop("nodeName");
+      if ($(".neko").length == 0) {
+        this.after("<div class=\"neko\" id=" + setting.nekoname + " data-msg=\"" + setting.hoverMsg + "\"></div>");
+      }
+      let basicInfo = getBasicInfo();
+      $(getThis)
+        .css({
+          'position': 'fixed',
+          'width': setting.scroWidth,
+          'top': setting.top,
+          'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
+          'z-index': setting.z_index,
+          'background-color': setting.bgcolor,
+          "border-radius": setting.borderRadius,
+          'right': setting.right,
+          'background-image': 'url(' + setting.scImg + ')',
+          'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
+          'background-size': 'contain'
+        });
+      $("#" + setting.nekoname)
+        .css({
+          'position': 'fixed',
+          'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
+          'z-index': setting.z_index * 10,
+          'right': setting.right,
+          'background-image': 'url(' + setting.nekoImg + ')',
+        });
+      show(getBasicInfo());
+      $(window)
+        .scroll(function () {
+          let basicInfo = getBasicInfo();
+          show(basicInfo);
+          $(getThis)
+            .css({
+              'position': 'fixed',
+              'width': setting.scroWidth,
+              'top': setting.top,
+              'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
+              'z-index': setting.z_index,
+              'background-color': setting.bgcolor,
+              "border-radius": setting.borderRadius,
+              'right': setting.right,
+              'background-image': 'url(' + setting.scImg + ')',
+              'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
+              'background-size': 'contain'
+            });
+          $("#" + setting.nekoname)
+            .css({
+              'position': 'fixed',
+              'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
+              'z-index': setting.z_index * 10,
+              'right': setting.right,
+              'background-image': 'url(' + setting.nekoImg + ')',
+            });
+          if (basicInfo.ScrollTop == basicInfo.S_V) {
+            $("#" + setting.nekoname)
+              .addClass("showMsg")
+          } else {
+            $("#" + setting.nekoname)
+              .removeClass("showMsg");
+            $("#" + setting.nekoname)
+              .attr("data-msg", setting.hoverMsg);
+          }
+        });
+      this.click(function (e) {
+        btf.scrollToDest(0, 500)
+      });
+      $("#" + setting.nekoname)
+        .click(function () {
+          btf.scrollToDest(0, 500)
+        });
+      return this;
+    }
+  })(jQuery);
+
+  $(document).ready(function () {
+    //部分自定义
+    $("#myscoll").nekoScroll({
+      bgcolor: 'rgb(0 0 0 / .5)', //背景颜色，没有绳子背景图片时有效
+      borderRadius: '2em',
+      zoom: 0.9
+    }
+    );
+    //自定义（去掉以下注释，并注释掉其他的查看效果）
+    /*
+    $("#myscoll").nekoScroll({
+        nekoname:'neko1', //nekoname，相当于id
+        nekoImg:'img/猫咪.png', //neko的背景图片
+        scImg:"img/绳1.png", //绳子的背景图片
+        bgcolor:'#1e90ff', //背景颜色，没有绳子背景图片时有效
+        zoom:0.9, //绳子长度的缩放值
+        hoverMsg:'你好~喵', //鼠标浮动到neko上方的对话框信息
+        right:'100px', //距离页面右边的距离
+        fontFamily:'楷体', //对话框字体
+        fontSize:'14px', //对话框字体的大小
+        color:'#1e90ff', //对话框字体颜色
+        scroWidth:'8px', //绳子的宽度
+        z_index:100, //不用解释了吧
+        during:1200, //从顶部到底部滑动的时长
+    });
+    */
+  })
+}
+
+/* 小猫咪 end */
+
+//----------------------------------------------------------------
+
+/* 右键菜单 start */
+function setMask() {
+  //设置遮罩
+  if (document.getElementsByClassName("rmMask")[0] != undefined)
+    return document.getElementsByClassName("rmMask")[0];
+  mask = document.createElement('div');
+  mask.className = "rmMask";
+  mask.style.width = window.innerWidth + 'px';
+  mask.style.height = window.innerHeight + 'px';
+  mask.style.background = '#fff';
+  mask.style.opacity = '.0';
+  mask.style.position = 'fixed';
+  mask.style.top = '0';
+  mask.style.left = '0';
+  mask.style.zIndex = 998;
+  document.body.appendChild(mask);
+  document.getElementById("rightMenu").style.zIndex = 19198;
+  return mask;
+}
+
+function insertAtCursor(myField, myValue) {
+
+  //IE 浏览器
+  if (document.selection) {
+    myField.focus();
+    sel = document.selection.createRange();
+    sel.text = myValue;
+    sel.select();
+  }
+
+  //FireFox、Chrome等
+  else if (myField.selectionStart || myField.selectionStart == '0') {
+    var startPos = myField.selectionStart;
+    var endPos = myField.selectionEnd;
+
+    // 保存滚动条
+    var restoreTop = myField.scrollTop;
+    myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+
+    if (restoreTop > 0) {
+      myField.scrollTop = restoreTop;
+    }
+
+    myField.focus();
+    myField.selectionStart = startPos + myValue.length;
+    myField.selectionEnd = startPos + myValue.length;
+  } else {
+    myField.value += myValue;
+    myField.focus();
+  }
+}
+
+let rmf = {};
+rmf.showRightMenu = function (isTrue, x = 0, y = 0) {
+  let $rightMenu = $('#rightMenu');
+  $rightMenu.css('top', x + 'px').css('left', y + 'px');
+
+  if (isTrue) {
+    $rightMenu.show();
+  } else {
+    $rightMenu.hide();
+  }
+}
+
+rmf.copyWordsLink = function () {
+  let url = window.location.href
+  let txa = document.createElement("textarea");
+  txa.value = url;
+  document.body.appendChild(txa)
+  txa.select();
+  document.execCommand("Copy");
+  document.body.removeChild(txa);
+}
+rmf.syncReadModeMenu = function () {
+  const menuItem = document.getElementById('menu-readmode');
+  if (!menuItem) return;
+  const isReadMode = document.body.classList.contains('read-mode');
+  const label = menuItem.querySelector('span');
+  const icon = menuItem.querySelector('i');
+  if (label) label.textContent = isReadMode ? '退出阅读模式' : '阅读模式';
+  if (icon) icon.className = isReadMode ? 'fa fa-sign-out-alt' : 'fa fa-book';
+}
+
+rmf.exitReadMode = function () {
+  document.body.classList.remove('read-mode');
+  document.querySelectorAll('.exit-readmode').forEach(button => button.remove());
+  rmf.syncReadModeMenu();
+}
+
+rmf.switchReadMode = function () {
+  const $body = document.body;
+  if ($body.classList.contains('read-mode')) {
+    rmf.exitReadMode();
+    return;
+  }
+
+  $body.classList.add('read-mode');
+  let exitButton = document.querySelector('.exit-readmode');
+  if (!exitButton) {
+    exitButton = document.createElement('button');
+    exitButton.type = 'button';
+    exitButton.className = 'fas fa-sign-out-alt exit-readmode';
+    exitButton.setAttribute('aria-label', '退出阅读模式');
+    exitButton.addEventListener('click', rmf.exitReadMode);
+    $body.appendChild(exitButton);
+  }
+  rmf.syncReadModeMenu();
+}
+
+document.addEventListener('pjax:complete', function () {
+  if (!document.body.classList.contains('read-mode')) {
+    document.querySelectorAll('.exit-readmode').forEach(button => button.remove());
+  }
+  rmf.syncReadModeMenu();
+});
+
+//复制选中文字
+rmf.copySelect = function () {
+  document.execCommand('Copy', false, null);
+}
+
+//回到顶部
+rmf.scrollToTop = function () {
+  document.getElementsByClassName("menus_items")[1].setAttribute("style", "");
+  document.getElementById("name-container").setAttribute("style", "display:none");
+  btf.scrollToDest(0, 500);
+}
+
+document.body.addEventListener('touchmove', function () {
+
+}, { passive: false });
+
+function popupMenu() {
+  window.oncontextmenu = function (event) {
+    // if (event.ctrlKey) return true;
+
+    // 当关掉自定义右键时候直接返回
+    if (mouseMode == "off") return true;
+
+    $('.rightMenu-group.hide').hide();
+    rmf.syncReadModeMenu();
+    if (document.getSelection().toString()) {
+      $('#menu-text').show();
+    }
+    if (document.getElementById('post')) {
+      $('#menu-post').show();
+    } else {
+      if (document.getElementById('page')) {
+        $('#menu-post').show();
+      }
+    }
+    var el = window.document.body;
+    el = event.target;
+    var a = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/
+    if (a.test(window.getSelection().toString()) && el.tagName != "A") {
+      $('#menu-too').show()
+    }
+    if (el.tagName == 'A') {
+      $('#menu-to').show()
+      rmf.open = function () {
+        if (el.href.indexOf("http://") == -1 && el.href.indexOf("https://") == -1 || el.href.indexOf("yisous.xyz") != -1) {
+          pjax.loadUrl(el.href)
+        }
+        else {
+          location.href = el.href
+        }
+      }
+      rmf.openWithNewTab = function () {
+        window.open(el.href, '_blank', 'noopener,noreferrer');
+      }
+      rmf.copyLink = function () {
+        let url = el.href
+        let txa = document.createElement("textarea");
+        txa.value = url;
+        document.body.appendChild(txa)
+        txa.select();
+        document.execCommand("Copy");
+        document.body.removeChild(txa);
+      }
+    } else if (el.tagName == 'IMG') {
+      $('#menu-img').show()
+      rmf.openWithNewTab = function () {
+        const imageUrl = el.currentSrc || el.src;
+        const imageWindow = window.open('about:blank', '_blank');
+        if (!imageWindow) {
+          banqinNotify({
+            title: '无法打开新窗口',
+            message: '请允许本站打开弹出式窗口后重试。',
+            type: 'warning',
+            duration: 5000
+          });
+          return;
+        }
+
+        imageWindow.opener = null;
+        imageWindow.document.title = el.alt || '图片预览';
+        imageWindow.document.documentElement.style.background = '#111';
+        imageWindow.document.body.style.cssText = 'margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#111;';
+        const preview = imageWindow.document.createElement('img');
+        preview.src = imageUrl;
+        preview.alt = el.alt || '';
+        preview.style.cssText = 'display:block;max-width:100%;max-height:100vh;object-fit:contain;';
+        imageWindow.document.body.appendChild(preview);
+      }
+      rmf.click = function () {
+        el.click()
+      }
+      rmf.copyLink = function () {
+        let url = el.src
+        let txa = document.createElement("textarea");
+        txa.value = url;
+        document.body.appendChild(txa)
+        txa.select();
+        document.execCommand("Copy");
+        document.body.removeChild(txa);
+      }
+      rmf.saveAs = function () {
+        const a = document.createElement('a');
+        const url = el.currentSrc || el.src;
+        let filename = 'image';
+        try {
+          filename = decodeURIComponent(new URL(url, window.location.href).pathname.split('/').pop()) || filename;
+        } catch (error) { }
+        a.href = url;
+        a.download = filename;
+        a.rel = 'noopener noreferrer';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
+    } else if (el.tagName == "TEXTAREA" || el.tagName == "INPUT") {
+      $('#menu-paste').show();
+      rmf.paste = function () {
+        navigator.permissions
+          .query({
+            name: 'clipboard-read'
+          })
+          .then(result => {
+            if (result.state == 'granted' || result.state == 'prompt') {
+              //读取剪贴板
+              navigator.clipboard.readText().then(text => {
+                console.log(text)
+                insertAtCursor(el, text)
+              })
+            } else {
+              Snackbar.show({
+                text: '请允许读取剪贴板！',
+                pos: 'top-center',
+                showAction: false,
+              })
+            }
+          })
+      }
+    }
+    let pageX = event.clientX + 10;
+    let pageY = event.clientY;
+    let rmWidth = $('#rightMenu').width();
+    let rmHeight = $('#rightMenu').height();
+    if (pageX + rmWidth > window.innerWidth) {
+      pageX -= rmWidth + 10;
+    }
+    if (pageY + rmHeight > window.innerHeight) {
+      pageY -= pageY + rmHeight - window.innerHeight;
+    }
+    mask = setMask();
+    // 滚动消失的代码和阅读进度有冲突，因此放到readPercent.js里面了
+    $(".rightMenu-item").click(() => {
+      $('.rmMask').attr('style', 'display: none');
+    })
+    $(window).resize(() => {
+      rmf.showRightMenu(false);
+      $('.rmMask').attr('style', 'display: none');
+    })
+    mask.onclick = () => {
+      $('.rmMask').attr('style', 'display: none');
+    }
+    rmf.showRightMenu(true, pageY, pageX);
+    $('.rmMask').attr('style', 'display: flex');
+    return false;
+  };
+
+  window.addEventListener('click', function () {
+    rmf.showRightMenu(false);
+  });
+}
+if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+  popupMenu()
+}
+const box = document.documentElement
+
+function addLongtabListener(target, callback) {
+  let timer = 0 // 初始化timer
+
+  target.ontouchstart = () => {
+    timer = 0 // 重置timer
+    timer = setTimeout(() => {
+      callback();
+      timer = 0
+    }, 380) // 超时器能成功执行，说明是长按
+  }
+
+  target.ontouchmove = () => {
+    clearTimeout(timer) // 如果来到这里，说明是滑动
+    timer = 0
+  }
+
+  target.ontouchend = () => { // 到这里如果timer有值，说明此触摸时间不足380ms，是点击
+    if (timer) {
+      clearTimeout(timer)
+    }
+  }
+}
+
+addLongtabListener(box, popupMenu)
+
+// 全屏
+rmf.fullScreen = function () {
+  if (document.fullscreenElement) document.exitFullscreen();
+  else document.documentElement.requestFullscreen();
+}
+
+// 右键开关
+if (localStorage.getItem("mouse") == undefined) {
+  localStorage.setItem("mouse", "on");
+}
+var mouseMode = localStorage.getItem("mouse");
+function changeMouseMode() {
+  if (localStorage.getItem("mouse") == "on") {
+    mouseMode = "off";
+    localStorage.setItem("mouse", "off");
+    debounce(function () {
+      banqinNotify({
+        title: "切换右键模式成功🍔",
+        message: "当前鼠标右键已恢复为系统默认！",
+        type: "success",
+        duration: 5000
+      });
+    }, 300);
+  } else {
+    mouseMode = "on";
+    localStorage.setItem("mouse", "on");
+    debounce(function () {
+      banqinNotify({
+        title: "切换右键模式成功🍔",
+        message: "当前鼠标右键已更换为网站指定样式！",
+        type: "success",
+        duration: 5000
+      });
+    }, 300);
+  }
+}
+/* 右键菜单 end */
+
+//----------------------------------------------------------------
+
+/* 控制台输出字符画 start */
+var now1 = new Date();
+
+function createtime1() {
+  var grt = new Date("01/25/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  var days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  var dnum = Math.floor(days);
+
+  var ascll = [
+    `欢迎来到坂琴的小窝🍜`,
+    `想要变得越来越好`,
+    `
+        
+BBBBBBBBBBBBBBBBB                                           QQQQQQQQQ       iiii                   
+B::::::::::::::::B                                        QQ:::::::::QQ    i::::i                  
+B::::::BBBBBB:::::B                                     QQ:::::::::::::QQ   iiii                   
+BB:::::B     B:::::B                                   Q:::::::QQQ:::::::Q                         
+  B::::B     B:::::B  aaaaaaaaaaaaa  nnnn  nnnnnnnn    Q::::::O   Q::::::Qiiiiiiinnnn  nnnnnnnn    
+  B::::B     B:::::B  a::::::::::::a n:::nn::::::::nn  Q:::::O     Q:::::Qi:::::in:::nn::::::::nn  
+  B::::BBBBBB:::::B   aaaaaaaaa:::::an::::::::::::::nn Q:::::O     Q:::::Q i::::in::::::::::::::nn 
+  B:::::::::::::BB             a::::ann:::::::::::::::nQ:::::O     Q:::::Q i::::inn:::::::::::::::n
+  B::::BBBBBB:::::B     aaaaaaa:::::a  n:::::nnnn:::::nQ:::::O     Q:::::Q i::::i  n:::::nnnn:::::n
+  B::::B     B:::::B  aa::::::::::::a  n::::n    n::::nQ:::::O     Q:::::Q i::::i  n::::n    n::::n
+  B::::B     B:::::B a::::aaaa::::::a  n::::n    n::::nQ:::::O  QQQQ:::::Q i::::i  n::::n    n::::n
+  B::::B     B:::::Ba::::a    a:::::a  n::::n    n::::nQ::::::O Q::::::::Q i::::i  n::::n    n::::n
+BB:::::BBBBBB::::::Ba::::a    a:::::a  n::::n    n::::nQ:::::::QQ::::::::Qi::::::i n::::n    n::::n
+B:::::::::::::::::B a:::::aaaa::::::a  n::::n    n::::n QQ::::::::::::::Q i::::::i n::::n    n::::n
+B::::::::::::::::B   a::::::::::aa:::a n::::n    n::::n   QQ:::::::::::Q  i::::::i n::::n    n::::n
+BBBBBBBBBBBBBBBBB     aaaaaaaaaa  aaaa nnnnnn    nnnnnn     QQQQQQQQ::::QQiiiiiiii nnnnnn    nnnnnn
+                                                                    Q:::::Q                        
+                                              
+`,
+    "小站已经苟活",
+    dnum,
+    "天啦!",
+    "©2025 By 坂琴的小窝🍜",
+  ];
+
+  setTimeout(
+    console.log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#39c5bb",
+      "",
+      "color:#39c5bb",
+      "color:#39c5bb",
+      "",
+      "color:#39c5bb",
+      ""
+    )
+  );
+}
+
+createtime1();
+
+function createtime2() {
+  var ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为「大聪明」`, `Photo captured: `, ` 🤪 `];
+
+  setTimeout(
+    console.log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}`,
+      "color:white; background-color:#10bcc0",
+      "",
+      "",
+      'background:url("https://unpkg.zhimg.com/anzhiyu-assets@latest/image/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(console.log.bind(console, "%c WELCOME %c 欢迎光临，大聪明", "color:white; background-color:#23c682", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 坂琴的小窝🍜 %c 你正在访问坂琴的小窝🍜",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(console.log.bind(console, "%c W23-12 %c 系统监测到你已打开控制台", "color:white; background-color:#4f90d9", ""));
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中", "color:white; background-color:#d9534f", "")
+  );
+}
+createtime2();
+
+// 重写console方法
+console.log = function () { };
+console.error = function () { };
+console.warn = function () { };
+
+/* 控制台输出字符画 end */
+
+//----------------------------------------------------------------
+
+/* 夜间模式切换动画 start */
+function switchNightMode() {
+  document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"><div id="sun"></div><div id="moon"></div></div></div>'),
+    setTimeout(function () {
+      document.querySelector('body').classList.contains('DarkMode') ? (document.querySelector('body').classList.remove('DarkMode'), localStorage.setItem('isDark', '0'), document.getElementById('modeicon').setAttribute('xlink:href', '#icon-moon')) : (document.querySelector('body').classList.add('DarkMode'), localStorage.setItem('isDark', '1'), document.getElementById('modeicon').setAttribute('xlink:href', '#icon-sun')),
+        setTimeout(function () {
+          document.getElementsByClassName('Cuteen_DarkSky')[0].style.transition = 'opacity 3s';
+          document.getElementsByClassName('Cuteen_DarkSky')[0].style.opacity = '0';
+          setTimeout(function () {
+            document.getElementsByClassName('Cuteen_DarkSky')[0].remove();
+          }, 1e3);
+        }, 2e3)
+    })
+  const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+  if (nowMode === 'light') {
+    // 先设置太阳月亮透明度
+    document.getElementById("sun").style.opacity = "1";
+    document.getElementById("moon").style.opacity = "0";
+    setTimeout(function () {
+      document.getElementById("sun").style.opacity = "0";
+      document.getElementById("moon").style.opacity = "1";
+    }, 1000);
+
+    activateDarkMode()
+    saveToLocal.set('theme', 'dark', 2)
+    // GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night)
+    document.getElementById('modeicon').setAttribute('xlink:href', '#icon-sun')
+    // 延时弹窗提醒
+    setTimeout(() => {
+      banqinNotify({
+        title: "关灯啦🌙",
+        message: "当前已成功切换至夜间模式！",
+        type: "success",
+        duration: 5000
+      });
+    }, 2000)
+  } else {
+    // 先设置太阳月亮透明度
+    document.getElementById("sun").style.opacity = "0";
+    document.getElementById("moon").style.opacity = "1";
+    setTimeout(function () {
+      document.getElementById("sun").style.opacity = "1";
+      document.getElementById("moon").style.opacity = "0";
+    }, 1000);
+
+    activateLightMode()
+    saveToLocal.set('theme', 'light', 2)
+    document.querySelector('body').classList.add('DarkMode'), document.getElementById('modeicon').setAttribute('xlink:href', '#icon-moon')
+    setTimeout(() => {
+      banqinNotify({
+        title: "开灯啦🌞",
+        message: "当前已成功切换至白天模式！",
+        type: "success",
+        duration: 5000
+      });
+    }, 2000)
+  }
+  // handle some cases
+  typeof utterancesTheme === 'function' && utterancesTheme()
+  typeof FB === 'object' && window.loadFBComment()
+  window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(() => window.disqusReset(), 200)
+}
+
+/* 夜间模式切换动画 end */
+
+//----------------------------------------------------------------
+
+/* 分享按钮 start */
+// 分享本页
+function share_() {
+  let url = window.location.origin + window.location.pathname
+  try {
+    // 截取标题
+    var title = document.title;
+    var subTitle = title.endsWith("| 坂琴的小窝🍜") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('坂琴的小窝🍜的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    banqinNotify({
+      title: "成功复制分享信息🎉",
+      message: "您现在可以通过粘贴直接跟小伙伴分享了！",
+      type: "success",
+      duration: 5000
+    });
+  } catch (err) {
+    console.error('复制失败！', err);
+  }
+  // new ClipboardJS(".share", { text: function () { return '标题：' + document.title + '\n链接：' + url } });
+  // btf.snackbarShow("本页链接已复制到剪切板，快去分享吧~")
+}
+
+// 防抖
+function share() {
+  debounce(share_, 300);
+}
+
+/* 分享按钮 end */
+
+//----------------------------------------------------------------
+
+/* 恶搞标题 start */
+//动态标题
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = '不要走！快回来！`(*>﹏<*)′~';
+    clearTimeout(titleTime);
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = '好耶！你回来啦～ヾ(•ω•`)o';
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile;
+    }, 2000);
+  }
+});
+/* 恶搞标题 end */
+
+//----------------------------------------------------------------
+
+
+/* 农历转换 start */
+/**
+
+* @1900-2100区间内的公历、农历互转
+
+* @charset UTF-8
+
+* @Author  jiangjiazhi
+
+* @公历转农历：calendar.solar2lunar(1987,11,01); //[you can ignore params of prefix 0]
+
+* @农历转公历：calendar.lunar2solar(1987,09,10); //[you can ignore params of prefix 0]
+
+*/
+
+
+
+/**
+
+* 农历1900-2100的润大小信息表
+
+* @Array Of Property
+
+* @return Hex
+
+*/
+
+var lunarInfo = [0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2, // 1900-1909
+
+  0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977, // 1910-1919
+
+  0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970, // 1920-1929
+
+  0x06566, 0x0d4a0, 0x0ea50, 0x06e95, 0x05ad0, 0x02b60, 0x186e3, 0x092e0, 0x1c8d7, 0x0c950, // 1930-1939
+
+  0x0d4a0, 0x1d8a6, 0x0b550, 0x056a0, 0x1a5b4, 0x025d0, 0x092d0, 0x0d2b2, 0x0a950, 0x0b557, // 1940-1949
+
+  0x06ca0, 0x0b550, 0x15355, 0x04da0, 0x0a5b0, 0x14573, 0x052b0, 0x0a9a8, 0x0e950, 0x06aa0, // 1950-1959
+
+  0x0aea6, 0x0ab50, 0x04b60, 0x0aae4, 0x0a570, 0x05260, 0x0f263, 0x0d950, 0x05b57, 0x056a0, // 1960-1969
+
+  0x096d0, 0x04dd5, 0x04ad0, 0x0a4d0, 0x0d4d4, 0x0d250, 0x0d558, 0x0b540, 0x0b6a0, 0x195a6, // 1970-1979
+
+  0x095b0, 0x049b0, 0x0a974, 0x0a4b0, 0x0b27a, 0x06a50, 0x06d40, 0x0af46, 0x0ab60, 0x09570, // 1980-1989
+
+  0x04af5, 0x04970, 0x064b0, 0x074a3, 0x0ea50, 0x06b58, 0x05ac0, 0x0ab60, 0x096d5, 0x092e0, // 1990-1999
+
+  0x0c960, 0x0d954, 0x0d4a0, 0x0da50, 0x07552, 0x056a0, 0x0abb7, 0x025d0, 0x092d0, 0x0cab5, // 2000-2009
+
+  0x0a950, 0x0b4a0, 0x0baa4, 0x0ad50, 0x055d9, 0x04ba0, 0x0a5b0, 0x15176, 0x052b0, 0x0a930, // 2010-2019
+
+  0x07954, 0x06aa0, 0x0ad50, 0x05b52, 0x04b60, 0x0a6e6, 0x0a4e0, 0x0d260, 0x0ea65, 0x0d530, // 2020-2029
+
+  0x05aa0, 0x076a3, 0x096d0, 0x04afb, 0x04ad0, 0x0a4d0, 0x1d0b6, 0x0d250, 0x0d520, 0x0dd45, // 2030-2039
+
+  0x0b5a0, 0x056d0, 0x055b2, 0x049b0, 0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0, // 2040-2049
+
+  0x14b63, 0x09370, 0x049f8, 0x04970, 0x064b0, 0x168a6, 0x0ea50, 0x06b20, 0x1a6c4, 0x0aae0, // 2050-2059
+
+  0x0a2e0, 0x0d2e3, 0x0c960, 0x0d557, 0x0d4a0, 0x0da50, 0x05d55, 0x056a0, 0x0a6d0, 0x055d4, // 2060-2069
+
+  0x052d0, 0x0a9b8, 0x0a950, 0x0b4a0, 0x0b6a6, 0x0ad50, 0x055a0, 0x0aba4, 0x0a5b0, 0x052b0, // 2070-2079
+
+  0x0b273, 0x06930, 0x07337, 0x06aa0, 0x0ad50, 0x14b55, 0x04b60, 0x0a570, 0x054e4, 0x0d160, // 2080-2089
+
+  0x0e968, 0x0d520, 0x0daa0, 0x16aa6, 0x056d0, 0x04ae0, 0x0a9d4, 0x0a2d0, 0x0d150, 0x0f252, // 2090-2099
+
+  0x0d520] // 2100
+
+
+
+var solarMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+
+
+/**
+
+* 天干地支之天干速查表
+
+* @Array Of Property trans['甲','乙','丙','丁','戊','己','庚','辛','壬','癸']
+
+* @return Cn string
+
+*/
+
+var Gan = ['\u7532', '\u4e59', '\u4e19', '\u4e01', '\u620a', '\u5df1', '\u5e9a', '\u8f9b', '\u58ec', '\u7678']
+
+
+
+/**
+
+* 天干地支之地支速查表
+
+* @Array Of Property
+
+* @trans['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥']
+
+* @return Cn string
+
+*/
+
+var Zhi = ['\u5b50', '\u4e11', '\u5bc5', '\u536f', '\u8fb0', '\u5df3', '\u5348', '\u672a', '\u7533', '\u9149', '\u620c', '\u4ea5']
+
+
+
+/**
+
+* 天干地支之地支速查表<=>生肖
+
+* @Array Of Property
+
+* @trans['鼠','牛','虎','兔','龙','蛇','马','羊','猴','鸡','狗','猪']
+
+* @return Cn string
+
+*/
+
+var Animals = ['\u9f20', '\u725b', '\u864e', '\u5154', '\u9f99', '\u86c7', '\u9a6c', '\u7f8a', '\u7334', '\u9e21', '\u72d7', '\u732a']
+
+
+
+/**
+
+* 24节气速查表
+
+* @Array Of Property
+
+* @trans['小寒','大寒','立春','雨水','惊蛰','春分','清明','谷雨','立夏','小满','芒种','夏至','小暑','大暑','立秋','处暑','白露','秋分','寒露','霜降','立冬','小雪','大雪','冬至']
+
+* @return Cn string
+
+*/
+
+var solarTerm = ['\u5c0f\u5bd2', '\u5927\u5bd2', '\u7acb\u6625', '\u96e8\u6c34', '\u60ca\u86f0', '\u6625\u5206', '\u6e05\u660e', '\u8c37\u96e8', '\u7acb\u590f', '\u5c0f\u6ee1', '\u8292\u79cd', '\u590f\u81f3', '\u5c0f\u6691', '\u5927\u6691', '\u7acb\u79cb', '\u5904\u6691', '\u767d\u9732', '\u79cb\u5206', '\u5bd2\u9732', '\u971c\u964d', '\u7acb\u51ac', '\u5c0f\u96ea', '\u5927\u96ea', '\u51ac\u81f3']
+
+
+
+/**
+
+* 1900-2100各年的24节气日期速查表
+
+* @Array Of Property
+
+* @return 0x string For splice
+
+*/
+
+var sTermInfo = ['9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f',
+
+  '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+
+  '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa',
+
+  '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f',
+
+  'b027097bd097c36b0b6fc9274c91aa', '9778397bd19801ec9210c965cc920e', '97b6b97bd19801ec95f8c965cc920f',
+
+  '97bd09801d98082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd197c36c9210c9274c91aa',
+
+  '97b6b97bd19801ec95f8c965cc920e', '97bd09801d98082c95f8e1cfcc920f', '97bd097bd097c36b0b6fc9210c8dc2',
+
+  '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec95f8c965cc920e', '97bcf97c3598082c95f8e1cfcc920f',
+
+  '97bd097bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+
+  '97bcf97c3598082c95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+
+  '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722',
+
+  '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f',
+
+  '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+
+  '97bcf97c359801ec95f8c965cc920f', '97bd097bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+
+  '97b6b97bd19801ec9210c965cc920e', '97bcf97c359801ec95f8c965cc920f', '97bd097bd07f595b0b6fc920fb0722',
+
+  '9778397bd097c36b0b6fc9210c8dc2', '9778397bd19801ec9210c9274c920e', '97b6b97bd19801ec95f8c965cc920f',
+
+  '97bd07f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c920e',
+
+  '97b6b97bd19801ec95f8c965cc920f', '97bd07f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2',
+
+  '9778397bd097c36c9210c9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bd07f1487f595b0b0bc920fb0722',
+
+  '7f0e397bd097c36b0b6fc9210c8dc2', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+
+  '97bcf7f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+
+  '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722',
+
+  '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf7f1487f531b0b0bb0b6fb0722',
+
+  '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
+
+  '97bcf7f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+
+  '97b6b97bd19801ec9210c9274c920e', '97bcf7f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722',
+
+  '9778397bd097c36b0b6fc9210c91aa', '97b6b97bd197c36c9210c9274c920e', '97bcf7f0e47f531b0b0bb0b6fb0722',
+
+  '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '9778397bd097c36c9210c9274c920e',
+
+  '97b6b7f0e47f531b0723b0b6fb0722', '7f0e37f5307f595b0b0bc920fb0722', '7f0e397bd097c36b0b6fc9210c8dc2',
+
+  '9778397bd097c36b0b70c9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e37f1487f595b0b0bb0b6fb0722',
+
+  '7f0e397bd097c35b0b6fc9210c8dc2', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721',
+
+  '7f0e27f1487f595b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+
+  '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722',
+
+  '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722',
+
+  '7f0e397bd097c35b0b6fc920fb0722', '9778397bd097c36b0b6fc9274c91aa', '97b6b7f0e47f531b0723b0b6fb0721',
+
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9274c91aa',
+
+  '97b6b7f0e47f531b0723b0787b0721', '7f0e27f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722',
+
+  '9778397bd097c36b0b6fc9210c91aa', '97b6b7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722',
+
+  '7f0e397bd07f595b0b0bc920fb0722', '9778397bd097c36b0b6fc9210c8dc2', '977837f0e37f149b0723b0787b0721',
+
+  '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f5307f595b0b0bc920fb0722', '7f0e397bd097c35b0b6fc9210c8dc2',
+
+  '977837f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e37f1487f595b0b0bb0b6fb0722',
+
+  '7f0e397bd097c35b0b6fc9210c8dc2', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722', '977837f0e37f14998082b0787b06bd',
+
+  '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd097c35b0b6fc920fb0722',
+
+  '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722',
+
+  '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14998082b0787b06bd',
+
+  '7f07e7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0b0bb0b6fb0722', '7f0e397bd07f595b0b0bc920fb0722',
+
+  '977837f0e37f14998082b0723b06bd', '7f07e7f0e37f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722',
+
+  '7f0e397bd07f595b0b0bc920fb0722', '977837f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b0721',
+
+  '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f1487f595b0b0bb0b6fb0722', '7f0e37f0e37f14898082b0723b02d5',
+
+  '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e37f1487f531b0b0bb0b6fb0722',
+
+  '7f0e37f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+
+  '7f0e37f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd',
+
+  '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e37f14898082b072297c35',
+
+  '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722',
+
+  '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f149b0723b0787b0721',
+
+  '7f0e27f1487f531b0b0bb0b6fb0722', '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14998082b0723b06bd',
+
+  '7f07e7f0e47f149b0723b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722', '7f0e37f0e366aa89801eb072297c35',
+
+  '7ec967f0e37f14998082b0723b06bd', '7f07e7f0e37f14998083b0787b0721', '7f0e27f0e47f531b0723b0b6fb0722',
+
+  '7f0e37f0e366aa89801eb072297c35', '7ec967f0e37f14898082b0723b02d5', '7f07e7f0e37f14998082b0787b0721',
+
+  '7f07e7f0e47f531b0723b0b6fb0722', '7f0e36665b66aa89801e9808297c35', '665f67f0e37f14898082b0723b02d5',
+
+  '7ec967f0e37f14998082b0787b0721', '7f07e7f0e47f531b0723b0b6fb0722', '7f0e36665b66a449801e9808297c35',
+
+  '665f67f0e37f14898082b0723b02d5', '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721',
+
+  '7f0e36665b66a449801e9808297c35', '665f67f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd',
+
+  '7f07e7f0e47f531b0723b0b6fb0721', '7f0e26665b66a449801e9808297c35', '665f67f0e37f1489801eb072297c35',
+
+  '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722']
+
+
+
+/**
+
+ * 数字转中文速查表
+
+* @Array Of Property
+
+* @trans ['日','一','二','三','四','五','六','七','八','九','十']
+
+* @return Cn string
+
+ */
+
+var nStr1 = ['\u65e5', '\u4e00', '\u4e8c', '\u4e09', '\u56db', '\u4e94', '\u516d', '\u4e03', '\u516b', '\u4e5d', '\u5341']
+
+
+
+/**
+
+* 日期转农历称呼速查表
+
+* @Array Of Property
+
+* @trans ['初','十','廿','卅']
+
+* @return Cn string
+
+*/
+
+var nStr2 = ['\u521d', '\u5341', '\u5eff', '\u5345']
+
+
+
+/**
+
+* 月份转农历称呼速查表
+
+* @Array Of Property
+
+* @trans ['正','一','二','三','四','五','六','七','八','九','十','冬','腊']
+
+* @return Cn string
+
+*/
+
+var nStr3 = ['\u6b63', '\u4e8c', '\u4e09', '\u56db', '\u4e94', '\u516d', '\u4e03', '\u516b', '\u4e5d', '\u5341', '\u51ac', '\u814a']
+
+
+
+/**
+
+* 返回农历y年一整年的总天数
+
+* @param lunar Year
+
+ * @return Number
+
+* @eg:var count = calendar.lYearDays(1987) ;//count=387
+
+*/
+
+function lYearDays(y) {
+
+  var i
+
+  var sum = 348
+
+  for (i = 0x8000; i > 0x8; i >>= 1) { sum += (lunarInfo[y - 1900] & i) ? 1 : 0 }
+
+  return (sum + leapDays(y))
+
+}
+
+
+
+/**
+
+* 返回农历y年闰月是哪个月；若y年没有闰月 则返回0
+
+* @param lunar Year
+
+* @return Number (0-12)
+
+ * @eg:var leapMonth = calendar.leapMonth(1987) ;//leapMonth=6
+
+*/
+
+function leapMonth(y) { // 闰字编码 \u95f0
+
+  return (lunarInfo[y - 1900] & 0xf)
+
+}
+
+
+
+/**
+
+* 返回农历y年闰月的天数 若该年没有闰月则返回0
+
+* @param lunar Year
+
+* @return Number (0、29、30)
+
+* @eg:var leapMonthDay = calendar.leapDays(1987) ;//leapMonthDay=29
+
+*/
+
+function leapDays(y) {
+
+  if (leapMonth(y)) {
+
+    return ((lunarInfo[y - 1900] & 0x10000) ? 30 : 29)
+
+  }
+
+  return (0)
+
+}
+
+
+
+/**
+
+* 返回农历y年m月（非闰月）的总天数，计算m为闰月时的天数请使用leapDays方法
+
+* @param lunar Year
+
+* @return Number (-1、29、30)
+
+ * @eg:var MonthDay = calendar.monthDays(1987,9) ;//MonthDay=29
+
+*/
+
+function monthDays(y, m) {
+
+  if (m > 12 || m < 1) { return -1 }// 月份参数从1至12，参数错误返回-1
+
+  return ((lunarInfo[y - 1900] & (0x10000 >> m)) ? 30 : 29)
+
+}
+
+
+
+/**
+
+* 返回公历(!)y年m月的天数
+
+* @param solar Year
+
+* @return Number (-1、28、29、30、31)
+
+* @eg:var solarMonthDay = calendar.leapDays(1987) ;//solarMonthDay=30
+
+*/
+
+function solarDays(y, m) {
+
+  if (m > 12 || m < 1) { return -1 } // 若参数错误 返回-1
+
+  var ms = m - 1
+
+  if (ms === 1) { // 2月份的闰平规律测算后确认返回28或29
+
+    return (((y % 4 === 0) && (y % 100 !== 0) || (y % 400 === 0)) ? 29 : 28)
+
+  } else {
+
+    return (solarMonth[ms])
+
+  }
+
+}
+
+
+
+/**
+
+* 农历年份转换为干支纪年
+
+* @param  lYear 农历年的年份数
+
+* @return Cn string
+
+*/
+
+function toGanZhiYear(lYear) {
+
+  var ganKey = (lYear - 3) % 10
+
+  var zhiKey = (lYear - 3) % 12
+
+  if (ganKey === 0) ganKey = 10 // 如果余数为0则为最后一个天干
+
+  if (zhiKey === 0) zhiKey = 12 // 如果余数为0则为最后一个地支
+
+  return Gan[ganKey - 1] + Zhi[zhiKey - 1]
+
+}
+
+
+
+/**
+
+* 公历月、日判断所属星座
+
+* @param  cMonth [description]
+
+* @param  cDay [description]
+
+* @return Cn string
+
+*/
+
+function toAstro(cMonth, cDay) {
+
+  var s = '\u9b54\u7faf\u6c34\u74f6\u53cc\u9c7c\u767d\u7f8a\u91d1\u725b\u53cc\u5b50\u5de8\u87f9\u72ee\u5b50\u5904\u5973\u5929\u79e4\u5929\u874e\u5c04\u624b\u9b54\u7faf'
+
+  var arr = [20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22]
+
+  return s.substr(cMonth * 2 - (cDay < arr[cMonth - 1] ? 2 : 0), 2) + '\u5ea7' // 座
+
+}
+
+
+
+/**
+
+* 传入offset偏移量返回干支
+
+* @param offset 相对甲子的偏移量
+
+* @return Cn string
+
+*/
+
+function toGanZhi(offset) {
+
+  return Gan[offset % 10] + Zhi[offset % 12]
+
+}
+
+
+
+/**
+
+* 传入公历(!)y年获得该年第n个节气的公历日期
+
+* @param y公历年(1900-2100)；n二十四节气中的第几个节气(1~24)；从n=1(小寒)算起
+
+* @return day Number
+
+* @eg:var _24 = calendar.getTerm(1987,3) ;//_24=4;意即1987年2月4日立春
+
+*/
+
+function getTerm(y, n) {
+
+  if (y < 1900 || y > 2100) { return -1 }
+
+  if (n < 1 || n > 24) { return -1 }
+
+  var _table = sTermInfo[y - 1900]
+
+  var _info = [
+
+    parseInt('0x' + _table.substr(0, 5)).toString(),
+
+    parseInt('0x' + _table.substr(5, 5)).toString(),
+
+    parseInt('0x' + _table.substr(10, 5)).toString(),
+
+    parseInt('0x' + _table.substr(15, 5)).toString(),
+
+    parseInt('0x' + _table.substr(20, 5)).toString(),
+
+    parseInt('0x' + _table.substr(25, 5)).toString()
+
+  ]
+
+  var _calday = [
+
+    _info[0].substr(0, 1),
+
+    _info[0].substr(1, 2),
+
+    _info[0].substr(3, 1),
+
+    _info[0].substr(4, 2),
+
+
+
+    _info[1].substr(0, 1),
+
+    _info[1].substr(1, 2),
+
+    _info[1].substr(3, 1),
+
+    _info[1].substr(4, 2),
+
+
+
+    _info[2].substr(0, 1),
+
+    _info[2].substr(1, 2),
+
+    _info[2].substr(3, 1),
+
+    _info[2].substr(4, 2),
+
+
+
+    _info[3].substr(0, 1),
+
+    _info[3].substr(1, 2),
+
+    _info[3].substr(3, 1),
+
+    _info[3].substr(4, 2),
+
+
+
+    _info[4].substr(0, 1),
+
+    _info[4].substr(1, 2),
+
+    _info[4].substr(3, 1),
+
+    _info[4].substr(4, 2),
+
+
+
+    _info[5].substr(0, 1),
+
+    _info[5].substr(1, 2),
+
+    _info[5].substr(3, 1),
+
+    _info[5].substr(4, 2)
+
+  ]
+
+  return parseInt(_calday[n - 1])
+
+}
+
+
+
+/**
+
+* 传入农历数字月份返回汉语通俗表示法
+
+* @param lunar month
+
+* @return Cn string
+
+* @eg:var cnMonth = calendar.toChinaMonth(12) ;//cnMonth='腊月'
+
+*/
+
+function toChinaMonth(m) { // 月 => \u6708
+
+  if (m > 12 || m < 1) { return -1 } // 若参数错误 返回-1
+
+  var s = nStr3[m - 1]
+
+  s += '\u6708' // 加上月字
+
+  return s
+
+}
+
+
+
+/**
+
+* 传入农历日期数字返回汉字表示法
+
+* @param lunar day
+
+* @return Cn string
+
+* @eg:var cnDay = calendar.toChinaDay(21) ;//cnMonth='廿一'
+
+*/
+
+function toChinaDay(d) { // 日 => \u65e5
+
+  var s
+
+  switch (d) {
+
+    case 10:
+
+      s = '\u521d\u5341'
+
+      break
+
+    case 20:
+
+      s = '\u4e8c\u5341'
+
+      break
+
+    case 30:
+
+      s = '\u4e09\u5341'
+
+      break
+
+    default:
+
+      s = nStr2[Math.floor(d / 10)]
+
+      s += nStr1[d % 10]
+
+  }
+
+  return (s)
+
+}
+
+
+
+/**
+
+* 年份转生肖[!仅能大致转换] => 精确划分生肖分界线是“立春”
+
+* @param y year
+
+* @return Cn string
+
+* @eg:var animal = calendar.getAnimal(1987) ;//animal='兔'
+
+*/
+
+function getAnimal(y) {
+
+  return Animals[(y - 4) % 12]
+
+}
+
+
+
+/**
+
+* 传入阳历年月日获得详细的公历、农历object信息 <=>JSON
+
+* @param y  solar year
+
+* @param m  solar month
+
+* @param d  solar day
+
+* @return JSON object
+
+* @eg:console.log(calendar.solar2lunar(1987,11,01));
+
+*/
+
+function solar2lunar(y, m, d) { // 参数区间1900.1.31~2100.12.31
+
+  // 年份限定、上限
+
+  if (y < 1900 || y > 2100) {
+
+    return -1 // undefined转换为数字变为NaN
+
+  }
+
+  // 公历传参最下限
+
+  if (y === 1900 && m === 1 && d < 31) {
+
+    return -1
+
+  }
+
+  // 未传参  获得当天
+
+  var objDate = null
+
+  if (!y) {
+
+    objDate = new Date()
+
+  } else {
+
+    objDate = new Date(y, parseInt(m) - 1, d)
+
+  }
+
+  var i
+
+  var leap = 0
+
+  var temp = 0
+
+  // 修正ymd参数
+
+  y = objDate.getFullYear()
+
+  m = objDate.getMonth() + 1
+
+  d = objDate.getDate()
+
+  var offset = (Date.UTC(objDate.getFullYear(), objDate.getMonth(), objDate.getDate()) - Date.UTC(1900, 0, 31)) / 86400000
+
+  for (i = 1900; i < 2101 && offset > 0; i++) {
+
+    temp = lYearDays(i)
+
+    offset -= temp
+
+  }
+
+  if (offset < 0) {
+
+    offset += temp; i--
+
+  }
+
+
+
+  // 是否今天
+
+  var isTodayObj = new Date()
+
+  var isToday = false
+
+  if (isTodayObj.getFullYear() === y && isTodayObj.getMonth() + 1 === m && isTodayObj.getDate() === d) {
+
+    isToday = true
+
+  }
+
+  // 星期几
+
+  var nWeek = objDate.getDay()
+
+  var cWeek = nStr1[nWeek]
+
+  // 数字表示周几顺应天朝周一开始的惯例
+
+  if (nWeek === 0) {
+
+    nWeek = 7
+
+  }
+
+  // 农历年
+
+  var year = i
+
+  leap = leapMonth(i) // 闰哪个月
+
+  var isLeap = false
+
+
+
+  // 效验闰月
+
+  for (i = 1; i < 13 && offset > 0; i++) {
+
+    // 闰月
+
+    if (leap > 0 && i === (leap + 1) && isLeap === false) {
+
+      --i
+
+      isLeap = true; temp = leapDays(year) // 计算农历闰月天数
+
+    } else {
+
+      temp = monthDays(year, i)// 计算农历普通月天数
+
+    }
+
+    // 解除闰月
+
+    if (isLeap === true && i === (leap + 1)) { isLeap = false }
+
+    offset -= temp
+
+  }
+
+  // 闰月导致数组下标重叠取反
+
+  if (offset === 0 && leap > 0 && i === leap + 1) {
+
+    if (isLeap) {
+
+      isLeap = false
+
+    } else {
+
+      isLeap = true; --i
+
+    }
+
+  }
+
+  if (offset < 0) {
+
+    offset += temp; --i
+
+  }
+
+  // 农历月
+
+  var month = i
+
+  // 农历日
+
+  var day = offset + 1
+
+  // 天干地支处理
+
+  var sm = m - 1
+
+  var gzY = toGanZhiYear(year)
+
+
+
+  // 当月的两个节气
+
+  // bugfix-2017-7-24 11:03:38 use lunar Year Param `y` Not `year`
+
+  var firstNode = getTerm(y, (m * 2 - 1)) // 返回当月「节」为几日开始
+
+  var secondNode = getTerm(y, (m * 2)) // 返回当月「节」为几日开始
+
+
+
+  // 依据12节气修正干支月
+
+  var gzM = toGanZhi((y - 1900) * 12 + m + 11)
+
+  if (d >= firstNode) {
+
+    gzM = toGanZhi((y - 1900) * 12 + m + 12)
+
+  }
+
+  // 传入的日期的节气与否
+
+  var isTerm = false
+
+  var Term = null
+
+  if (firstNode === d) {
+
+    isTerm = true
+
+    Term = solarTerm[m * 2 - 2]
+
+  }
+
+  if (secondNode === d) {
+
+    isTerm = true
+
+    Term = solarTerm[m * 2 - 1]
+
+  }
+
+  // 日柱 当月一日与 1900/1/1 相差天数
+
+  var dayCyclical = Date.UTC(y, sm, 1, 0, 0, 0, 0) / 86400000 + 25567 + 10
+
+  var gzD = toGanZhi(dayCyclical + d - 1)
+
+  // 该日期所属的星座
+
+  var astro = toAstro(m, d)
+
+  return { 'lYear': year, 'lMonth': month, 'lDay': day, 'Animal': getAnimal(year), 'IMonthCn': (isLeap ? '\u95f0' : '') + toChinaMonth(month), 'IDayCn': toChinaDay(day), 'cYear': y, 'cMonth': m, 'cDay': d, 'gzYear': gzY, 'gzMonth': gzM, 'gzDay': gzD, 'isToday': isToday, 'isLeap': isLeap, 'nWeek': nWeek, 'ncWeek': '\u661f\u671f' + cWeek, 'isTerm': isTerm, 'Term': Term, 'astro': astro }
+
+}
+
+
+
+
+
+var calendarFormatter = {
+
+  // 传入阳历年月日获得详细的公历、农历object信息 <=>JSON
+
+  solar2lunar: function (y, m, d) { // 参数区间1900.1.31~2100.12.31
+
+    return solar2lunar(y, m, d)
+
+  },
+
+  /**
+
+  * 传入农历年月日以及传入的月份是否闰月获得详细的公历、农历object信息 <=>JSON
+
+  * @param y  lunar year
+
+  * @param m  lunar month
+
+  * @param d  lunar day
+
+  * @param isLeapMonth  lunar month is leap or not.[如果是农历闰月第四个参数赋值true即可]
+
+  * @return JSON object
+
+  * @eg:console.log(calendar.lunar2solar(1987,9,10));
+
+  */
+
+  lunar2solar: function (y, m, d, isLeapMonth) { // 参数区间1900.1.31~2100.12.1
+
+    isLeapMonth = !!isLeapMonth
+
+    if (isLeapMonth && (leapMonth !== m)) { return -1 }// 传参要求计算该闰月公历 但该年得出的闰月与传参的月份并不同
+
+    if (y === 2100 && m === 12 && d > 1 || y === 1900 && m === 1 && d < 31) { return -1 } // 超出了最大极限值
+
+    var day = monthDays(y, m)
+
+    var _day = day
+
+    // bugFix 2016-9-25
+
+    // if month is leap, _day use leapDays method
+
+    if (isLeapMonth) {
+
+      _day = leapDays(y, m)
+
+    }
+
+    if (y < 1900 || y > 2100 || d > _day) { return -1 }// 参数合法性效验
+
+
+
+    // 计算农历的时间差
+
+    var offset = 0
+
+    for (var i = 1900; i < y; i++) {
+
+      offset += lYearDays(i)
+
+    }
+
+    var leap = 0
+
+    var isAdd = false
+
+    for (i = 1; i < m; i++) {
+
+      leap = leapMonth(y)
+
+      if (!isAdd) { // 处理闰月
+
+        if (leap <= i && leap > 0) {
+
+          offset += leapDays(y); isAdd = true
+
+        }
+
+      }
+
+      offset += monthDays(y, i)
+
+    }
+
+    // 转换闰月农历 需补充该年闰月的前一个月的时差
+
+    if (isLeapMonth) { offset += day }
+
+    // 1900年农历正月一日的公历时间为1900年1月30日0时0分0秒(该时间也是本农历的最开始起始点)
+
+    var stmap = Date.UTC(1900, 1, 30, 0, 0, 0)
+
+    var calObj = new Date((offset + d - 31) * 86400000 + stmap)
+
+    var cY = calObj.getUTCFullYear()
+
+    var cM = calObj.getUTCMonth() + 1
+
+    var cD = calObj.getUTCDate()
+
+    return solar2lunar(cY, cM, cD)
+
+  }
+
+}
+
+/* 农历转换 end */
+
+//----------------------------------------------------------------
+
+/* 节日弹窗 start */
+var d = new Date();
+m = d.getMonth() + 1;
+dd = d.getDate();
+y = d.getFullYear();
+
+// 公祭日
+if (m == 9 && dd == 18) {
+  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("今天是九一八事变" + (y - 1931).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 7 && dd == 7) {
+  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("今天是卢沟桥事变" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 12 && dd == 13) {
+  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("今天是南京大屠杀" + (y - 1937).toString() + "周年纪念日\n🪔勿忘国耻，振兴中华🪔");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 8 && dd == 14) {
+  document.getElementsByTagName("html")[0].setAttribute("style", "filter: grayscale(60%);");
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("今天是世界慰安妇纪念日\n🪔勿忘国耻，振兴中华🪔");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+
+
+// 节假日
+if (m == 10 && dd <= 3) {//国庆节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("祝祖国" + (y - 1949).toString() + "岁生日快乐！");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 8 && dd == 15) {//搞来玩的，小日子投降
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("小日子已经投降" + (y - 1945).toString() + "年了😃");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 1 && dd == 1) {//元旦节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert(y.toString() + "年元旦快乐！🎉");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 3 && dd == 8) {//妇女节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("各位女神们，妇女节快乐！👩");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
+if (m == 4 && dd == 1) {//愚人节，随机谎话
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert(l[Math.floor(Math.random() * l.length)]);
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 5 && dd == 1) {//劳动节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("劳动节快乐\n为各行各业辛勤工作的人们致敬！");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 5 && dd == 4) {//青年节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("青年节快乐\n青春不是回忆逝去,而是把握现在！");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 5 && dd == 20) {//520
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("今年是520情人节\n快和你喜欢的人一起过吧！💑");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 7 && dd == 1) {//建党节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("祝中国共产党" + (y - 1921).toString() + "岁生日快乐！");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 8 && dd == 1) {//建军节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("祝中国人民解放军" + (y - 1927).toString() + "岁生日快乐！");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 9 && dd == 10) {//教师节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("各位老师们教师节快乐！👩‍🏫");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 12 && dd == 25) {//圣诞节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("圣诞节快乐！🎄");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 7 && dd == 30) {//站长生日
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("祝站长" + (y - 2004).toString() + "岁生日快乐！🍜");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+
+// if (m == 6 && dd == 30) {//小猫咪生日
+//   if (sessionStorage.getItem("isPopupWindow") != "1") {
+//     Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
+//     sessionStorage.setItem("isPopupWindow", "1");
+//   }
+// }
+
+//传统节日部分
+
+if ((y == 2023 && m == 4 && dd == 5) || (y == 2024 && m == 4 && dd == 4) || (y == 2025 && m == 4 && dd == 4)) {//清明节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("清明时节雨纷纷,一束鲜花祭故人💐");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((y == 2023 && m == 12 && dd == 22) || (y == 2024 && m == 12 && dd == 21) || (y == 2025 && m == 12 && dd == 21)) {//冬至
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("冬至快乐\n快吃上一碗热热的汤圆和饺子吧🧆");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+
+var lunar = calendarFormatter.solar2lunar();
+
+//农历采用汉字计算，防止出现闰月导致问题
+
+if ((lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初六") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初五") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初四") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初三") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初二") || (lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "初一") || (lunar["IMonthCn"] == "腊月" && lunar["IDayCn"] == "三十") || (lunar["IMonthCn"] == "腊月" && lunar["IDayCn"] == "廿九")) {
+  //春节，本来只有大年三十到初六，但是有时候除夕是大年二十九，所以也加上了
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert(y.toString() + "年新年快乐\n🎊祝你心想事成，诸事顺利🎊");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((lunar["IMonthCn"] == "正月" && lunar["IDayCn"] == "十五")) {
+  //元宵节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("元宵节快乐\n送你一个大大的灯笼🧅");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((lunar["IMonthCn"] == "五月" && lunar["IDayCn"] == "初五")) {
+  //端午节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("端午节快乐\n请你吃一条粽子🍙");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((lunar["IMonthCn"] == "七月" && lunar["IDayCn"] == "初七")) {
+  //七夕节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((lunar["IMonthCn"] == "八月" && lunar["IDayCn"] == "十五")) {
+  //中秋节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("中秋节快乐\n请你吃一块月饼🍪");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((lunar["IMonthCn"] == "九月" && lunar["IDayCn"] == "初九")) {
+  //重阳节
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    banqinHolidayAlert("重阳节快乐\n独在异乡为异客，每逢佳节倍思亲");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+
+// 切换主题提醒
+// if (y == 2022 && m == 12 && (dd >= 18 && dd <= 20)) {
+//     if (sessionStorage.getItem("isPopupWindow") != "1") {
+//         Swal.fire("网站换成冬日限定主题啦⛄");
+//         sessionStorage.setItem("isPopupWindow", "1");
+//     }
+// }
+
+
+/* 节日弹窗 end */
+
+//----------------------------------------------------------------
+
+/* 听话鼠标 start */
+var CURSOR;
+
+Math.lerp = (a, b, n) => (1 - n) * a + n * b;
+
+const getStyle2 = (el, attr) => {
+  try {
+    return window.getComputedStyle
+      ? window.getComputedStyle(el)[attr]
+      : el.currentStyle[attr];
+  } catch (e) { }
+  return "";
+};
+
+// 为了屏蔽异步加载导致无法读取颜色值，这里统一用哈希表预处理
+const map = new Map();
+map.set('red', "rgb(241, 71, 71)");
+map.set('orange', "rgb(241, 162, 71)");
+map.set('yellow', "rgb(241, 238, 71)")
+map.set('purple', "rgb(179, 71, 241)");
+map.set('blue', "rgb(102, 204, 255)");
+map.set('gray', "rgb(226, 226, 226)");
+map.set('green', "rgb(57, 197, 187)");
+map.set('whitegray', "rgb(241, 241, 241)");
+map.set('pink', "rgb(237, 112, 155)");
+map.set('black', "rgb(0, 0, 0)");
+map.set('darkblue', "rgb(97, 100, 159)");
+map.set('heoblue', "rgb(66, 90, 239)");
+
+class Cursor {
+  constructor() {
+    this.pos = { curr: null, prev: null };
+    this.pt = [];
+    this.create();
+    this.init();
+    this.render();
+  }
+
+  move(left, top) {
+    this.cursor.style["left"] = `${left}px`;
+    this.cursor.style["top"] = `${top}px`;
+  }
+
+  create() {
+    if (!this.cursor) {
+      this.cursor = document.createElement("div");
+      this.cursor.id = "cursor";
+      this.cursor.classList.add("hidden");
+      document.body.append(this.cursor);
+    }
+    var el = document.getElementsByTagName('*');
+    for (let i = 0; i < el.length; i++)
+      if (getStyle2(el[i], "cursor") == "pointer")
+        this.pt.push(el[i].outerHTML);
+    var colorVal = map.get(localStorage.getItem("themeColor"));
+    document.body.appendChild((this.scr = document.createElement("style")));
+    this.scr.innerHTML = `* {cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='8px' height='8px'><circle cx='4' cy='4' r='4' opacity='1.0' fill='` + colorVal + `'/></svg>") 4 4, auto}`;
+  }
+
+  refresh() {
+    this.scr.remove();
+    this.cursor.classList.remove("hover");
+    this.cursor.classList.remove("active");
+    this.pos = { curr: null, prev: null };
+    this.pt = [];
+
+    this.create();
+    this.init();
+    this.render();
+  }
+
+  init() {
+    document.onmouseover = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.add("hover");
+    document.onmouseout = e => this.pt.includes(e.target.outerHTML) && this.cursor.classList.remove("hover");
+    document.onmousemove = e => { (this.pos.curr == null) && this.move(e.clientX - 8, e.clientY - 8); this.pos.curr = { x: e.clientX - 8, y: e.clientY - 8 }; this.cursor.classList.remove("hidden"); };
+    document.onmouseenter = e => this.cursor.classList.remove("hidden");
+    document.onmouseleave = e => this.cursor.classList.add("hidden");
+    document.onmousedown = e => this.cursor.classList.add("active");
+    document.onmouseup = e => this.cursor.classList.remove("active");
+  }
+
+  render() {
+    if (this.pos.prev) {
+      // 跟踪速度调节
+      this.pos.prev.x = Math.lerp(this.pos.prev.x, this.pos.curr.x, 0.15);
+      this.pos.prev.y = Math.lerp(this.pos.prev.y, this.pos.curr.y, 0.15);
+      this.move(this.pos.prev.x, this.pos.prev.y);
+    } else {
+      this.pos.prev = this.pos.curr;
+    }
+    requestAnimationFrame(() => this.render());
+  }
+}
+
+(() => {
+  CURSOR = new Cursor();
+  // 需要重新获取列表时，使用 CURSOR.refresh()
+})();
+
+/* 听话鼠标 end */
+
+//----------------------------------------------------------------
+
+/* 新年倒计时 start */
+// let newYearTimer = null;
+// var newYear = () => {
+//   clearTimeout(newYearTimer);
+//   if (!document.querySelector('#newYear')) return;
+//   // 新年时间戳 and 星期对象
+//   let newYear = new Date('2023-01-22 00:00:00').getTime() / 1000,
+//     week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }
+
+//   time();
+
+//   // 补零函数
+//   function nol(h) { return h > 9 ? h : '0' + h; };
+
+//   function time() {
+//     // 现在 时间对象
+//     let now = new Date();
+
+//     // 右下角 今天
+//     document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]
+
+//     // 现在与新年相差秒数
+//     let second = newYear - Math.round(now.getTime() / 1000);
+
+//     // 小于0则表示已经过年
+//     if (second < 0) {
+//       document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';
+//       document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';
+//     } else {
+//       // 大于0则还未过年
+//       document.querySelector('#newYear .title').innerHTML = '距离2023年春节：'
+
+//       // 大于一天则直接渲染天数
+//       if (second > 86400) {
+//         document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`
+//       } else {
+//         // 小于一天则使用时分秒计时。
+//         let h = nol(parseInt(second / 3600));
+//         second %= 3600;
+//         let m = nol(parseInt(second / 60));
+//         second %= 60;
+//         let s = nol(second);
+//         document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;
+//         // 计时
+//         newYearTimer = setTimeout(time, 1000);
+//       }
+//     }
+//   }
+
+//   // 元宝飘落
+//   jQuery(document).ready(function ($) {
+//     $('#newYear').wpSuperSnow({
+//       flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
+//       totalFlakes: '100',
+//       zIndex: '999999',
+//       maxSize: '30',
+//       maxDuration: '20',
+//       useFlakeTrans: false
+//     });
+//   });
+// }
+// // Pjax适配：若没有开启Pjax这里直接是newYear()即可
+// // 开了Pjax的用以下两句
+// document.addEventListener('pjax:complete', newYear);
+// document.addEventListener('DOMContentLoaded', newYear);
+
+/* 新年倒计时 end */
+
+//----------------------------------------------------------------
+
+/* 页脚计时器 start */
+var now = new Date();
+function createtime() {
+  // 当前时间
+  now.setTime(now.getTime() + 1000);
+  var start = new Date("01/25/2022 00:00:00"); // 旅行者1号开始计算的时间
+  var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
+  var unit = (dis / 149600000).toFixed(6);  // 天文单位
+  // 网站诞生时间
+  var grt = new Date("01/25/2022 00:00:00");
+  var days = (now - grt) / 1e3 / 60 / 60 / 24,
+    dnum = Math.floor(days),
+    hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
+    hnum = Math.floor(hours);
+  1 == String(hnum).length && (hnum = "0" + hnum);
+  var minutes = (now - grt) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+    mnum = Math.floor(minutes);
+  1 == String(mnum).length && (mnum = "0" + mnum);
+  var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+    snum = Math.round(seconds);
+  1 == String(snum).length && (snum = "0" + snum);
+  let currentTimeHtml = "";
+  (currentTimeHtml =
+    hnum < 18 && hnum >= 9
+      ? `<img class='boardsign' src='https://img.shields.io/badge/坂琴的窝-营业中-6adea8?style=social&logo=cakephp' title='今天也要努力学习哦~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
+      : `<img class='boardsign' src='https://img.shields.io/badge/坂琴的窝-下班了该睡觉了~-6adea8?style=social&logo=coffeescript' title='该睡觉了（￣︶￣）↗　'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
+    document.getElementById("workboard") &&
+    (document.getElementById("workboard").innerHTML = currentTimeHtml);
+}
+// 设置重复执行函数，周期1000ms
+setInterval(() => {
+  createtime();
+}, 1000);
+
+/*页脚计时器 end */
+
+//----------------------------------------------------------------
+
+
+/* fps检测 start */
+var fpsFrameId = null;
+var fpsMonitorEnabled = false;
+var fpsFrameCount = 0;
+var fpsLastSampleTime = Date.now();
+
+function fpsStatusText(fps) {
+  if (fps <= 5) return `<span style="color:#bd0000">卡成ppt🤢</span>`;
+  if (fps <= 15) return `<span style="color:red">电竞级帧率😖</span>`;
+  if (fps <= 25) return `<span style="color:orange">有点难受😨</span>`;
+  if (fps < 35) return `<span style="color:#9338e6">不太流畅🙄</span>`;
+  if (fps <= 45) return `<span style="color:#08b7e4">还不错哦😁</span>`;
+  return `<span style="color:#39c5bb">十分流畅🤣</span>`;
+}
+
+function fpsLoop() {
+  if (!fpsMonitorEnabled || document.hidden) {
+    fpsFrameId = null;
+    return;
+  }
+
+  const now = Date.now();
+  fpsFrameCount++;
+  if (now - fpsLastSampleTime >= 1000) {
+    const fps = Math.round((fpsFrameCount * 1000) / (now - fpsLastSampleTime));
+    const target = document.getElementById("fps");
+    if (target) target.innerHTML = `FPS:${fps} ${fpsStatusText(fps)}`;
+    fpsFrameCount = 0;
+    fpsLastSampleTime = now;
+  }
+  fpsFrameId = window.requestAnimationFrame(fpsLoop);
+}
+
+function startFpsMonitor() {
+  const target = document.getElementById("fps");
+  if (target) target.style.removeProperty("display");
+  fpsMonitorEnabled = true;
+  fpsFrameCount = 0;
+  fpsLastSampleTime = Date.now();
+  if (!document.hidden && fpsFrameId === null) fpsFrameId = window.requestAnimationFrame(fpsLoop);
+}
+
+function stopFpsMonitor() {
+  fpsMonitorEnabled = false;
+  if (fpsFrameId !== null) window.cancelAnimationFrame(fpsFrameId);
+  fpsFrameId = null;
+  const target = document.getElementById("fps");
+  if (target) {
+    target.style.setProperty("display", "none", "important");
+    target.textContent = "";
+  }
+}
+
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden && fpsFrameId !== null) {
+    window.cancelAnimationFrame(fpsFrameId);
+    fpsFrameId = null;
+  } else if (!document.hidden && fpsMonitorEnabled && fpsFrameId === null) {
+    fpsFrameCount = 0;
+    fpsLastSampleTime = Date.now();
+    fpsFrameId = window.requestAnimationFrame(fpsLoop);
+  }
+});
+
+window.localStorage.getItem("fpson") == "1" ? startFpsMonitor() : stopFpsMonitor();
+/* fps检测 end */
+
+//----------------------------------------------------------------
+
+/* 美化模块 start */
+
+// 更新版本需要每个用户都恢复一次默认设置
+if (localStorage.getItem("reset_4") == undefined) {
+  localStorage.setItem("reset_4", "1");
+  // 清空之前的标记值
+  for (var i = 1; i <= 3; i++) {
+    localStorage.removeItem("reset_" + i);
+  }
+  clearItem();
+  setTimeout(function () {
+    banqinNotify({
+      title: "提示🍒",
+      message: " (｡･∀･)ﾉﾞ由于网站部分设置项更新，当前已为您重置所有设置，祝您愉快！",
+      type: "success",
+      duration: 8000
+    });
+  }, 1500);
+}
+
+// 清除localStorage配置项
+function clearItem() {
+  localStorage.removeItem('blogbg');
+  localStorage.removeItem('universe');
+  localStorage.removeItem('blur');
+  localStorage.removeItem('fpson');
+  localStorage.removeItem('transNum');
+  localStorage.removeItem('blurRad');
+  localStorage.removeItem('font');
+  localStorage.removeItem('themeColor');
+  localStorage.removeItem('rs');
+  localStorage.removeItem('mouse');
+  localStorage.removeItem('light');
+  localStorage.removeItem('snow');
+  if (typeof stopFpsMonitor === 'function') stopFpsMonitor();
+}
+
+
+// 设置字体
+if (localStorage.getItem("font") == undefined) {
+  // localStorage.setItem("font", "LXGW");
+  localStorage.setItem("font", "YZSOFT");
+}
+setFont(localStorage.getItem("font"));
+function setFont(n) {
+  localStorage.setItem("font", n)
+  if (n == "default") {
+    document.documentElement.style.setProperty('--global-font', '-apple-system');
+    document.body.style.fontFamily = "-apple-system, Consolas_1, BlinkMacSystemFont, 'Segoe UI' , 'Helvetica Neue' , Lato, Roboto, 'PingFang SC' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif";
+  }
+  else {
+    document.documentElement.style.setProperty('--global-font', n);
+    document.body.style.fontFamily = "var(--global-font),-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif";
+  }
+  try { setFontBorder(); } catch (err) { };
+}
+
+// 设置字体选择框边界
+function setFontBorder() {
+  var curFont = localStorage.getItem("font");
+  var swfId = "swf_" + curFont;
+  var currentFontButton = document.getElementById(swfId);
+  if (!currentFontButton) return;
+  currentFontButton.style.border = "2px solid var(--theme-color)";
+  Array.prototype.forEach.call(document.getElementsByClassName("swf"), function (ee) {
+    if (ee.id != swfId) ee.style.border = "2px solid var(--border-color)";
+  });
+}
+
+
+// 设置主题色
+if (localStorage.getItem("themeColor") == undefined) {
+  localStorage.setItem("themeColor", "green");
+}
+setColor(localStorage.getItem("themeColor"));
+function setColor(c) {
+  document.getElementById("themeColor").innerText = `:root{--theme-color:` + map.get(c) + ` !important}`;
+  localStorage.setItem("themeColor", c);
+  // 刷新鼠标颜色
+  CURSOR.refresh();
+  // 设置一个带有透明度的主题色，用于菜单栏的悬浮颜色
+  var theme_color = map.get(c);
+  var trans_theme_color = "rgba" + theme_color.substring(3, theme_color.length - 1) + ", 0.7)";
+  var high_trans_color = "rgba" + theme_color.substring(3, theme_color.length - 1) + ", 0.5)";
+  document.documentElement.style.setProperty("--text-bg-hover", trans_theme_color);
+  document.documentElement.style.setProperty("--high-trans-color", high_trans_color);
+}
+
+
+// 星空背景开关
+if (localStorage.getItem("universe") == undefined) {
+  localStorage.setItem("universe", "block");  //如果想默认开就改成block,默认关就是none
+}
+setUniverse2(localStorage.getItem("universe"));
+function setUniverse2(c) {
+  document.getElementById("universe").style.display = c;
+  localStorage.setItem("universe", c);
+  window.dispatchEvent(new Event("banqin:universe-change"));
+}
+function setUniverse() {
+  if (document.getElementById("universeSet").checked) {
+    setUniverse2("block");
+  } else {
+    setUniverse2("none");
+  }
+}
+
+// 雪花开关
+if (localStorage.getItem("snow") == undefined) {
+  localStorage.setItem("snow", "none");   //如果想默认开就改成block,默认关就是none
+}
+document.getElementById("snow").style.display = localStorage.getItem("snow");
+function setSnow() {
+  if (document.getElementById("snowSet").checked) {
+    document.getElementById("snow").style.display = "block";
+    localStorage.setItem("snow", "block");
+  } else {
+    document.getElementById("snow").style.display = "none";
+    localStorage.setItem("snow", "none");
+  }
+  window.dispatchEvent(new Event("banqin:snow-change"));
+}
+
+
+// 帧率监测开关
+if (localStorage.getItem("fpson") == undefined) {
+  localStorage.setItem("fpson", "0");
+}
+function fpssw() {
+  const enabled = document.getElementById("fpson").checked;
+  localStorage.setItem("fpson", enabled ? "1" : "0");
+  enabled ? startFpsMonitor() : stopFpsMonitor();
+}
+
+// 刷新窗口
+function reload() {
+  window.location.reload();
+}
+
+// 侧边栏开关
+if (localStorage.getItem("rs") == undefined) {
+  localStorage.setItem("rs", "block");
+}
+if (localStorage.getItem("rs") == "block") {
+  document.getElementById("rightSide").innerText = `:root{--rightside-display: block}`;
+} else {
+  document.getElementById("rightSide").innerText = `:root{--rightside-display: none}`;
+}
+function toggleRightside() {
+  // 先设置localStorage变量
+  if (document.getElementById("rightSideSet").checked) {
+    localStorage.setItem("rs", "block");
+    document.getElementById("rightSide").innerText = `:root{--rightside-display: block}`;
+  } else {
+    localStorage.setItem("rs", "none");
+    document.getElementById("rightSide").innerText = `:root{--rightside-display: none}`;
+  }
+}
+
+
+// 透明度调节滑块
+if (localStorage.getItem("transNum") == undefined) {
+  localStorage.setItem("transNum", 95);
+}
+var curTransNum = localStorage.getItem("transNum");
+var curTransMini = curTransNum;
+function applyTransparency(value) {
+  const percentage = Math.max(0, Math.min(100, Number(value) || 0));
+  const alpha = percentage / 100;
+  const lightValue = `rgba(253, 253, 253, ${alpha})`;
+  const darkValue = `rgba(25, 25, 25, ${alpha})`;
+  document.documentElement.style.setProperty('--trans-light', lightValue, 'important');
+  document.documentElement.style.setProperty('--trans-dark', darkValue, 'important');
+  const style = document.getElementById("transPercent");
+  if (style) style.textContent = `:root{--trans-light:${lightValue} !important;--trans-dark:${darkValue} !important;}`;
+}
+applyTransparency(curTransNum);
+function setTrans() {
+  var elem = document.getElementById("transSet");
+  var newTransNum = elem.value;
+  var target = document.querySelector('.transValue');
+  if (target) target.textContent = "透明度 (0%-100%): " + newTransNum + "%";
+  localStorage.setItem("transNum", newTransNum);
+  curTransMini = newTransNum;
+  curTransNum = newTransNum;  // 更新当前透明度
+  const range = document.querySelector('#rang_trans');
+  if (range) range.style.width = curTransMini + "%";
+  applyTransparency(newTransNum);
+};
+
+
+// 模糊度调节滑块
+if (localStorage.getItem("blurRad") == undefined) {
+  localStorage.setItem("blurRad", 20);
+}
+var curBlur = localStorage.getItem("blurRad"); // 当前模糊半径
+var miniBlur = curBlur;
+function applyBlurRadius(value) {
+  const radius = Math.max(0, Math.min(100, Number(value) || 0));
+  const blurValue = `blur(${radius}px) saturate(120%)`;
+  document.documentElement.style.setProperty('--blur-num', blurValue, 'important');
+  const style = document.getElementById("blurNum");
+  if (style) style.textContent = `:root{--blur-num:${blurValue} !important;}`;
+}
+applyBlurRadius(curBlur);
+function setBlurNum() {
+  var elem = document.getElementById("blurSet");
+  var newBlur = elem.value;
+  var target = document.querySelector('.blurValue');
+  if (target) target.textContent = "模糊半径 (开启模糊生效 0px-100px): " + newBlur + "px";
+  localStorage.setItem("blurRad", newBlur);
+  curBlur = newBlur;
+  miniBlur = curBlur;
+  const range = document.querySelector('#rang_blur');
+  if (range) range.style.width = miniBlur + "%";
+  applyBlurRadius(curBlur);
+};
+
+
+// 模糊效果开关
+if (localStorage.getItem("blur") == undefined) {
+  localStorage.setItem("blur", 0);
+}
+function applyBlurState(enabled) {
+  const filterValue = enabled ? 'var(--blur-num)' : 'none';
+  document.documentElement.style.setProperty('--backdrop-filter', filterValue, 'important');
+  const style = document.getElementById("settingStyle");
+  if (style) style.textContent = `:root{--backdrop-filter:${filterValue} !important;}`;
+}
+applyBlurState(localStorage.getItem("blur") == 1);
+function setBlur() {
+  if (document.getElementById("blur").checked) {
+    localStorage.setItem("blur", 1);
+    applyBlurState(true);
+  } else {
+    localStorage.setItem("blur", 0);
+    applyBlurState(false);
+  }
+}
+
+// 更换背景(原来Leonus的代码)
+// 存数据
+// name：命名 data：数据
+// function saveData(name, data) {
+//   localStorage.setItem(name, JSON.stringify({ time: Date.now(), data: data }));
+// }
+// 取数据
+// name：命名 time：过期时长,单位分钟,如传入30,即加载数据时如果超出30分钟返回0,否则返回数据
+// function loadData(name, time) {
+//   let d = JSON.parse(localStorage.getItem(name));
+//   // 过期或有错误返回 0 否则返回数据
+//   if (d) {
+//     let t = Date.now() - d.time;
+//     if (t < time * 60 * 1000 && t > -1) return d.data;
+//   }
+//   return 0;
+// }
+// 上面两个函数如果你有其他需要存取数据的功能，也可以直接使用
+// 读取背景
+// try {
+//   let data = loadData("blogbg", 1440);
+//   if (data) changeBg(data, 1);
+//   else localStorage.removeItem("blogbg");
+// } catch (error) {
+//   localStorage.removeItem("blogbg");
+// }
+// 切换背景函数
+// 此处的flag是为了每次读取时都重新存储一次,导致过期时间不稳定
+// 如果flag为0则存储,即设置背景. 为1则不存储,即每次加载自动读取背景.
+// function changeBg(s, flag) {
+//   let bg = document.getElementById("web_bg");
+//   if (s.charAt(0) == "#") {
+//     bg.style.backgroundColor = s;
+//     bg.style.backgroundImage = "none";
+//   } else {
+//     bg.style.backgroundImage = s
+//   };
+//   if (!flag) {
+//     saveData("blogbg", s);
+//   }
+// }
+
+// 切换自定义颜色
+var defineColor = localStorage.getItem("blogbg") && localStorage.getItem("blogbg").charAt(0) == '#' ? localStorage.getItem("blogbg") : '#F4D88A';
+function changeBgColor() {
+  changeBg(document.querySelector("#define_colors").value);
+}
+
+// 必应每日壁纸API
+let bingDayBg = screen.width <= 768 ? "url(https://bing.img.run/m.php)" : "url(https://bing.img.run/1920x1080.php)";
+// 必应历史壁纸API
+let bingHistoryBg = screen.width <= 768 ? "url(https://bing.img.run/rand_m.php)" : "url(https://bing.img.run/rand.php)";
+// EEE.DOG
+let EEEDog = "url(https://api.yimian.xyz/img?type=moe&size=1920x1080)";
+// 随机美图cdn.seovx.com
+let seovx = "url(https://cdn.seovx.com/?mom=302)";
+// picsum随机
+let picsum = "url(https://picsum.photos/1920/1080.webp)";
+// 小歪二次元
+// let waiDongman = "url(https://api.ixiaowai.cn/api/api.php)";
+//  小歪高清壁纸
+let waiBizhi = "url(https://api.ixiaowai.cn/gqapi/gqapi.php)";
+// 博天随机
+let btstu = "url(http://api.btstu.cn/sjbz/?lx=suiji)";
+// tuapi 动漫
+// let tuapi = "url(https://tuapi.eees.cc/api.php?category=dongman)";
+// unsplash随机 https://source.unsplash.com/random/1920x1080/daily (weekly)
+let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
+
+
+// 更换背景(自己的代码)
+if (localStorage.getItem("blogbg") != undefined) {
+  setBg(localStorage.getItem("blogbg"));
+} else {
+  const style = document.getElementById("defineBg");
+  if (style) style.textContent = '';
+}
+
+function normalizeBackgroundValue(value) {
+  const input = String(value || '').trim();
+  if (!input) return null;
+  if (/^#[0-9a-f]{3,8}$/i.test(input)) return input;
+  if (/^url\((.|\s)*\)$/i.test(input)) return input;
+  try {
+    const parsed = new URL(input, window.location.href);
+    if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+    return `url(${JSON.stringify(parsed.href)})`;
+  } catch (error) {
+    return null;
+  }
+}
+
+// 切换背景主函数
+function changeBg(s) {
+  const normalized = normalizeBackgroundValue(s);
+  if (!normalized) return false;
+  // 自定义颜色框
+  defineColor = normalized.charAt(0) == "#" ? normalized : '#F4D88A';
+  setBg(normalized);
+  localStorage.setItem("blogbg", normalized);
+  return true;
+}
+// 设置背景属性
+function setBg(s) {
+  const normalized = normalizeBackgroundValue(s);
+  if (!normalized) return;
+  const backgroundValue = normalized.charAt(0) === '#'
+    ? normalized
+    : `${normalized} center / cover no-repeat`;
+  const style = document.getElementById("defineBg");
+  if (style) {
+    style.textContent = `#web_bg{background:${backgroundValue} !important;background-attachment:local !important;}`;
+  }
+  const background = document.getElementById("web_bg");
+  if (background) {
+    background.style.setProperty('background', backgroundValue, 'important');
+    background.style.setProperty('background-attachment', 'local', 'important');
+  }
+}
+
+document.addEventListener('pjax:complete', function () {
+  const savedBackground = localStorage.getItem('blogbg');
+  if (savedBackground) setBg(savedBackground);
+});
+
+// 切换链接对应的背景(加入了链接检验与防抖)
+function getPicture() {
+  debounce(getPicture_, 300);
+}
+
+function getPicture_() {
+  const input = document.getElementById("pic-link");
+  const pictureUrl = input ? input.value.trim() : '';
+  let parsedUrl = null;
+  try {
+    parsedUrl = new URL(pictureUrl, window.location.href);
+  } catch (error) { }
+
+  if (!parsedUrl || !['http:', 'https:'].includes(parsedUrl.protocol)) {
+    banqinNotify({
+      title: "链接不对🤣",
+      message: "请输入以 http:// 或 https:// 开头的有效图片链接！",
+      type: "warning",
+      duration: 5000
+    });
+    return;
+  }
+
+  checkImgExists(parsedUrl.href).then(() => {
+    // 有效的图片链接
+    changeBg(parsedUrl.href);
+    // 提示切换成功
+    banqinNotify({
+      title: "可以啦🍨",
+      message: "切换自定义背景成功！",
+      type: "success",
+      duration: 5000
+    });
+  }).catch(() => {
+    // 无效的图片链接，提示无效
+    banqinNotify({
+      title: "链接不对🤣",
+      message: "请输入有效的图片链接！",
+      type: "warning",
+      duration: 5000
+    });
+  })
+}
+// 判断图片链接是否可用
+function checkImgExists(imgurl) {
+  return new Promise(function (resolve, reject) {
+    var ImgObj = new Image();
+    ImgObj.src = imgurl;
+    ImgObj.onload = function (res) {
+      resolve(res);
+    }
+    ImgObj.onerror = function (err) {
+      reject(err);
+    }
+  })
+}
+
+// 黑夜霓虹灯开关
+if (localStorage.getItem("light") == undefined) {
+  localStorage.setItem("light", "true");
+}
+// 这里要适配Pjax
+document.addEventListener('pjax:complete', function () {
+  changeLight(localStorage.getItem("light") == "true" ? true : false)
+});
+document.addEventListener('DOMContentLoaded', function () {
+  changeLight(localStorage.getItem("light") == "true" ? true : false)
+});
+function setLight() {
+  if (document.getElementById("lightSet").checked) {
+    changeLight(true);
+    localStorage.setItem("light", "true");
+  } else {
+    changeLight(false);
+    localStorage.setItem("light", "false");
+  }
+}
+// 更换霓虹灯状态
+function changeLight(flag) {
+  if (document.getElementById("site-name"))
+    document.getElementById("site-name").style.animation = flag ? "light_15px 10s linear infinite" : "none";
+  if (document.getElementById("site-title"))
+    document.getElementById("site-title").style.animation = flag ? "light_15px 10s linear infinite" : "none";
+  if (document.getElementById("site-subtitle"))
+    document.getElementById("site-subtitle").style.animation = flag ? "light_10px 10s linear infinite" : "none";
+  if (document.getElementById("post-info"))
+    document.getElementById("post-info").style.animation = flag ? "light_5px 10s linear infinite" : "none";
+  document.getElementById("menu_shadow").innerText = flag ? `:root{--menu-shadow: 0 0 1px var(--theme-color);}` : `:root{--menu-shadow: none;}`;
+}
+
+
+
+// 解决开启Pjax的问题
+// function whenDOMReady() {
+//   try {
+//     let data = loadData('blogbg', 1440)
+//     if (data) changeBg_noWindow(data, 0)
+//     else localStorage.removeItem('blogbg');
+//   } catch (error) { localStorage.removeItem('blogbg'); }
+// }
+// whenDOMReady()
+// document.addEventListener("pjax:success", whenDOMReady)
+
+// 无弹窗提醒更换背景
+// function changeBg_noWindow(s, flag) {
+//   let bg = document.getElementById("web_bg");
+//   if (s.charAt(0) == "#") {
+//     bg.style.backgroundColor = s;
+//     bg.style.backgroundImage = "none";
+//   } else bg.style.backgroundImage = s;
+//   if (!flag) {
+//     saveData("blogbg", s);
+//   }
+// }
+
+// 创建窗口
+var winbox = "";
+
+function createWinbox() {
+  let div = document.createElement("div");
+  document.body.appendChild(div);
+  winbox = WinBox({
+    id: "meihuaBox",
+    index: 99,
+    title: "美化设置",
+    x: "left",
+    y: "center",
+    minwidth: "300px",
+    height: "60%",
+    // "#76c8f1"
+    background: 'var(--theme-color)',
+    onmaximize: () => {
+      div.innerHTML = `<style>body::-webkit-scrollbar {display: none;} div#meihuaBox {width: 100% !important;}</style>`;
+    },
+    onrestore: () => {
+      div.innerHTML = "";
+    },
+  });
+  winResize();
+  window.addEventListener("resize", winResize);
+
+  // 每一类我放了一个演示，直接往下复制粘贴 a标签 就可以，需要注意的是 函数里面的链接 冒号前面需要添加反斜杠\进行转义
+  winbox.body.innerHTML = `
+<div class="settings" style="display: block;">
+<div id="article-container" style="padding:12px;">
+<br>
+<center><p><button onclick="reset()" style="background:linear-gradient(to right, #fc354c, #0abfbc);display:block;width:40%;padding:15px 0;border-radius:30px;color:white;font-size:1.1em;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认设置</button></p></center>
+
+<h2>一、显示偏好</h2>
+<p class="settings-help">透明度作用于首页卡片、侧栏和正文容器；模糊半径需要同时开启“模糊效果”后才会显示。</p>
+
+<div class="transValue" style="font-weight:bold;padding-left:10px">透明度 (0%-100%): ${curTransNum}%</div>
+<div class="range">
+  <input id="transSet" type="range" min="0" max="100" step="1" value=${curTransNum} oninput="setTrans()">
+  <p class="rang_width" id="rang_trans" style="width:${curTransMini}%"></p>
+</div>
+
+<div class="blurValue" style="font-weight:bold;padding-left:10px">模糊半径 (开启模糊生效 0px-100px): ${curBlur} px</div>
+<div class="range">
+  <input id="blurSet" type="range" min="0" max="100" step="1" value="${curBlur}" oninput="setBlurNum()">
+  <p class="rang_width" id="rang_blur" style="width:${miniBlur}%"></p>
+</div>
+
+
+<div class="settings-toggle-grid">
+  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">星空特效 (夜间模式)</span><input type="checkbox" id="universeSet" onchange="setUniverse()"></label>
+  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">霓虹灯 (夜间模式)</span><input type="checkbox" id="lightSet" onchange="setLight()"></label>
+  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">模糊效果 (消耗性能)</span><input type="checkbox" id="blur" onchange="setBlur()"></label>
+  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">侧边栏 (默认开)</span><input type="checkbox" id="rightSideSet" onchange="toggleRightside()"></label>
+  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">帧率监测</span><input type="checkbox" id="fpson" onchange="fpssw()"></label>
+  <label class="settings-toggle"><span class="content-text" style="font-weight:bold">雪花特效 (白天模式)</span><input type="checkbox" id="snowSet" onchange="setSnow()"></label>
+</div>
+
+<h2>二、主题色设置</h2>
+<div class="content" style="display:flex"><input type="radio" id="red" name="colors" value=" "
+        onclick="setColor('red')"><input type="radio" id="orange" name="colors" value=" "
+        onclick="setColor('orange')"><input type="radio" id="yellow" name="colors" value=" "
+        onclick="setColor('yellow')"><input type="radio" id="green" name="colors" value=" "
+        onclick="setColor('green')"><input type="radio" id="blue" name="colors" value=" "
+        onclick="setColor('blue')"><input type="radio" id="heoblue" name="colors" value=" "
+        onclick="setColor('heoblue')"><input type="radio" id="darkblue" name="colors" value=" "
+        onclick="setColor('darkblue')"><input type="radio" id="purple" name="colors" value=" "
+        onclick="setColor('purple')"><input type="radio" id="pink" name="colors" value=" "
+        onclick="setColor('pink')" checked="checked"><input type="radio" id="black" name="colors" value=" "
+        onclick="setColor('black')"><input type="radio" id="blackgray" name="colors" value=" "
+        onclick="setColor('blackgray')"></div>
+
+<h2>三、背景设置</h2>
+<center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>
+
+<h3>1. 画廊图片</h3>
+<details class="folding-tag" cyan><summary> 查看画廊图片 </summary>
+              <div class='content'>
+              <div class="bgbox"><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/129971794_p0.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/129971794_p0.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/store.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/store.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/ailisi.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/ailisi.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/yewan_jiaotang.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/yewan_jiaotang.webp)')"></a><a href="/box/gallery" rel="noopener external nofollow" style="background-image:url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/summer_night.webp)" class="imgbox" onclick="changeBg('url(https://coscdn.ibanqin.com/images/coverimages/2025/5-14/summer_night.webp)')"></a></div>
+              </div>
+            </details>
+ 
+<h3>2. 自定义背景</h3>
+<details class="folding-tag" cyan><summary> 设置自定义背景 </summary>
+              <div class='content'>
+              <p class="settings-help">填写直链后会立即替换全站背景，并同时应用到电脑/手机与日间/夜间模式。</p><p><center><input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/104088864_p0.webp"></center></p><p><center><button type="button" onclick="getPicture()" style="background:var(--theme-color);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button></center></p>
+              </div>
+            </details>
+
+<br>
+<center><div style="font-size:1.2em;color:var(--theme-color);font-weight:bold;">------ ( •̀ ω •́ )y 到底啦 ------</div></center>
+<br>
+
+</div>
+
+</div>
+
+`;
+
+  // 打开小窗时候初始化
+  $("#" + localStorage.getItem("themeColor")).attr("checked", true);
+  if (localStorage.getItem("blur") == 1) {
+    document.getElementById("blur").checked = true;
+  } else {
+    document.getElementById("blur").checked = false;
+  }
+  if (localStorage.getItem("universe") == "block") {
+    document.getElementById("universeSet").checked = true;
+  } else if (localStorage.getItem("universe") == "none") {
+    document.getElementById("universeSet").checked = false;
+  }
+  if (localStorage.getItem("fpson") == "1") {
+    document.getElementById("fpson").checked = true;
+  } else {
+    document.getElementById("fpson").checked = false;
+  }
+  if (localStorage.getItem("rs") == "block") {
+    document.getElementById("rightSideSet").checked = true;
+  } else if (localStorage.getItem("rs") == "none") {
+    document.getElementById("rightSideSet").checked = false;
+  }
+  if (localStorage.getItem("light") == "true") {
+    document.getElementById("lightSet").checked = true;
+  } else {
+    document.getElementById("lightSet").checked = false;
+  }
+  setFontBorder();
+  if (localStorage.getItem("snow") == "block") {
+    document.getElementById("snowSet").checked = true;
+  } else if (localStorage.getItem("snow") == "none") {
+    document.getElementById("snowSet").checked = false;
+  }
+}
+
+// 恢复默认背景
+function resetBg() {
+  localStorage.removeItem('blogbg');
+  reload();
+}
+
+// 恢复默认设置并刷新页面
+function reset() {
+  clearItem();
+  reload();
+}
+
+// 适应窗口大小
+function winResize() {
+  try {
+    var offsetWid = document.documentElement.clientWidth;
+    if (offsetWid <= 768) {
+      winbox.resize(offsetWid * 0.95 + "px", "90%").move("center", "center");
+    } else {
+      winbox.resize(offsetWid * 0.6 + "px", "70%").move("center", "center");
+    }
+  } catch (err) {
+    // console.log("Pjax毒瘤抽风运行winResize方法🙄🙄🙄");
+  }
+}
+
+// WinBox is only needed after the user opens the beautification panel.
+// Load it on demand instead of adding it to every page visit.
+let winboxLoadPromise = null;
+function loadWinBox() {
+  if (typeof WinBox === "function") return Promise.resolve();
+  if (winboxLoadPromise) return winboxLoadPromise;
+
+  const sources = [
+    "https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/winbox.bundle.min.js",
+    "https://unpkg.com/winbox@0.2.82/dist/winbox.bundle.min.js"
+  ];
+
+  winboxLoadPromise = new Promise((resolve, reject) => {
+    const loadSource = (index) => {
+      if (index >= sources.length) {
+        reject(new Error("WinBox failed to load"));
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = sources[index];
+      script.async = true;
+      script.onload = () => typeof WinBox === "function" ? resolve() : loadSource(index + 1);
+      script.onerror = () => {
+        script.remove();
+        loadSource(index + 1);
+      };
+      document.head.appendChild(script);
+    };
+    loadSource(0);
+  });
+
+  return winboxLoadPromise;
+}
+
+// 切换状态，窗口已创建则控制窗口显示和隐藏，没窗口则创建窗口
+function toggleWinbox() {
+  loadWinBox().then(() => {
+    try {
+      toggleWinboxReady();
+    } catch (error) {
+      console.error("设置面板初始化失败", error);
+      banqinNotify({
+        title: "设置面板初始化失败",
+        message: "页面组件发生异常，请刷新后重试。",
+        type: "warning",
+        duration: 5000
+      });
+    }
+  }).catch(() => {
+    winboxLoadPromise = null;
+    banqinNotify({
+      title: "设置面板加载失败",
+      message: "请检查网络后重试。",
+      type: "warning",
+      duration: 5000
+    });
+  });
+}
+
+function toggleWinboxReady() {
+  if (document.querySelector("#meihuaBox")) {
+    winbox.toggleClass("hide");
+  } else {
+    createWinbox();
+  };
+}
+
+/* 美化模块 end */
