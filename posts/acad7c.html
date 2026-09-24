@@ -1,1 +1,1108 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>游戏 PBR 资产制作流程 | 坂琴的小窝🍜</title><meta name="keywords" content="3D,全流程"><meta name="author" content="坂琴"><meta name="copyright" content="坂琴"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="🍗记录的所有3D软件联合起来的全流程"><meta property="og:type" content="article"><meta property="og:title" content="游戏 PBR 资产制作流程"><meta property="og:url" content="https://www.ibanqin.com/posts/acad7c.html"><meta property="og:site_name" content="坂琴的小窝🍜"><meta property="og:description" content="🍗记录的所有3D软件联合起来的全流程"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/109514837_p0.webp"><meta property="article:published_time" content="2026-08-16T08:43:44.000Z"><meta property="article:modified_time" content="2026-08-16T09:00:19.177Z"><meta property="article:author" content="坂琴"><meta property="article:tag" content="3D"><meta property="article:tag" content="全流程"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/109514837_p0.webp"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://www.ibanqin.com/posts/acad7c"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="baidu-site-verification" content="codeva-6sYWDWF4i5"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload='this.media="all"'><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?ba6163406eb6745d7af4b3aa1d9b78cf";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>const GLOBAL_CONFIG={root:"/",algolia:void 0,localSearch:{path:"/search.xml",preload:!0,languages:{hits_empty:"找不到您查询的内容：${query}"}},translate:void 0,noticeOutdate:{limitDay:365,position:"top",messagePrev:"这篇文章已经是",messageNext:"天之前的东西了，如果是技术类的内容注意时效性哦！如果是个人的想法内容的话……也不知道有没有改变呢，我感觉你可以把这个链接拍到我的脑门上，问我有没有改变！😘"},highlight:{plugin:"highlighjs",highlightCopy:!0,highlightLang:!0,highlightHeightLimit:230},copy:{success:"复制成功",error:"复制错误",noSupport:"浏览器不支持"},relativeDate:{homepage:!0,post:!0},runtime:"",date_suffix:{just:"刚刚",min:"分钟前",hour:"小时前",day:"天前",month:"个月前"},copyright:void 0,lightbox:"fancybox",Snackbar:void 0,source:{justifiedGallery:{js:"https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js",css:"https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css"}},isPhotoFigcaption:!1,islazyload:!1,isAnchor:!1}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"游戏 PBR 资产制作流程",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2026-08-16 17:00:19"}</script><noscript><style>#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(e=>{e.saveToLocal={set:function(e,t,o){if(0===o)return;const a=864e5*o,n={value:t,expiry:(new Date).getTime()+a};localStorage.setItem(e,JSON.stringify(n))},get:function(e){const t=localStorage.getItem(e);if(!t)return;const o=JSON.parse(t);if(!((new Date).getTime()>o.expiry))return o.value;localStorage.removeItem(e)}},e.getScript=e=>new Promise(((t,o)=>{const a=document.createElement("script");a.src=e,a.async=!0,a.onerror=o,a.onload=a.onreadystatechange=function(){const e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(a.onload=a.onreadystatechange=null,t())},document.head.appendChild(a)})),e.activateDarkMode=function(){document.documentElement.setAttribute("data-theme","dark"),null!==document.querySelector('meta[name="theme-color"]')&&document.querySelector('meta[name="theme-color"]').setAttribute("content","#0d0d0d")},e.activateLightMode=function(){document.documentElement.setAttribute("data-theme","light"),null!==document.querySelector('meta[name="theme-color"]')&&document.querySelector('meta[name="theme-color"]').setAttribute("content","ffffff")};const t=saveToLocal.get("theme"),o=(new Date).getHours();void 0===t?o<=6||o>=18?activateDarkMode():activateLightMode():"light"===t?activateLightMode():activateDarkMode();const a=saveToLocal.get("aside-status");void 0!==a&&("hide"===a?document.documentElement.classList.add("hide-aside"):document.documentElement.classList.remove("hide-aside"));/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)&&document.documentElement.classList.add("apple")})(window)</script><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><script defer charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=3Lv1nvnRA9AxBBhO&ck=3Lv1nvnRA9AxBBhO"></script><script defer src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous" onload='(new LingQue.Monitor).init({id:"3Lv27RXjduoNKWlu",sendSuspicious:!0})'></script><svg aria-hidden="true" style="position:absolute;overflow:hidden;width:0;height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248 626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload='this.media="screen"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload='this.media="all"'><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload='this.media="all"'><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="坂琴的小窝🍜" type="application/atom+xml"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img decoding="async" src="https://coscdn.ibanqin.com/images/yatuoli.webp" onerror='onerror=null,src="/assets/r1.jpg"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-a-appround36"></use></svg> <span class="menu_word" style="font-size:17px">首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-wenzhang"></use></svg> <span class="menu_word" style="font-size:17px">文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-guidang1"></use></svg> <span class="menu_word" style="font-size:17px">归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-biaoqian_1"></use></svg> <span class="menu_word" style="font-size:17px">标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-fenlei1"></use></svg> <span class="menu_word" style="font-size:17px">分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-ziyuan"></use></svg> <span class="menu_word" style="font-size:17px">工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-hualang"></use></svg> <span class="menu_word" style="font-size:17px">画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/personalgallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-weihualang"></use></svg> <span class="menu_word" style="font-size:17px">私人画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-daohang"></use></svg> <span class="menu_word" style="font-size:17px">网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-shejiao1"></use></svg> <span class="menu_word" style="font-size:17px">社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-liuyanban"></use></svg> <span class="menu_word" style="font-size:17px">留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-youqinglianjie"></use></svg> <span class="menu_word" style="font-size:17px">友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-wangzhan"></use></svg> <span class="menu_word" style="font-size:17px">网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-a-charttongjishujuzhanbibaifenbi"></use></svg> <span class="menu_word" style="font-size:17px">网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/charts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-a-zhanbifenxitongji"></use></svg> <span class="menu_word" style="font-size:17px">文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/aboutsite"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-guanyu1"></use></svg> <span class="menu_word" style="font-size:17px">关于本站</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-xianxingshalou"></use></svg> <span class="menu_word" style="font-size:17px">网站建设进程</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-wode1"></use></svg> <span class="menu_word" style="font-size:17px">我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-qunliaotian"></use></svg> <span class="menu_word" style="font-size:17px">唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/talk/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-shejiao"></use></svg> <span class="menu_word" style="font-size:17px">个人碎碎念</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-dianying"></use></svg> <span class="menu_word" style="font-size:17px">电影和动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-guanyuwomen"></use></svg> <span class="menu_word" style="font-size:17px">关于我</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">坂琴的小窝🍜</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-a-appround36"></use></svg> <span class="menu_word" style="font-size:17px">首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-wenzhang"></use></svg> <span class="menu_word" style="font-size:17px">文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-guidang1"></use></svg> <span class="menu_word" style="font-size:17px">归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-biaoqian_1"></use></svg> <span class="menu_word" style="font-size:17px">标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-fenlei1"></use></svg> <span class="menu_word" style="font-size:17px">分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-ziyuan"></use></svg> <span class="menu_word" style="font-size:17px">工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-hualang"></use></svg> <span class="menu_word" style="font-size:17px">画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/personalgallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-weihualang"></use></svg> <span class="menu_word" style="font-size:17px">私人画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-daohang"></use></svg> <span class="menu_word" style="font-size:17px">网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-shejiao1"></use></svg> <span class="menu_word" style="font-size:17px">社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-liuyanban"></use></svg> <span class="menu_word" style="font-size:17px">留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-youqinglianjie"></use></svg> <span class="menu_word" style="font-size:17px">友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-wangzhan"></use></svg> <span class="menu_word" style="font-size:17px">网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-a-charttongjishujuzhanbibaifenbi"></use></svg> <span class="menu_word" style="font-size:17px">网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/charts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-a-zhanbifenxitongji"></use></svg> <span class="menu_word" style="font-size:17px">文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/aboutsite"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-guanyu1"></use></svg> <span class="menu_word" style="font-size:17px">关于本站</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-xianxingshalou"></use></svg> <span class="menu_word" style="font-size:17px">网站建设进程</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-wode1"></use></svg> <span class="menu_word" style="font-size:17px">我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-qunliaotian"></use></svg> <span class="menu_word" style="font-size:17px">唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/talk/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-shejiao"></use></svg> <span class="menu_word" style="font-size:17px">个人碎碎念</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-dianying"></use></svg> <span class="menu_word" style="font-size:17px">电影和动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.3em;height:1.3em;vertical-align:-.15em;fill:currentColor;overflow:hidden"><use xlink:href="#icon-guanyuwomen"></use></svg> <span class="menu_word" style="font-size:17px">关于我</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="请搜索你想要的任何信息吧~☜(ﾟヮﾟ☜)"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-sousuo1"></use></svg> <span>搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="这里是美化设置-快来设置成你想要的风格吧~(❁´◡`❁)" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-shezhi4"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-yueliang"></use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">游戏 PBR 资产制作流程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于</span> <time class="post-meta-date-created" datetime="2026-08-16T08:43:44.000Z" title="发表于 2026-08-16 16:43:44">2026-08-16</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-16T09:00:19.177Z" title="更新于 2026-08-16 17:00:19">2026-08-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/3D%E5%BB%BA%E6%A8%A1%E5%92%8C%E6%B8%B2%E6%9F%93/">3D建模和渲染</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">4808</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="游戏 PBR 资产制作流程"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>游戏 PBR 资产制作流程｜从需求到引擎交付</h1><blockquote><p>版本基线：3ds Max 2024.2、RizomUV 2020、Marmoset Toolbag 5.02、Substance 3D Painter v10.0.1、ZBrush 2023.1.1。本文整理的是游戏美术岗位常见的通用流程；三角面预算、纹素密度、贴图规格、命名和通道打包必须以具体公司与项目规范为准。粗搞位于👉<a href="https://www.ibanqin.com/posts/bd4086d7.html">学习建模所记录的一些笔记 | 坂琴的小窝🍜</a></p></blockquote><h2 id="1-先理解：公司要的不是“一个好看的模型”">1. 先理解：公司要的不是“一个好看的模型”</h2><p>游戏资产必须同时满足四类要求：</p><ol><li><strong>美术正确</strong>：比例、轮廓、材质和磨损逻辑成立。</li><li><strong>技术正确</strong>：拓扑、UV、法线、切线空间、LOD、碰撞和导出设置正确。</li><li><strong>性能可控</strong>：三角面、材质槽、纹理数量、分辨率和透明度开销符合目标平台。</li><li><strong>可维护</strong>：命名、目录、版本、源文件和交付说明让其他人能继续工作。</li></ol><p>因此，完整流程不是“建模 → 贴图 → 出图”，而是：</p><p><strong>需求确认 → 参考与材质拆解 → Blockout → 高模 → 低模 → UV → 烘焙 → PBR 贴图 → 引擎集成 → 性能与视觉 QA → 交付</strong></p><h2 id="2-全流程阶段门">2. 全流程阶段门</h2><table><thead><tr><th>阶段</th><th>主要软件</th><th>输入</th><th>输出</th><th>通过条件</th></tr></thead><tbody><tr><td>0. 需求与技术规格</td><td>文档、引擎</td><td>任务卡、概念图</td><td>资产规格表</td><td>引擎、平台、预算、命名、贴图规范均明确</td></tr><tr><td>1. 参考与材质拆解</td><td>PureRef 等</td><td>概念图、实物参考</td><td>参考板、材质清单</td><td>正背侧、尺度、结构和材质成因清楚</td></tr><tr><td>2. Blockout</td><td>3ds Max</td><td>规格表、参考板</td><td>可评审灰模</td><td>尺寸、比例、轮廓、Pivot 与拼接关系正确</td></tr><tr><td>3. 高模</td><td>ZBrush、3ds Max</td><td>通过评审的灰模</td><td>可烘焙高模</td><td>大中小形层级明确，无无意义噪声</td></tr><tr><td>4. 低模与 LOD0</td><td>3ds Max</td><td>高模或灰模</td><td>游戏低模</td><td>轮廓优先、拓扑可控、三角面符合预算</td></tr><tr><td>5. UV</td><td>RizomUV</td><td>最终低模</td><td>UV0；必要时 UV1</td><td>拉伸、密度、重叠、方向和 Padding 合格</td></tr><tr><td>6. 烘焙</td><td>Toolbag 或 Painter</td><td>高模、低模、UV</td><td>Normal、AO、Curvature 等</td><td>无明显接缝、投射、波浪、漏烘</td></tr><tr><td>7. PBR 贴图</td><td>Painter</td><td>低模与 Mesh Maps</td><td>Base Color、Normal、R/M/AO 等</td><td>多种灯光下材质稳定，数值物理合理</td></tr><tr><td>8. LOD、碰撞、导出</td><td>3ds Max、引擎</td><td>完成资产</td><td>FBX、贴图、碰撞、LOD</td><td>命名、Pivot、三角化、法线和尺度一致</td></tr><tr><td>9. 引擎集成</td><td>Unreal/项目引擎</td><td>交付文件</td><td>可用游戏资产</td><td>材质连接、碰撞、LOD、光照和性能正确</td></tr><tr><td>10. 最终 QA</td><td>引擎、Toolbag</td><td>集成资产</td><td>审核截图与交付包</td><td>视觉、技术、性能和目录检查全部通过</td></tr></tbody></table><h2 id="3-阶段-0：建立资产规格表">3. 阶段 0：建立资产规格表</h2><p>没有规格表就开始建模，是最容易返工的做法。至少先确认：</p><table><thead><tr><th>项目</th><th>必须明确的内容</th></tr></thead><tbody><tr><td>资产用途</td><td>英雄资产、普通场景道具、模块化建筑、远景资产或角色附件</td></tr><tr><td>目标平台</td><td>PC、主机、移动端、VR；这直接影响预算</td></tr><tr><td>目标引擎</td><td>Unreal、Unity 或公司自研引擎</td></tr><tr><td>尺度与单位</td><td>真实尺寸；DCC 与引擎单位换算</td></tr><tr><td>坐标与朝向</td><td>Up 轴、Forward 轴、模型正面方向</td></tr><tr><td>Pivot</td><td>中心、底部、角点、铰链或模块吸附点</td></tr><tr><td>几何预算</td><td>LOD0 三角面数与后续 LOD 目标</td></tr><tr><td>材质预算</td><td>材质槽数量、Shader 类型、是否允许透明</td></tr><tr><td>UV 规范</td><td>纹素密度、0–1 或 UDIM、镜像/堆叠是否允许、UV1 要求</td></tr><tr><td>贴图规范</td><td>分辨率、格式、位深、颜色空间、法线方向、通道打包</td></tr><tr><td>LOD 与碰撞</td><td>数量、切换策略、碰撞复杂度和命名</td></tr><tr><td>命名与目录</td><td>资产前缀、大小写、分隔符、版本号和提交位置</td></tr></tbody></table><blockquote><p>公司流程的第一条原则：<strong>项目规范高于个人习惯。</strong> 本笔记中的数值只能当参考，不能替代任务卡。</p></blockquote><h3 id="3-1-开工前选择资产与纹理策略">3.1 开工前选择资产与纹理策略</h3><p>不是所有资产都应该走“每件做一套唯一高低模 + 唯一贴图”。先由主美/技术美术或任务规范确认策略：</p><table><thead><tr><th>策略</th><th>适合情况</th><th>主要检查点</th></tr></thead><tbody><tr><td>唯一烘焙贴图</td><td>英雄道具、独特磨损和近景资产</td><td>纹理预算、唯一 UV、烘焙质量</td></tr><tr><td>平铺材质 / Tiling</td><td>大面积墙地、重复表面</td><td>真实材质尺度、重复感、顶点混合</td></tr><tr><td>Trim Sheet</td><td>模块建筑、重复边框与型材</td><td>模块尺寸、UV 对齐、共享材质规则</td></tr><tr><td>Atlas 图集</td><td>多个小件或同类资产合批</td><td>共享分辨率、Padding、更新成本</td></tr><tr><td>贴花 / Decal</td><td>标识、污渍、裂缝和局部变化</td><td>Overdraw、排序、数量与平台开销</td></tr><tr><td>混合方案</td><td>大多数正式场景资产</td><td>唯一细节只用在真正重要的位置</td></tr></tbody></table><p>选择策略后再决定高模范围、UV 方案、材质槽和贴图数量。否则很容易把适合共享材质的场景模块做成昂贵的唯一贴图资产。</p><h2 id="4-阶段-1：参考与-PBR-材质拆解">4. 阶段 1：参考与 PBR 材质拆解</h2><h3 id="4-1-参考板必须包含">4.1 参考板必须包含</h3><ul><li>正面、侧面、背面和顶部结构。</li><li>人或已知物体作尺度对比。</li><li>新品、使用中和损坏状态。</li><li>近距离材质细节：涂层、裸露金属、锈、灰尘、油污、木纹等。</li><li>相同材质在干燥、潮湿、强光和柔光下的表现。</li></ul><h3 id="4-2-每种材质先回答五个问题">4.2 每种材质先回答五个问题</h3><ol><li>它是金属还是非金属？</li><li>表面是否有涂层？磨损后露出的是什么？</li><li>粗糙度变化由什么造成：抛光、油污、灰尘、腐蚀还是水？</li><li>哪些细节属于几何，哪些属于法线或高度？</li><li>污渍为什么在这里出现：重力、手部接触、边缘碰撞还是积水？</li></ol><h2 id="5-阶段-2：3ds-Max-Blockout">5. 阶段 2：3ds Max Blockout</h2><p>详细操作见：<a href="https://www.ibanqin.com/posts/70ffbee9.html">3ds Max｜建模与视口操作</a>。</p><h3 id="5-1-操作顺序">5.1 操作顺序</h3><ol><li>设置系统单位和显示单位，记录真实尺寸。</li><li>在世界原点附近建立灰模，先处理整体比例和占地尺寸。</li><li>按功能拆分部件：主体、活动件、可重复件、碰撞体、未来 LOD。</li><li>设置临时材质颜色，帮助区分结构，不在此阶段做最终材质。</li><li>把 Pivot 放到实际使用位置，例如门轴、轮轴或模块角点。</li><li>导入引擎做第一次尺度测试，而不是完成后才第一次导入。</li></ol><h3 id="5-2-Blockout-评审门">5.2 Blockout 评审门</h3><ul><li>[ ] 放进游戏场景后尺寸正确。</li><li>[ ] 主视角轮廓与概念图一致。</li><li>[ ] 活动件轴心正确。</li><li>[ ] 模块拼接没有缝隙或重叠。</li><li>[ ] 已决定哪些细节做几何、哪些烘焙进贴图。</li></ul><h2 id="6-阶段-3：高模制作">6. 阶段 3：高模制作</h2><p>详细操作见：<a href="https://www.ibanqin.com/posts/360bbe0a.html">ZBrush｜基础操作与模型管理</a>。</p><h3 id="6-1-形体优先级">6.1 形体优先级</h3><ol><li><strong>大形</strong>：轮廓、比例、主要体块。</li><li><strong>中形</strong>：面板分割、焊缝、倒角、破损区域。</li><li><strong>小形</strong>：木纤维、划痕、毛孔、锤击纹。</li><li><strong>微细节</strong>：只添加在最终像素密度能显示的位置。</li></ol><h3 id="6-2-高模常见公司要求">6.2 高模常见公司要求</h3><ul><li>倒角宽度在目标观看距离下可读，不要只追求现实中的极窄边。</li><li>不允许依靠随机噪声掩盖错误的大形。</li><li>浮动几何要避免互相穿插造成烘焙污染。</li><li>高模与低模保持相同世界位置、比例和对象分组逻辑。</li><li>保存可编辑源文件；若为烘焙制作减面副本，不覆盖原高模。</li></ul><h3 id="6-3-高模评审门">6.3 高模评审门</h3><ul><li>[ ] 纯色材质、无贴图时形体仍然成立。</li><li>[ ] 不同角度轮廓自然。</li><li>[ ] 大、中、小细节层级清楚。</li><li>[ ] 没有对称复制留下的不合理重复痕迹。</li><li>[ ] 可按对象名与低模一一对应。</li></ul><h2 id="7-阶段-4：低模、拓扑与三角化">7. 阶段 4：低模、拓扑与三角化</h2><h3 id="7-1-低模原则">7.1 低模原则</h3><ul><li>面数优先用在轮廓、关节、变形区和明显高光转折。</li><li>平面内部看不出轮廓变化的边，应判断是否可以删除。</li><li>不为“全四边面”牺牲游戏运行效率；最终渲染是三角形。</li><li>细长三角形、重叠面、非流形、零面积面和孤立顶点必须清理。</li><li>静态道具可以使用三角面；动画模型必须额外考虑变形流线。</li></ul><h3 id="7-2-为什么要在烘焙前固定三角化">7.2 为什么要在烘焙前固定三角化</h3><p>同一个四边面在不同软件中可能沿不同方向拆成三角形，导致顶点法线和法线贴图不匹配。推荐：</p><ol><li>在 DCC 中保存一份可编辑四边面源文件。</li><li>复制出导出版本。</li><li>在导出版本上固定三角化。</li><li>使用同一份三角化低模完成烘焙、Painter 和引擎导入。</li></ol><h3 id="7-3-材质槽">7.3 材质槽</h3><p>材质槽越多，通常意味着更多 Draw Calls。是否拆分材质应同时考虑：</p><ul><li>贴图分辨率是否足够；</li><li>Shader 是否不同，例如不透明、透明、发光；</li><li>是否需要独立换装或染色；</li><li>资产是否会被合批或实例化。</li></ul><h2 id="8-阶段-5：UV">8. 阶段 5：UV</h2><p>详细操作见：<a href="https://www.ibanqin.com/posts/5776c3a2.html">RizomUV｜展开与缝合</a>。</p><h3 id="8-1-UV0-操作顺序">8.1 UV0 操作顺序</h3><ol><li>导入最终三角化策略已经确定的低模。</li><li>先按结构和硬边规划接缝。</li><li>使用 C 切缝。</li><li>使用 U 展开。</li><li>使用 O 优化并检查棋盘格拉伸。</li><li>拉直需要保持方向的硬表面边。</li><li>统一或按重要度分配纹素密度。</li><li>处理允许的镜像、堆叠和重复件。</li><li>设置与目标分辨率对应的像素间距。</li><li>使用 P 排布，并做最终重叠与越界检查。</li></ol><h3 id="8-2-硬边与-UV-缝">8.2 硬边与 UV 缝</h3><ul><li>硬边通常应同时切成 UV 缝，避免同一 UV 顶点承载不连续的顶点法线。</li><li>UV 缝不一定都要是硬边。</li><li>最终规则必须与目标引擎的切线空间和公司烘焙规范一致。</li></ul><h3 id="8-3-UV1-或光照贴图通道">8.3 UV1 或光照贴图通道</h3><p>如果项目使用烘焙光照，通常还需要独立光照 UV：</p><ul><li>不允许重叠和镜像；</li><li>所有板片位于 0–1；</li><li>有足够像素 Padding；</li><li>通道编号与引擎导入设置一致。</li></ul><p>现代动态光照或虚拟几何方案是否仍要求光照 UV，应由项目技术美术确认。</p><h2 id="9-阶段-6：高低模烘焙">9. 阶段 6：高低模烘焙</h2><p>详细操作见：<a href="https://www.ibanqin.com/posts/21471ded.html">Marmoset Toolbag｜烘焙与渲染</a>。</p><h3 id="9-1-烘焙前检查">9.1 烘焙前检查</h3><ul><li>[ ] 高低模使用一致的坐标、比例和 Pivot。</li><li>[ ] 对象命名能按 <strong>name_low / name_high</strong> 配对。</li><li>[ ] 低模 UV 无意外重叠或越界。</li><li>[ ] 低模已固定三角化。</li><li>[ ] 平滑组、硬边和 UV 缝已最终确定。</li><li>[ ] 目标切线空间和法线方向已确认。</li></ul><h3 id="9-2-烘焙顺序">9.2 烘焙顺序</h3><ol><li>在低分辨率、低采样下只烘焙法线。</li><li>检查接缝、波浪、黑边、投射到邻件和漏烘。</li><li>调整包围框 / Cage、偏移、倾斜校正或烘焙组。</li><li>法线通过后，再烘焙 AO、Curvature、Position、Thickness、ID 等。</li><li>提高到最终分辨率和合理采样。</li><li>把烘焙器、版本、切线空间和参数记录在交付说明中。</li></ol><h3 id="9-3-烘焙图用途">9.3 烘焙图用途</h3><table><thead><tr><th>图</th><th>主要用途</th></tr></thead><tbody><tr><td>Tangent Normal</td><td>在低模上重建高模表面方向</td></tr><tr><td>World Space Normal</td><td>Painter 生成器的方向依据</td></tr><tr><td>AO</td><td>局部遮蔽信息；通常作为独立线性数据使用</td></tr><tr><td>Curvature</td><td>边缘、凹槽和磨损生成器依据</td></tr><tr><td>Position</td><td>上下、前后或空间渐变遮罩</td></tr><tr><td>Thickness</td><td>半透明、散射或厚薄相关效果</td></tr><tr><td>ID</td><td>快速选择材质区域，不直接等于最终颜色</td></tr></tbody></table><h2 id="10-阶段-7：PBR-贴图制作">10. 阶段 7：PBR 贴图制作</h2><p>详细操作见：<a href="https://www.ibanqin.com/posts/aa63755a.html">Substance 3D Painter｜贴图制作与导出</a>。</p><h3 id="10-1-金属度—粗糙度工作流">10.1 金属度—粗糙度工作流</h3><table><thead><tr><th>通道</th><th>正确理解</th><th>常见错误</th></tr></thead><tbody><tr><td>Base Color</td><td>材质本身颜色；金属区域也承载反射颜色</td><td>画入灯光、高光、强 AO 和方向性阴影</td></tr><tr><td>Metallic</td><td>纯金属通常为 1，非金属为 0</td><td>所有区域都使用模糊灰色“看起来更高级”</td></tr><tr><td>Roughness</td><td>控制反射清晰度；0 光滑，1 粗糙</td><td>只改颜色，不做粗糙度层次</td></tr><tr><td>Normal</td><td>表面微小方向变化</td><td>方向与目标引擎不一致</td></tr><tr><td>AO</td><td>局部环境遮蔽</td><td>永久重度乘进 Base Color，导致换光后仍发黑</td></tr><tr><td>Height</td><td>高低变化的源数据</td><td>用过强高度代替真正需要的几何</td></tr><tr><td>Opacity</td><td>透明或镂空控制</td><td>不透明资产也输出无意义 Alpha</td></tr></tbody></table><h3 id="10-2-贴图分层顺序">10.2 贴图分层顺序</h3><ol><li><strong>基础材质层</strong>：真实材质的 Base Color、Metallic、Roughness。</li><li><strong>大尺度变化</strong>：上下、内外、日晒、潮湿和主要使用区域。</li><li><strong>结构层</strong>：接缝、焊缝、面板缝、凹陷和凸起。</li><li><strong>使用痕迹</strong>：边缘磨损、手部接触、脚踩、刮擦。</li><li><strong>环境痕迹</strong>：灰尘、泥、锈、油、水渍。</li><li><strong>微细节</strong>：颗粒、木纤维、细划痕；控制强度。</li><li><strong>校验层</strong>：检查颜色、粗糙度、金属度和法线单通道。</li></ol><h3 id="10-3-材质逻辑示例">10.3 材质逻辑示例</h3><ul><li>漆面金属：油漆是非金属；只有油漆脱落露出的基底才是金属。</li><li>锈：锈层通常按非金属处理，粗糙度高于裸露抛光金属。</li><li>灰尘：通常提高粗糙度、降低对比并积在朝上或凹陷区域。</li><li>油污：常降低粗糙度并出现在接触、转轴和维护区域。</li><li>木头：金属度为 0；主要靠 Base Color、Roughness、Normal/Height 表现纤维与破损。</li></ul><h2 id="11-阶段-8：贴图导出、颜色空间与通道打包">11. 阶段 8：贴图导出、颜色空间与通道打包</h2><h3 id="11-1-颜色空间">11.1 颜色空间</h3><p>常见基线如下，但引擎导入规则优先：</p><table><thead><tr><th>贴图</th><th>常见颜色空间</th></tr></thead><tbody><tr><td>Base Color、Emissive Color</td><td>sRGB</td></tr><tr><td>Normal、Roughness、Metallic、AO、Height、Mask</td><td>线性数据，通常关闭 sRGB</td></tr></tbody></table><h3 id="11-2-法线方向">11.2 法线方向</h3><ul><li>OpenGL 常记作 Y+。</li><li>DirectX / Direct3D 常记作 Y-。</li><li>Painter 官方项目说明中，Unreal 默认使用 DirectX；Unity 默认使用 OpenGL，HDRP 设置需另行确认。</li><li>方向错误时通常表现为凹凸相反；应修正项目或导出设置，不要靠灯光掩盖。</li></ul><h3 id="11-3-通道打包">11.3 通道打包</h3><p>原笔记的 Mix 约定：</p><table><thead><tr><th>通道</th><th>内容</th></tr></thead><tbody><tr><td>R</td><td>Roughness</td></tr><tr><td>G</td><td>Metallic</td></tr><tr><td>B</td><td>Mixed AO</td></tr></tbody></table><p>这不是行业唯一标准。项目也可能使用 ORM：R=AO、G=Roughness、B=Metallic。导出模板与引擎材质节点必须成对维护。</p><h2 id="12-阶段-9：LOD、碰撞与-FBX-导出">12. 阶段 9：LOD、碰撞与 FBX 导出</h2><h3 id="12-1-LOD">12.1 LOD</h3><ul><li>LOD0 保留最近距离所需轮廓和材质。</li><li>后续 LOD 优先减少小轮廓、内部结构和远处不可读细节。</li><li>所有 LOD 保持相同位置、比例与 Pivot。</li><li>不要机械规定每级减少固定百分比；以屏幕占比、轮廓误差和目标平台为准。</li></ul><h3 id="12-2-碰撞">12.2 碰撞</h3><ul><li>碰撞用于游戏交互，不是复制一份渲染网格。</li><li>尽量使用简单凸体；复杂度由玩法需求决定。</li><li>门、抽屉和活动件的碰撞要考虑动画范围。</li><li>Unreal 的自定义碰撞常使用 UCX_ 等命名；具体前缀必须查项目导入规范。</li></ul><h3 id="12-3-FBX-导出">12.3 FBX 导出</h3><ol><li>只选择需要交付的低模、LOD、骨骼或碰撞体。</li><li>确认单位、轴向、Pivot、位置、旋转和缩放。</li><li>导出平滑组；切线/副法线是否导出由项目切线流程决定。</li><li>使用与烘焙一致的三角化低模。</li><li>关闭不需要的相机、灯光、动画和嵌入媒体。</li><li>将 FBX 重新导入空场景，做一次回读验证。</li></ol><h2 id="13-阶段-10：引擎集成">13. 阶段 10：引擎集成</h2><p>以 Unreal 静态网格为例，官方 FBX 流程支持材质、多个 UV、平滑组、顶点色、LOD 和自定义碰撞；实际公司通常还会增加自动检查脚本。</p><h3 id="13-1-导入后必须检查">13.1 导入后必须检查</h3><ul><li>[ ] 尺度、朝向和 Pivot。</li><li>[ ] 三角面数、材质槽和 UV 通道。</li><li>[ ] 法线、切线与接缝。</li><li>[ ] Base Color、Normal、Mix 等贴图颜色空间。</li><li>[ ] 通道打包节点是否对应。</li><li>[ ] LOD 数量、屏幕切换与轮廓跳变。</li><li>[ ] 碰撞是否阻挡正确、是否过度复杂。</li><li>[ ] 光照贴图通道与分辨率；仅在项目需要时。</li><li>[ ] Nanite、虚拟纹理或项目特有功能设置；仅按项目要求启用。</li></ul><h3 id="13-2-必须在真实场景中验证">13.2 必须在真实场景中验证</h3><ul><li>中性光、强光、背光和较暗环境。</li><li>最近与最远实际游戏距离。</li><li>不同曝光、天气或时间段。</li><li>与附近资产的纹素密度和材质尺度是否一致。</li></ul><h2 id="14-公司级-QA-清单">14. 公司级 QA 清单</h2><h3 id="14-1-几何">14.1 几何</h3><ul><li>[ ] 无重面、破面、反法线、孤立点和非流形错误。</li><li>[ ] 轮廓预算合理，隐藏区域没有无意义面数。</li><li>[ ] 三角化与烘焙版本一致。</li><li>[ ] Pivot、单位、轴向和变换正确。</li><li>[ ] LOD 与碰撞通过游戏测试。</li></ul><h3 id="14-2-UV-与烘焙">14.2 UV 与烘焙</h3><ul><li>[ ] 纹素密度符合项目表。</li><li>[ ] 镜像、堆叠和重叠均为有意设计。</li><li>[ ] Padding 足够，Mipmap 下不串色。</li><li>[ ] 法线无明显接缝、波浪、投射或漏烘。</li><li>[ ] 硬边、UV 缝和切线空间一致。</li></ul><h3 id="14-3-PBR-材质">14.3 PBR 材质</h3><ul><li>[ ] Base Color 没有烘死灯光与高光。</li><li>[ ] 金属度符合材料，而不是凭视觉随意填灰。</li><li>[ ] 粗糙度承担主要材质变化。</li><li>[ ] 所有污渍、磨损和锈迹都有成因。</li><li>[ ] 在多套 HDR 与目标引擎中表现稳定。</li></ul><h3 id="14-4-文件与提交">14.4 文件与提交</h3><ul><li>[ ] 命名、目录、后缀和版本号符合任务卡。</li><li>[ ] 没有丢失贴图、绝对路径和无用测试文件。</li><li>[ ] 源文件、导出文件和最终贴图分层清楚。</li><li>[ ] 提交前做过回读测试。</li><li>[ ] 交付说明记录软件版本、特殊设置和待解决问题。</li></ul><h2 id="15-推荐交付目录">15. 推荐交付目录</h2><p>以下只是通用示例，仓库结构以公司规定为准：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Asset_Name/</span><br><span class="line">├─ Source/</span><br><span class="line">│  ├─ Max/</span><br><span class="line">│  ├─ ZBrush/</span><br><span class="line">│  └─ Painter/</span><br><span class="line">├─ Export/</span><br><span class="line">│  ├─ Mesh/</span><br><span class="line">│  └─ Textures/</span><br><span class="line">├─ Reference/</span><br><span class="line">├─ Review/</span><br><span class="line">└─ README.md</span><br></pre></td></tr></table></figure><p>建议源文件递增保存，例如 <strong>asset_hp_v001.ztl</strong>、<strong>asset_lp_v003.max</strong>，不要长期覆盖唯一文件。</p><h2 id="16-最容易导致返工的问题">16. 最容易导致返工的问题</h2><ol><li>完成建模后才第一次导入引擎检查尺度。</li><li>烘焙后又改变低模三角化、硬边或 UV。</li><li>不确认法线方向，见到凹凸反了就随手 Flip Y。</li><li>把 AO、高光和灯光重度画进 Base Color。</li><li>只在 Painter 或 Toolbag 中好看，没有在目标引擎验证。</li><li>用“公司都这样”代替具体任务卡数值。</li><li>只有最终文件，没有可回退的源文件与版本记录。</li></ol><h2 id="17-本套笔记的软件分工">17. 本套笔记的软件分工</h2><table><thead><tr><th>文件</th><th>对应 PBR 阶段</th></tr></thead><tbody><tr><td><a href="https://www.ibanqin.com/posts/70ffbee9.html">01-3ds Max｜建模与视口操作</a></td><td>Blockout、低模、Pivot、LOD、碰撞、导出</td></tr><tr><td><a href="https://www.ibanqin.com/posts/5776c3a2.html">02-RizomUV｜展开与缝合</a></td><td>UV 接缝、展开、纹素密度、排布、UV QA</td></tr><tr><td><a href="https://www.ibanqin.com/posts/21471ded.html">03-Marmoset Toolbag｜烘焙与渲染</a></td><td>高低模烘焙、材质验证、作品展示</td></tr><tr><td><a href="https://www.ibanqin.com/posts/aa63755a.html">04-Substance 3D Painter｜贴图制作与导出</a></td><td>PBR 材质、Mesh Maps、通道打包、导出</td></tr><tr><td><a href="https://www.ibanqin.com/posts/360bbe0a.html">05-ZBrush｜基础操作与模型管理</a></td><td>高模雕刻、SubTool、Polygroup、Mask、导出</td></tr></tbody></table><h2 id="待确认术语表">待确认术语表</h2><table><thead><tr><th>项目</th><th>原因</th></tr></thead><tbody><tr><td>三角面、纹素密度、贴图分辨率</td><td>必须由目标平台和资产等级决定</td></tr><tr><td>通道打包顺序</td><td>原笔记 Mix 与常见 ORM 不同，必须查项目 Shader</td></tr><tr><td>LOD 数量与减面比例</td><td>必须以引擎测试和项目预算为准</td></tr><tr><td>碰撞命名</td><td>Unreal 与自研引擎可能不同</td></tr><tr><td>光照 UV</td><td>动态光照、烘焙光照和项目渲染方案要求不同</td></tr><tr><td>Toolbag 中文标签</td><td>5.02 的汉化来源未明确，保留中英对照</td></tr></tbody></table><h2 id="官方核对资料">官方核对资料</h2><ul><li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/unreal-engine/fbx-static-mesh-pipeline-in-unreal-engine?lang=en-US">Epic：FBX Static Mesh Pipeline</a></li><li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/unreal-engine/physically-based-materials-in-unreal-engine">Epic：Physically Based Materials</a></li><li><a target="_blank" rel="noopener" href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/getting-started/project-creation">Adobe：Painter Project Creation</a></li><li><a target="_blank" rel="noopener" href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/baking">Adobe：Painter Baking</a></li><li><a target="_blank" rel="noopener" href="https://docs.marmoset.co/docs/baking-attributes/">Marmoset：Baking Attributes</a></li></ul></article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>游戏 PBR 资产制作流程</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.ibanqin.com/posts/acad7c.html">https://www.ibanqin.com/posts/acad7c.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>坂琴</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2026-08-16</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2026-08-16</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/3D/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>3D</a><a class="post-meta__tags" href="/tags/%E5%85%A8%E6%B5%81%E7%A8%8B/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>全流程</a></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload='this.media="all"'><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂作者</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fwechat_daqian.webp" target="_blank"><img decoding="async" class="post-qr-code-img" src="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fwechat_daqian.webp" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fzhifubao_daqian.webp" target="_blank"><img decoding="async" class="post-qr-code-img" src="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fzhifubao_daqian.webp" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/360bbe0a.html"><img decoding="async" class="next-cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11-2/59759429_p0.webp" onerror='onerror=null,src="/assets/r2.jpg"' alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ZBrush｜基础操作与模型管理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/bd4086d7.html" title="学习建模所记录的一些笔记"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images%2Fcoverimages%2F%E9%BB%84%E6%98%8F%E8%A1%97%E9%81%93.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">学习建模所记录的一些笔记</div></div></a></div><div><a href="/posts/1fda3ab1.html" title="如何提升审美？"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images%2Fcoverimages%2F%E9%BB%84%E6%98%8F%E8%A1%97%E9%81%93.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-07-23</div><div class="title">如何提升审美？</div></div></a></div><div><a href="/posts/21471ded.html" title="Marmoset Toolbag｜烘焙与渲染"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images%2Fcoverimages%2F%E5%A4%9C%E6%99%9A%E5%A5%B3%E7%94%9F.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">Marmoset Toolbag｜烘焙与渲染</div></div></a></div><div><a href="/posts/5776c3a2.html" title="RizomUV｜展开与缝合"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/5-14/summer_night.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">RizomUV｜展开与缝合</div></div></a></div><div><a href="/posts/70ffbee9.html" title="3ds Max｜建模与视口操作"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11-2/111210544_p0.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">3ds Max｜建模与视口操作</div></div></a></div><div><a href="/posts/aa63755a.html" title="Substance 3D Painter｜贴图制作与导出"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/5-14/store.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">Substance 3D Painter｜贴图制作与导出</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:700">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">游戏 PBR 资产制作流程｜从需求到引擎交付</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%88%E7%90%86%E8%A7%A3%EF%BC%9A%E5%85%AC%E5%8F%B8%E8%A6%81%E7%9A%84%E4%B8%8D%E6%98%AF%E2%80%9C%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9C%8B%E7%9A%84%E6%A8%A1%E5%9E%8B%E2%80%9D"><span class="toc-text">1. 先理解：公司要的不是“一个好看的模型”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%85%A8%E6%B5%81%E7%A8%8B%E9%98%B6%E6%AE%B5%E9%97%A8"><span class="toc-text">2. 全流程阶段门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%98%B6%E6%AE%B5-0%EF%BC%9A%E5%BB%BA%E7%AB%8B%E8%B5%84%E4%BA%A7%E8%A7%84%E6%A0%BC%E8%A1%A8"><span class="toc-text">3. 阶段 0：建立资产规格表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%BC%80%E5%B7%A5%E5%89%8D%E9%80%89%E6%8B%A9%E8%B5%84%E4%BA%A7%E4%B8%8E%E7%BA%B9%E7%90%86%E7%AD%96%E7%95%A5"><span class="toc-text">3.1 开工前选择资产与纹理策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%98%B6%E6%AE%B5-1%EF%BC%9A%E5%8F%82%E8%80%83%E4%B8%8E-PBR-%E6%9D%90%E8%B4%A8%E6%8B%86%E8%A7%A3"><span class="toc-text">4. 阶段 1：参考与 PBR 材质拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8F%82%E8%80%83%E6%9D%BF%E5%BF%85%E9%A1%BB%E5%8C%85%E5%90%AB"><span class="toc-text">4.1 参考板必须包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%AF%8F%E7%A7%8D%E6%9D%90%E8%B4%A8%E5%85%88%E5%9B%9E%E7%AD%94%E4%BA%94%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-text">4.2 每种材质先回答五个问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%98%B6%E6%AE%B5-2%EF%BC%9A3ds-Max-Blockout"><span class="toc-text">5. 阶段 2：3ds Max Blockout</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%93%8D%E4%BD%9C%E9%A1%BA%E5%BA%8F"><span class="toc-text">5.1 操作顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Blockout-%E8%AF%84%E5%AE%A1%E9%97%A8"><span class="toc-text">5.2 Blockout 评审门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%98%B6%E6%AE%B5-3%EF%BC%9A%E9%AB%98%E6%A8%A1%E5%88%B6%E4%BD%9C"><span class="toc-text">6. 阶段 3：高模制作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%BD%A2%E4%BD%93%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">6.1 形体优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E9%AB%98%E6%A8%A1%E5%B8%B8%E8%A7%81%E5%85%AC%E5%8F%B8%E8%A6%81%E6%B1%82"><span class="toc-text">6.2 高模常见公司要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E9%AB%98%E6%A8%A1%E8%AF%84%E5%AE%A1%E9%97%A8"><span class="toc-text">6.3 高模评审门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%98%B6%E6%AE%B5-4%EF%BC%9A%E4%BD%8E%E6%A8%A1%E3%80%81%E6%8B%93%E6%89%91%E4%B8%8E%E4%B8%89%E8%A7%92%E5%8C%96"><span class="toc-text">7. 阶段 4：低模、拓扑与三角化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E4%BD%8E%E6%A8%A1%E5%8E%9F%E5%88%99"><span class="toc-text">7.1 低模原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E7%83%98%E7%84%99%E5%89%8D%E5%9B%BA%E5%AE%9A%E4%B8%89%E8%A7%92%E5%8C%96"><span class="toc-text">7.2 为什么要在烘焙前固定三角化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E6%9D%90%E8%B4%A8%E6%A7%BD"><span class="toc-text">7.3 材质槽</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E9%98%B6%E6%AE%B5-5%EF%BC%9AUV"><span class="toc-text">8. 阶段 5：UV</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-UV0-%E6%93%8D%E4%BD%9C%E9%A1%BA%E5%BA%8F"><span class="toc-text">8.1 UV0 操作顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E7%A1%AC%E8%BE%B9%E4%B8%8E-UV-%E7%BC%9D"><span class="toc-text">8.2 硬边与 UV 缝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-UV1-%E6%88%96%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE%E9%80%9A%E9%81%93"><span class="toc-text">8.3 UV1 或光照贴图通道</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%98%B6%E6%AE%B5-6%EF%BC%9A%E9%AB%98%E4%BD%8E%E6%A8%A1%E7%83%98%E7%84%99"><span class="toc-text">9. 阶段 6：高低模烘焙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E7%83%98%E7%84%99%E5%89%8D%E6%A3%80%E6%9F%A5"><span class="toc-text">9.1 烘焙前检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%83%98%E7%84%99%E9%A1%BA%E5%BA%8F"><span class="toc-text">9.2 烘焙顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E7%83%98%E7%84%99%E5%9B%BE%E7%94%A8%E9%80%94"><span class="toc-text">9.3 烘焙图用途</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%98%B6%E6%AE%B5-7%EF%BC%9APBR-%E8%B4%B4%E5%9B%BE%E5%88%B6%E4%BD%9C"><span class="toc-text">10. 阶段 7：PBR 贴图制作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E9%87%91%E5%B1%9E%E5%BA%A6%E2%80%94%E7%B2%97%E7%B3%99%E5%BA%A6%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-text">10.1 金属度—粗糙度工作流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E8%B4%B4%E5%9B%BE%E5%88%86%E5%B1%82%E9%A1%BA%E5%BA%8F"><span class="toc-text">10.2 贴图分层顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E6%9D%90%E8%B4%A8%E9%80%BB%E8%BE%91%E7%A4%BA%E4%BE%8B"><span class="toc-text">10.3 材质逻辑示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E9%98%B6%E6%AE%B5-8%EF%BC%9A%E8%B4%B4%E5%9B%BE%E5%AF%BC%E5%87%BA%E3%80%81%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E4%B8%8E%E9%80%9A%E9%81%93%E6%89%93%E5%8C%85"><span class="toc-text">11. 阶段 8：贴图导出、颜色空间与通道打包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4"><span class="toc-text">11.1 颜色空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E6%B3%95%E7%BA%BF%E6%96%B9%E5%90%91"><span class="toc-text">11.2 法线方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E9%80%9A%E9%81%93%E6%89%93%E5%8C%85"><span class="toc-text">11.3 通道打包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E9%98%B6%E6%AE%B5-9%EF%BC%9ALOD%E3%80%81%E7%A2%B0%E6%92%9E%E4%B8%8E-FBX-%E5%AF%BC%E5%87%BA"><span class="toc-text">12. 阶段 9：LOD、碰撞与 FBX 导出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-LOD"><span class="toc-text">12.1 LOD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E7%A2%B0%E6%92%9E"><span class="toc-text">12.2 碰撞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-3-FBX-%E5%AF%BC%E5%87%BA"><span class="toc-text">12.3 FBX 导出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E9%98%B6%E6%AE%B5-10%EF%BC%9A%E5%BC%95%E6%93%8E%E9%9B%86%E6%88%90"><span class="toc-text">13. 阶段 10：引擎集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E5%AF%BC%E5%85%A5%E5%90%8E%E5%BF%85%E9%A1%BB%E6%A3%80%E6%9F%A5"><span class="toc-text">13.1 导入后必须检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E5%BF%85%E9%A1%BB%E5%9C%A8%E7%9C%9F%E5%AE%9E%E5%9C%BA%E6%99%AF%E4%B8%AD%E9%AA%8C%E8%AF%81"><span class="toc-text">13.2 必须在真实场景中验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%85%AC%E5%8F%B8%E7%BA%A7-QA-%E6%B8%85%E5%8D%95"><span class="toc-text">14. 公司级 QA 清单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-%E5%87%A0%E4%BD%95"><span class="toc-text">14.1 几何</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-UV-%E4%B8%8E%E7%83%98%E7%84%99"><span class="toc-text">14.2 UV 与烘焙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-PBR-%E6%9D%90%E8%B4%A8"><span class="toc-text">14.3 PBR 材质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-4-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%8F%90%E4%BA%A4"><span class="toc-text">14.4 文件与提交</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%8E%A8%E8%8D%90%E4%BA%A4%E4%BB%98%E7%9B%AE%E5%BD%95"><span class="toc-text">15. 推荐交付目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E6%9C%80%E5%AE%B9%E6%98%93%E5%AF%BC%E8%87%B4%E8%BF%94%E5%B7%A5%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">16. 最容易导致返工的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E6%9C%AC%E5%A5%97%E7%AC%94%E8%AE%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%88%86%E5%B7%A5"><span class="toc-text">17. 本套笔记的软件分工</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%85%E7%A1%AE%E8%AE%A4%E6%9C%AF%E8%AF%AD%E8%A1%A8"><span class="toc-text">待确认术语表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E6%A0%B8%E5%AF%B9%E8%B5%84%E6%96%99"><span class="toc-text">官方核对资料</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color:transparent"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>宇宙沙漏中的一粒晶芒，盛放着：母亲摇过的摇篮，诗人折断的羽毛笔，战士生锈的勋章，和所有来不及说出口的再见✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://robertsspaceindustries.com/en/">点击开启星辰之旅（迫真）</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1G84y1B7NH?spm_id_from=333.788.videopod.sections&amp;vd_source=4ec8181be82d7b99207d264eb28032e9">网站教程</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">友情链接</a><a href="/comments/">留言板</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/gallery/">我的画廊</a><a target="_blank" rel="noopener" href="https://www.takagisan.top">老博客地址</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://misakishiki.site/" title="来点后现代"><img loading="lazy" decoding="async" src="https://misakishiki.site/aquced.png" alt=""></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.takagisan.top/" title="坂琴的老博客"><img loading="lazy" decoding="async" src="https://coscdn.ibanqin.com/images/laoboke.webp" alt=""></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="生活明朗，万物可爱"><img loading="lazy" decoding="async" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg" alt=""></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://akilar.top/" title="期待您的光临"><img loading="lazy" decoding="async" src="https://npm.elemecdn.com/akilar-friends@latest/avatar/akilar.top.jpg" alt=""></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.xiowo.net/" title="万年鸽王，哈哈OvO"><img loading="lazy" decoding="async" src="https://blog.xiowo.net/img/avatar.png" alt=""></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://leoblog.cc/" title="玻璃晴朗，橘子辉煌~✨"><img loading="lazy" decoding="async" src="https://bu.dusays.com/2025/05/30/6838a5699eec2.png" alt=""></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.ububan.com/" title="Future is now 🔍🔍🔍"><img loading="lazy" decoding="async" src="https://ts4.tc.mm.bing.net/th/id/OIP-C._b9bMXovF8C88jhNT9ut3wHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt=""></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img loading="lazy" decoding="async" src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""></a></div></div></div></div><div class="copyright"><span><b>&copy;2022-2026</b></span><span><b>&nbsp;&nbsp;By 坂琴</b></span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.mps.gov.cn/#/query/webSearch"><img loading="lazy" decoding="async" class="icp-icon" src="https://coscdn.ibanqin.com/images/others/gonganbeian.webp"><span>渝公网安备50011802011289号</span></a>&nbsp|&nbsp<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index"><span>渝ICP备2023009623号-2</span></a>&nbsp|&nbsp<a href="https://icp.gov.moe/?keyword=20250729" target="_blank">萌ICP备20250729号</a></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析由51la提供"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Analytics-51la-brightgreen?style=flat&amp;logo=googleanalytics" alt=""></a><a class="github-badge" target="_blank" href="https://console.cloud.tencent.com/cos" style="margin-inline:5px" title="本网站使用腾讯云COS存储分流静态文件"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Bucket-腾讯云COS-blue?style=flat&amp;logo=buffer" alt=""></a><a class="github-badge" target="_blank" href="https://console.cloud.tencent.com/cdn" style="margin-inline:5px" title="本站使用腾讯云内容分发网络CDN加速与防护"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/CDN-腾讯云CDN-blue?style=flat&amp;logo=rclone" alt=""></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Copyright-CCBYSA4.0-white?style=flat&amp;logo=C" alt=""></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight,500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i> <span>数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" id="menu-readmode" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><script>(()=>{const t="#post #article-container",e="tianli-gpt-script",n="tianli-gpt-style",i=()=>{if(!document.querySelector(t))return;if(window.tianliGPT_postSelector=t,window.tianliGPT_key="76ce95971f5221de1cae",!document.getElementById(n)){const t=document.createElement("link");t.id=n,t.rel="stylesheet",t.href="https://ai.tianli0.top/static/public/tianli_gpt.min.css",document.head.appendChild(t)}const i=()=>{window.tianliGPT&&"function"==typeof window.tianliGPT.checkURLAndRun&&window.tianliGPT.checkURLAndRun()};if(window.tianliGPT)return void i();const o=document.getElementById(e);if(o)return void o.addEventListener("load",i,{once:!0});const d=document.createElement("script");d.id=e,d.src="https://ai.tianli0.top/static/public/tianli_gpt.min.js",d.onload=i,d.onerror=()=>d.remove(),document.head.appendChild(d)};window.loadTianliGPT=i,"loading"===document.readyState?document.addEventListener("DOMContentLoaded",i,{once:!0}):i(),document.addEventListener("pjax:complete",(()=>{window.setTimeout(i,0)}))})()</script><div class="js-pjax"><script>if(window.MathJax)MathJax.startup.document.state(0),MathJax.texReset(),MathJax.typeset();else{window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],tags:"ams"},chtml:{scale:1.2},options:{renderActions:{findScript:[10,t=>{for(const e of document.querySelectorAll('script[type^="math/tex"]')){const a=!!e.type.match(/; *mode=display/),n=new t.options.MathItem(e.textContent,t.inputJax[0],a),s=document.createTextNode("");e.parentNode.replaceChild(s,e),n.start={node:s,delim:"",n:0},n.end={node:s,delim:"",n:0},t.math.push(n)}},""],insertScript:[200,()=>{document.querySelectorAll("mjx-container:not([display])").forEach((t=>{const e=t.parentNode;"li"===e.nodeName.toLowerCase()?e.parentNode.classList.add("has-jax"):e.classList.add("has-jax")}))},"",!1]}}};const t=document.createElement("script");t.src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js",t.id="MathJax-script",t.async=!0,document.head.appendChild(t)}</script><script>(()=>{const t=()=>{twikoo.init(Object.assign({el:"#twikoo-wrap",envId:"https://twikoo.ibanqin.com/",region:"",onCommentLoaded:function(){btf.loadLightbox(document.querySelectorAll("#twikoo .tk-content img:not(.tk-owo-emotion)"))}},null))},o=()=>{"object"!=typeof twikoo?getScript("https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js").then(t):setTimeout(t,0)};btf.loadComment(document.getElementById("twikoo-wrap"),o)})()</script></div><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script>(()=>{const t=new Date,e=t.getMonth()+1,n=t.getDate();if(1===e&&n>=20||2===e&&n<=20){const t=document.createElement("script");t.async=!0,t.src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js",document.head.appendChild(t)}})()</script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/banqin.js"></script><script async src="//at.alicdn.com/t/c/font_4899107_gayaz0mokg5.js"></script><script id="canvas_nest" defer color="0,0,255" opacity="0.7" zindex="-1" count="30" mobile="false" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/canvas-nest.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors=["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"];var pjax=new Pjax({elements:'a:not([target="_blank"]):not([href="/site/charts/"])',selectors:pjaxSelectors,cacheBust:!1,analytics:!1,scrollRestoration:!1});document.addEventListener("pjax:send",(function(){if(window.tocScrollFn&&window.removeEventListener("scroll",window.tocScrollFn),window.scrollCollect&&window.removeEventListener("scroll",scrollCollect),"object"==typeof preloader&&preloader.initLoading(),document.getElementById("rightside").style.cssText="opacity: ''; transform: ''",window.aplayers)for(let e=0;e<window.aplayers.length;e++)window.aplayers[e].options.fixed||window.aplayers[e].destroy();"object"==typeof typed&&typed.destroy();const e=document.body.classList;e.contains("read-mode")&&e.remove("read-mode"),"object"==typeof disqusjs&&disqusjs.destroy()})),document.addEventListener("pjax:complete",(function(){window.refreshFn(),document.querySelectorAll("script[data-pjax]").forEach((e=>{const t=document.createElement("script"),o=e.text||e.textContent||e.innerHTML||"";Array.from(e.attributes).forEach((e=>t.setAttribute(e.name,e.value))),t.appendChild(document.createTextNode(o)),e.parentNode.replaceChild(t,e)})),GLOBAL_CONFIG.islazyload&&window.lazyLoadInstance.update(),"function"==typeof chatBtnFn&&chatBtnFn(),"function"==typeof panguInit&&panguInit(),"function"==typeof gtag&&gtag("config","",{page_path:window.location.pathname}),"object"==typeof _hmt&&_hmt.push(["_trackPageview",window.location.pathname]),"function"==typeof loadMeting&&document.getElementsByClassName("aplayer").length&&loadMeting(),"object"==typeof Prism&&Prism.highlightAll(),"object"==typeof preloader&&preloader.endLoading()})),document.addEventListener("pjax:error",(e=>{404===e.request.status&&pjax.loadUrl("/404.html")}))</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script data-pjax>if(document.getElementById("recent-posts")&&"/"===location.pathname){var parent=document.getElementById("recent-posts"),child='<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/其他学习笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍥 学习笔记 (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/生活记录/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🗼 奇奇怪怪的生活记录 (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/网络安全和编程学习笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🥑 网安和编程 (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/3D建模和渲染/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍆 3D建模和渲染 (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.ibanqin.com/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';console.log("已挂载magnet"),parent.insertAdjacentHTML("afterbegin",child)}</script><style>#catalog_magnet{flex-wrap:wrap;display:flex;width:100%;justify-content:space-between;padding:10px 10px 0 10px;align-content:flex-start}.magnet_item{flex-basis:calc(33.333333333333336% - 5px);background:#e9e9e9;margin-bottom:10px;border-radius:8px;transition:all .2s ease-in-out}.magnet_item:hover{background:var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:#000}.magnet_link:hover{color:#fff}@media screen and (max-width:600px){.magnet_item{flex-basis:100%}}.magnet_link_context{display:flex;padding:10px;font-size:16px;transition:all .2s ease-in-out}.magnet_link_context:hover{padding:10px 20px}</style><style></style><script data-pjax>function butterfly_swiper_injector_config(){var i=document.getElementById("recent-posts");console.log("已挂载butterfly_swiper"),i.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/7bf55b19.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/96552364_p0.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2026-03-22</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/7bf55b19.html&quot;);" href="javascript:void(0);" alt="">2026年所记录所想的一些事情和心情</a><div class="blog-slider__text">🍞我自己的2026年所记录的一些事情和心情总的来说算是2026年的日记</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/7bf55b19.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/792b5c3e.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images%2Fcoverimages%2F2.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-04-18</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/792b5c3e.html&quot;);" href="javascript:void(0);" alt="">2025年所记录所想的一些事情和心情</a><div class="blog-slider__text">🌸我自己的2025年所记录的一些事情和心情总的来说算是2025年的日记</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/792b5c3e.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/%E6%A8%B1%E8%8A%B1%E6%A0%91%E5%B0%8F%E8%B7%AF%E9%98%B3%E5%85%89.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法与外挂标签写法汇总</a><div class="blog-slider__text">🥧本文汇总Markdown格式以及外挂标签在网页端的渲染效果，可作为文档进行查询</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/20c7b744.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/%E6%A8%B1%E8%8A%B1%E6%A0%91.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-05-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/20c7b744.html&quot;);" href="javascript:void(0);" alt="">新博客上线!!!</a><div class="blog-slider__text">🍇记录本博客从老博客换到新博客的更换</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/20c7b744.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>')}for(var elist="undefined".split(","),cpage=location.pathname,epage="/",flag=0,i=0;i<elist.length;i++)cpage.includes(elist[i])&&flag++;("all"===epage&&0==flag||epage===cpage)&&butterfly_swiper_injector_config()</script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async>for(var arr=document.getElementsByClassName("recent-post-item"),i=0;i<arr.length;i++)arr[i].classList.add("wow"),arr[i].classList.add("animate__zoomIn"),arr[i].setAttribute("data-wow-duration","2s"),arr[i].setAttribute("data-wow-delay","200ms"),arr[i].setAttribute("data-wow-offset","30"),arr[i].setAttribute("data-wow-iteration","1")</script><script async>for(var arr=document.getElementsByClassName("card-widget"),i=0;i<arr.length;i++)arr[i].classList.add("wow"),arr[i].classList.add("animate__zoomIn"),arr[i].setAttribute("data-wow-duration","2s"),arr[i].setAttribute("data-wow-delay","200ms"),arr[i].setAttribute("data-wow-offset","30"),arr[i].setAttribute("data-wow-iteration","1")</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>function gitcalendar_injector_config(){document.getElementById("gitZone").insertAdjacentHTML("afterbegin",'<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>'),console.log("已挂载gitcalendar")}document.getElementById("gitZone")&&"/site/census/"===location.pathname&&(gitcalendar_injector_config(),GitCalendarInit("/api?null",["#d9e0df","#c6e0dc","#a8dcd4","#9adcd2","#89ded1","#77e0d0","#5fdecb","#47dcc6","#39dcc3","#1fdabe","#00dab9"],"null"))</script></body></html>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>游戏 PBR 资产制作流程 | 坂琴的小窝🍜</title><meta name="keywords" content="3D,全流程"><meta name="author" content="坂琴"><meta name="copyright" content="坂琴"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="🍗记录的所有3D软件联合起来的全流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏 PBR 资产制作流程">
+<meta property="og:url" content="https://www.ibanqin.com/posts/acad7c.html">
+<meta property="og:site_name" content="坂琴的小窝🍜">
+<meta property="og:description" content="🍗记录的所有3D软件联合起来的全流程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/121926394_p0.webp">
+<meta property="article:published_time" content="2026-08-16T08:43:44.000Z">
+<meta property="article:modified_time" content="2026-08-16T09:00:20.000Z">
+<meta property="article:author" content="坂琴">
+<meta property="article:tag" content="3D">
+<meta property="article:tag" content="全流程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/121926394_p0.webp"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://www.ibanqin.com/posts/acad7c"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="codeva-6sYWDWF4i5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ba6163406eb6745d7af4b3aa1d9b78cf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经是","messageNext":"天之前的东西了，如果是技术类的内容注意时效性哦！如果是个人的想法内容的话……也不知道有没有改变呢，我感觉你可以把这个链接拍到我的脑门上，问我有没有改变！😘"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '游戏 PBR 资产制作流程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-08-16 17:00:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><script defer charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=3Lv1nvnRA9AxBBhO&ck=3Lv1nvnRA9AxBBhO"></script><script defer src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous" onload="new LingQue.Monitor().init({id:'3Lv27RXjduoNKWlu',sendSuspicious:true})"></script><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="坂琴的小窝🍜" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img decoding="async" src="https://coscdn.ibanqin.com/images/yatuoli.webp" onerror="onerror=null;src='/assets/r1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-a-appround36"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wenzhang"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-biaoqian_1">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei1">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-ziyuan"></use></svg><span class="menu_word" style="font-size:17px"> 工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-hualang">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/personalgallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-weihualang">                   </use></svg><span class="menu_word" style="font-size:17px"> 私人画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-daohang">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiao1"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyanban">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youqinglianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangzhan"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-a-charttongjishujuzhanbibaifenbi">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/charts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-a-zhanbifenxitongji">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/aboutsite"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guanyu1">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于本站</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站建设进程</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wode1"></use></svg><span class="menu_word" style="font-size:17px"> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/talk/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 个人碎碎念</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying">                   </use></svg><span class="menu_word" style="font-size:17px"> 电影和动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guanyuwomen">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于我</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">坂琴的小窝🍜</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-a-appround36"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wenzhang"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-biaoqian_1">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei1">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-ziyuan"></use></svg><span class="menu_word" style="font-size:17px"> 工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-hualang">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/personalgallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-weihualang">                   </use></svg><span class="menu_word" style="font-size:17px"> 私人画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-daohang">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiao1"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyanban">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youqinglianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangzhan"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-a-charttongjishujuzhanbibaifenbi">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/charts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-a-zhanbifenxitongji">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/aboutsite"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guanyu1">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于本站</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站建设进程</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wode1"></use></svg><span class="menu_word" style="font-size:17px"> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/talk/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 个人碎碎念</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying">                   </use></svg><span class="menu_word" style="font-size:17px"> 电影和动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guanyuwomen">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于我</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="请搜索你想要的任何信息吧~☜(ﾟヮﾟ☜)"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-sousuo1"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="这里是美化设置-快来设置成你想要的风格吧~(❁´◡`❁)" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-shezhi4"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-yueliang">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">游戏 PBR 资产制作流程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2026-08-16T08:43:44.000Z" title="发表于 2026-08-16 16:43:44">2026-08-16</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-16T09:00:20.000Z" title="更新于 2026-08-16 17:00:20">2026-08-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/3D%E5%BB%BA%E6%A8%A1%E5%92%8C%E6%B8%B2%E6%9F%93/">3D建模和渲染</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">4808</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="游戏 PBR 资产制作流程"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>游戏 PBR 资产制作流程｜从需求到引擎交付</h1>
+<blockquote>
+<p>版本基线：3ds Max 2024.2、RizomUV 2020、Marmoset Toolbag 5.02、Substance 3D Painter v10.0.1、ZBrush 2023.1.1。本文整理的是游戏美术岗位常见的通用流程；三角面预算、纹素密度、贴图规格、命名和通道打包必须以具体公司与项目规范为准。粗搞位于👉<a href="https://www.ibanqin.com/posts/bd4086d7.html">学习建模所记录的一些笔记 | 坂琴的小窝🍜</a></p>
+</blockquote>
+<h2 id="1-先理解：公司要的不是“一个好看的模型”">1. 先理解：公司要的不是“一个好看的模型”</h2>
+<p>游戏资产必须同时满足四类要求：</p>
+<ol>
+<li><strong>美术正确</strong>：比例、轮廓、材质和磨损逻辑成立。</li>
+<li><strong>技术正确</strong>：拓扑、UV、法线、切线空间、LOD、碰撞和导出设置正确。</li>
+<li><strong>性能可控</strong>：三角面、材质槽、纹理数量、分辨率和透明度开销符合目标平台。</li>
+<li><strong>可维护</strong>：命名、目录、版本、源文件和交付说明让其他人能继续工作。</li>
+</ol>
+<p>因此，完整流程不是“建模 → 贴图 → 出图”，而是：</p>
+<p><strong>需求确认 → 参考与材质拆解 → Blockout → 高模 → 低模 → UV → 烘焙 → PBR 贴图 → 引擎集成 → 性能与视觉 QA → 交付</strong></p>
+<h2 id="2-全流程阶段门">2. 全流程阶段门</h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>主要软件</th>
+<th>输入</th>
+<th>输出</th>
+<th>通过条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0. 需求与技术规格</td>
+<td>文档、引擎</td>
+<td>任务卡、概念图</td>
+<td>资产规格表</td>
+<td>引擎、平台、预算、命名、贴图规范均明确</td>
+</tr>
+<tr>
+<td>1. 参考与材质拆解</td>
+<td>PureRef 等</td>
+<td>概念图、实物参考</td>
+<td>参考板、材质清单</td>
+<td>正背侧、尺度、结构和材质成因清楚</td>
+</tr>
+<tr>
+<td>2. Blockout</td>
+<td>3ds Max</td>
+<td>规格表、参考板</td>
+<td>可评审灰模</td>
+<td>尺寸、比例、轮廓、Pivot 与拼接关系正确</td>
+</tr>
+<tr>
+<td>3. 高模</td>
+<td>ZBrush、3ds Max</td>
+<td>通过评审的灰模</td>
+<td>可烘焙高模</td>
+<td>大中小形层级明确，无无意义噪声</td>
+</tr>
+<tr>
+<td>4. 低模与 LOD0</td>
+<td>3ds Max</td>
+<td>高模或灰模</td>
+<td>游戏低模</td>
+<td>轮廓优先、拓扑可控、三角面符合预算</td>
+</tr>
+<tr>
+<td>5. UV</td>
+<td>RizomUV</td>
+<td>最终低模</td>
+<td>UV0；必要时 UV1</td>
+<td>拉伸、密度、重叠、方向和 Padding 合格</td>
+</tr>
+<tr>
+<td>6. 烘焙</td>
+<td>Toolbag 或 Painter</td>
+<td>高模、低模、UV</td>
+<td>Normal、AO、Curvature 等</td>
+<td>无明显接缝、投射、波浪、漏烘</td>
+</tr>
+<tr>
+<td>7. PBR 贴图</td>
+<td>Painter</td>
+<td>低模与 Mesh Maps</td>
+<td>Base Color、Normal、R/M/AO 等</td>
+<td>多种灯光下材质稳定，数值物理合理</td>
+</tr>
+<tr>
+<td>8. LOD、碰撞、导出</td>
+<td>3ds Max、引擎</td>
+<td>完成资产</td>
+<td>FBX、贴图、碰撞、LOD</td>
+<td>命名、Pivot、三角化、法线和尺度一致</td>
+</tr>
+<tr>
+<td>9. 引擎集成</td>
+<td>Unreal/项目引擎</td>
+<td>交付文件</td>
+<td>可用游戏资产</td>
+<td>材质连接、碰撞、LOD、光照和性能正确</td>
+</tr>
+<tr>
+<td>10. 最终 QA</td>
+<td>引擎、Toolbag</td>
+<td>集成资产</td>
+<td>审核截图与交付包</td>
+<td>视觉、技术、性能和目录检查全部通过</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-阶段-0：建立资产规格表">3. 阶段 0：建立资产规格表</h2>
+<p>没有规格表就开始建模，是最容易返工的做法。至少先确认：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>必须明确的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资产用途</td>
+<td>英雄资产、普通场景道具、模块化建筑、远景资产或角色附件</td>
+</tr>
+<tr>
+<td>目标平台</td>
+<td>PC、主机、移动端、VR；这直接影响预算</td>
+</tr>
+<tr>
+<td>目标引擎</td>
+<td>Unreal、Unity 或公司自研引擎</td>
+</tr>
+<tr>
+<td>尺度与单位</td>
+<td>真实尺寸；DCC 与引擎单位换算</td>
+</tr>
+<tr>
+<td>坐标与朝向</td>
+<td>Up 轴、Forward 轴、模型正面方向</td>
+</tr>
+<tr>
+<td>Pivot</td>
+<td>中心、底部、角点、铰链或模块吸附点</td>
+</tr>
+<tr>
+<td>几何预算</td>
+<td>LOD0 三角面数与后续 LOD 目标</td>
+</tr>
+<tr>
+<td>材质预算</td>
+<td>材质槽数量、Shader 类型、是否允许透明</td>
+</tr>
+<tr>
+<td>UV 规范</td>
+<td>纹素密度、0–1 或 UDIM、镜像/堆叠是否允许、UV1 要求</td>
+</tr>
+<tr>
+<td>贴图规范</td>
+<td>分辨率、格式、位深、颜色空间、法线方向、通道打包</td>
+</tr>
+<tr>
+<td>LOD 与碰撞</td>
+<td>数量、切换策略、碰撞复杂度和命名</td>
+</tr>
+<tr>
+<td>命名与目录</td>
+<td>资产前缀、大小写、分隔符、版本号和提交位置</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>公司流程的第一条原则：<strong>项目规范高于个人习惯。</strong> 本笔记中的数值只能当参考，不能替代任务卡。</p>
+</blockquote>
+<h3 id="3-1-开工前选择资产与纹理策略">3.1 开工前选择资产与纹理策略</h3>
+<p>不是所有资产都应该走“每件做一套唯一高低模 + 唯一贴图”。先由主美/技术美术或任务规范确认策略：</p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>适合情况</th>
+<th>主要检查点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>唯一烘焙贴图</td>
+<td>英雄道具、独特磨损和近景资产</td>
+<td>纹理预算、唯一 UV、烘焙质量</td>
+</tr>
+<tr>
+<td>平铺材质 / Tiling</td>
+<td>大面积墙地、重复表面</td>
+<td>真实材质尺度、重复感、顶点混合</td>
+</tr>
+<tr>
+<td>Trim Sheet</td>
+<td>模块建筑、重复边框与型材</td>
+<td>模块尺寸、UV 对齐、共享材质规则</td>
+</tr>
+<tr>
+<td>Atlas 图集</td>
+<td>多个小件或同类资产合批</td>
+<td>共享分辨率、Padding、更新成本</td>
+</tr>
+<tr>
+<td>贴花 / Decal</td>
+<td>标识、污渍、裂缝和局部变化</td>
+<td>Overdraw、排序、数量与平台开销</td>
+</tr>
+<tr>
+<td>混合方案</td>
+<td>大多数正式场景资产</td>
+<td>唯一细节只用在真正重要的位置</td>
+</tr>
+</tbody>
+</table>
+<p>选择策略后再决定高模范围、UV 方案、材质槽和贴图数量。否则很容易把适合共享材质的场景模块做成昂贵的唯一贴图资产。</p>
+<h2 id="4-阶段-1：参考与-PBR-材质拆解">4. 阶段 1：参考与 PBR 材质拆解</h2>
+<h3 id="4-1-参考板必须包含">4.1 参考板必须包含</h3>
+<ul>
+<li>正面、侧面、背面和顶部结构。</li>
+<li>人或已知物体作尺度对比。</li>
+<li>新品、使用中和损坏状态。</li>
+<li>近距离材质细节：涂层、裸露金属、锈、灰尘、油污、木纹等。</li>
+<li>相同材质在干燥、潮湿、强光和柔光下的表现。</li>
+</ul>
+<h3 id="4-2-每种材质先回答五个问题">4.2 每种材质先回答五个问题</h3>
+<ol>
+<li>它是金属还是非金属？</li>
+<li>表面是否有涂层？磨损后露出的是什么？</li>
+<li>粗糙度变化由什么造成：抛光、油污、灰尘、腐蚀还是水？</li>
+<li>哪些细节属于几何，哪些属于法线或高度？</li>
+<li>污渍为什么在这里出现：重力、手部接触、边缘碰撞还是积水？</li>
+</ol>
+<h2 id="5-阶段-2：3ds-Max-Blockout">5. 阶段 2：3ds Max Blockout</h2>
+<p>详细操作见：<a href="https://www.ibanqin.com/posts/70ffbee9.html">3ds Max｜建模与视口操作</a>。</p>
+<h3 id="5-1-操作顺序">5.1 操作顺序</h3>
+<ol>
+<li>设置系统单位和显示单位，记录真实尺寸。</li>
+<li>在世界原点附近建立灰模，先处理整体比例和占地尺寸。</li>
+<li>按功能拆分部件：主体、活动件、可重复件、碰撞体、未来 LOD。</li>
+<li>设置临时材质颜色，帮助区分结构，不在此阶段做最终材质。</li>
+<li>把 Pivot 放到实际使用位置，例如门轴、轮轴或模块角点。</li>
+<li>导入引擎做第一次尺度测试，而不是完成后才第一次导入。</li>
+</ol>
+<h3 id="5-2-Blockout-评审门">5.2 Blockout 评审门</h3>
+<ul>
+<li>[ ] 放进游戏场景后尺寸正确。</li>
+<li>[ ] 主视角轮廓与概念图一致。</li>
+<li>[ ] 活动件轴心正确。</li>
+<li>[ ] 模块拼接没有缝隙或重叠。</li>
+<li>[ ] 已决定哪些细节做几何、哪些烘焙进贴图。</li>
+</ul>
+<h2 id="6-阶段-3：高模制作">6. 阶段 3：高模制作</h2>
+<p>详细操作见：<a href="https://www.ibanqin.com/posts/360bbe0a.html">ZBrush｜基础操作与模型管理</a>。</p>
+<h3 id="6-1-形体优先级">6.1 形体优先级</h3>
+<ol>
+<li><strong>大形</strong>：轮廓、比例、主要体块。</li>
+<li><strong>中形</strong>：面板分割、焊缝、倒角、破损区域。</li>
+<li><strong>小形</strong>：木纤维、划痕、毛孔、锤击纹。</li>
+<li><strong>微细节</strong>：只添加在最终像素密度能显示的位置。</li>
+</ol>
+<h3 id="6-2-高模常见公司要求">6.2 高模常见公司要求</h3>
+<ul>
+<li>倒角宽度在目标观看距离下可读，不要只追求现实中的极窄边。</li>
+<li>不允许依靠随机噪声掩盖错误的大形。</li>
+<li>浮动几何要避免互相穿插造成烘焙污染。</li>
+<li>高模与低模保持相同世界位置、比例和对象分组逻辑。</li>
+<li>保存可编辑源文件；若为烘焙制作减面副本，不覆盖原高模。</li>
+</ul>
+<h3 id="6-3-高模评审门">6.3 高模评审门</h3>
+<ul>
+<li>[ ] 纯色材质、无贴图时形体仍然成立。</li>
+<li>[ ] 不同角度轮廓自然。</li>
+<li>[ ] 大、中、小细节层级清楚。</li>
+<li>[ ] 没有对称复制留下的不合理重复痕迹。</li>
+<li>[ ] 可按对象名与低模一一对应。</li>
+</ul>
+<h2 id="7-阶段-4：低模、拓扑与三角化">7. 阶段 4：低模、拓扑与三角化</h2>
+<h3 id="7-1-低模原则">7.1 低模原则</h3>
+<ul>
+<li>面数优先用在轮廓、关节、变形区和明显高光转折。</li>
+<li>平面内部看不出轮廓变化的边，应判断是否可以删除。</li>
+<li>不为“全四边面”牺牲游戏运行效率；最终渲染是三角形。</li>
+<li>细长三角形、重叠面、非流形、零面积面和孤立顶点必须清理。</li>
+<li>静态道具可以使用三角面；动画模型必须额外考虑变形流线。</li>
+</ul>
+<h3 id="7-2-为什么要在烘焙前固定三角化">7.2 为什么要在烘焙前固定三角化</h3>
+<p>同一个四边面在不同软件中可能沿不同方向拆成三角形，导致顶点法线和法线贴图不匹配。推荐：</p>
+<ol>
+<li>在 DCC 中保存一份可编辑四边面源文件。</li>
+<li>复制出导出版本。</li>
+<li>在导出版本上固定三角化。</li>
+<li>使用同一份三角化低模完成烘焙、Painter 和引擎导入。</li>
+</ol>
+<h3 id="7-3-材质槽">7.3 材质槽</h3>
+<p>材质槽越多，通常意味着更多 Draw Calls。是否拆分材质应同时考虑：</p>
+<ul>
+<li>贴图分辨率是否足够；</li>
+<li>Shader 是否不同，例如不透明、透明、发光；</li>
+<li>是否需要独立换装或染色；</li>
+<li>资产是否会被合批或实例化。</li>
+</ul>
+<h2 id="8-阶段-5：UV">8. 阶段 5：UV</h2>
+<p>详细操作见：<a href="https://www.ibanqin.com/posts/5776c3a2.html">RizomUV｜展开与缝合</a>。</p>
+<h3 id="8-1-UV0-操作顺序">8.1 UV0 操作顺序</h3>
+<ol>
+<li>导入最终三角化策略已经确定的低模。</li>
+<li>先按结构和硬边规划接缝。</li>
+<li>使用 C 切缝。</li>
+<li>使用 U 展开。</li>
+<li>使用 O 优化并检查棋盘格拉伸。</li>
+<li>拉直需要保持方向的硬表面边。</li>
+<li>统一或按重要度分配纹素密度。</li>
+<li>处理允许的镜像、堆叠和重复件。</li>
+<li>设置与目标分辨率对应的像素间距。</li>
+<li>使用 P 排布，并做最终重叠与越界检查。</li>
+</ol>
+<h3 id="8-2-硬边与-UV-缝">8.2 硬边与 UV 缝</h3>
+<ul>
+<li>硬边通常应同时切成 UV 缝，避免同一 UV 顶点承载不连续的顶点法线。</li>
+<li>UV 缝不一定都要是硬边。</li>
+<li>最终规则必须与目标引擎的切线空间和公司烘焙规范一致。</li>
+</ul>
+<h3 id="8-3-UV1-或光照贴图通道">8.3 UV1 或光照贴图通道</h3>
+<p>如果项目使用烘焙光照，通常还需要独立光照 UV：</p>
+<ul>
+<li>不允许重叠和镜像；</li>
+<li>所有板片位于 0–1；</li>
+<li>有足够像素 Padding；</li>
+<li>通道编号与引擎导入设置一致。</li>
+</ul>
+<p>现代动态光照或虚拟几何方案是否仍要求光照 UV，应由项目技术美术确认。</p>
+<h2 id="9-阶段-6：高低模烘焙">9. 阶段 6：高低模烘焙</h2>
+<p>详细操作见：<a href="https://www.ibanqin.com/posts/21471ded.html">Marmoset Toolbag｜烘焙与渲染</a>。</p>
+<h3 id="9-1-烘焙前检查">9.1 烘焙前检查</h3>
+<ul>
+<li>[ ] 高低模使用一致的坐标、比例和 Pivot。</li>
+<li>[ ] 对象命名能按 <strong>name_low / name_high</strong> 配对。</li>
+<li>[ ] 低模 UV 无意外重叠或越界。</li>
+<li>[ ] 低模已固定三角化。</li>
+<li>[ ] 平滑组、硬边和 UV 缝已最终确定。</li>
+<li>[ ] 目标切线空间和法线方向已确认。</li>
+</ul>
+<h3 id="9-2-烘焙顺序">9.2 烘焙顺序</h3>
+<ol>
+<li>在低分辨率、低采样下只烘焙法线。</li>
+<li>检查接缝、波浪、黑边、投射到邻件和漏烘。</li>
+<li>调整包围框 / Cage、偏移、倾斜校正或烘焙组。</li>
+<li>法线通过后，再烘焙 AO、Curvature、Position、Thickness、ID 等。</li>
+<li>提高到最终分辨率和合理采样。</li>
+<li>把烘焙器、版本、切线空间和参数记录在交付说明中。</li>
+</ol>
+<h3 id="9-3-烘焙图用途">9.3 烘焙图用途</h3>
+<table>
+<thead>
+<tr>
+<th>图</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tangent Normal</td>
+<td>在低模上重建高模表面方向</td>
+</tr>
+<tr>
+<td>World Space Normal</td>
+<td>Painter 生成器的方向依据</td>
+</tr>
+<tr>
+<td>AO</td>
+<td>局部遮蔽信息；通常作为独立线性数据使用</td>
+</tr>
+<tr>
+<td>Curvature</td>
+<td>边缘、凹槽和磨损生成器依据</td>
+</tr>
+<tr>
+<td>Position</td>
+<td>上下、前后或空间渐变遮罩</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>半透明、散射或厚薄相关效果</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>快速选择材质区域，不直接等于最终颜色</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-阶段-7：PBR-贴图制作">10. 阶段 7：PBR 贴图制作</h2>
+<p>详细操作见：<a href="https://www.ibanqin.com/posts/aa63755a.html">Substance 3D Painter｜贴图制作与导出</a>。</p>
+<h3 id="10-1-金属度—粗糙度工作流">10.1 金属度—粗糙度工作流</h3>
+<table>
+<thead>
+<tr>
+<th>通道</th>
+<th>正确理解</th>
+<th>常见错误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Color</td>
+<td>材质本身颜色；金属区域也承载反射颜色</td>
+<td>画入灯光、高光、强 AO 和方向性阴影</td>
+</tr>
+<tr>
+<td>Metallic</td>
+<td>纯金属通常为 1，非金属为 0</td>
+<td>所有区域都使用模糊灰色“看起来更高级”</td>
+</tr>
+<tr>
+<td>Roughness</td>
+<td>控制反射清晰度；0 光滑，1 粗糙</td>
+<td>只改颜色，不做粗糙度层次</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>表面微小方向变化</td>
+<td>方向与目标引擎不一致</td>
+</tr>
+<tr>
+<td>AO</td>
+<td>局部环境遮蔽</td>
+<td>永久重度乘进 Base Color，导致换光后仍发黑</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>高低变化的源数据</td>
+<td>用过强高度代替真正需要的几何</td>
+</tr>
+<tr>
+<td>Opacity</td>
+<td>透明或镂空控制</td>
+<td>不透明资产也输出无意义 Alpha</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-2-贴图分层顺序">10.2 贴图分层顺序</h3>
+<ol>
+<li><strong>基础材质层</strong>：真实材质的 Base Color、Metallic、Roughness。</li>
+<li><strong>大尺度变化</strong>：上下、内外、日晒、潮湿和主要使用区域。</li>
+<li><strong>结构层</strong>：接缝、焊缝、面板缝、凹陷和凸起。</li>
+<li><strong>使用痕迹</strong>：边缘磨损、手部接触、脚踩、刮擦。</li>
+<li><strong>环境痕迹</strong>：灰尘、泥、锈、油、水渍。</li>
+<li><strong>微细节</strong>：颗粒、木纤维、细划痕；控制强度。</li>
+<li><strong>校验层</strong>：检查颜色、粗糙度、金属度和法线单通道。</li>
+</ol>
+<h3 id="10-3-材质逻辑示例">10.3 材质逻辑示例</h3>
+<ul>
+<li>漆面金属：油漆是非金属；只有油漆脱落露出的基底才是金属。</li>
+<li>锈：锈层通常按非金属处理，粗糙度高于裸露抛光金属。</li>
+<li>灰尘：通常提高粗糙度、降低对比并积在朝上或凹陷区域。</li>
+<li>油污：常降低粗糙度并出现在接触、转轴和维护区域。</li>
+<li>木头：金属度为 0；主要靠 Base Color、Roughness、Normal/Height 表现纤维与破损。</li>
+</ul>
+<h2 id="11-阶段-8：贴图导出、颜色空间与通道打包">11. 阶段 8：贴图导出、颜色空间与通道打包</h2>
+<h3 id="11-1-颜色空间">11.1 颜色空间</h3>
+<p>常见基线如下，但引擎导入规则优先：</p>
+<table>
+<thead>
+<tr>
+<th>贴图</th>
+<th>常见颜色空间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Color、Emissive Color</td>
+<td>sRGB</td>
+</tr>
+<tr>
+<td>Normal、Roughness、Metallic、AO、Height、Mask</td>
+<td>线性数据，通常关闭 sRGB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-2-法线方向">11.2 法线方向</h3>
+<ul>
+<li>OpenGL 常记作 Y+。</li>
+<li>DirectX / Direct3D 常记作 Y-。</li>
+<li>Painter 官方项目说明中，Unreal 默认使用 DirectX；Unity 默认使用 OpenGL，HDRP 设置需另行确认。</li>
+<li>方向错误时通常表现为凹凸相反；应修正项目或导出设置，不要靠灯光掩盖。</li>
+</ul>
+<h3 id="11-3-通道打包">11.3 通道打包</h3>
+<p>原笔记的 Mix 约定：</p>
+<table>
+<thead>
+<tr>
+<th>通道</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Roughness</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Metallic</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Mixed AO</td>
+</tr>
+</tbody>
+</table>
+<p>这不是行业唯一标准。项目也可能使用 ORM：R=AO、G=Roughness、B=Metallic。导出模板与引擎材质节点必须成对维护。</p>
+<h2 id="12-阶段-9：LOD、碰撞与-FBX-导出">12. 阶段 9：LOD、碰撞与 FBX 导出</h2>
+<h3 id="12-1-LOD">12.1 LOD</h3>
+<ul>
+<li>LOD0 保留最近距离所需轮廓和材质。</li>
+<li>后续 LOD 优先减少小轮廓、内部结构和远处不可读细节。</li>
+<li>所有 LOD 保持相同位置、比例与 Pivot。</li>
+<li>不要机械规定每级减少固定百分比；以屏幕占比、轮廓误差和目标平台为准。</li>
+</ul>
+<h3 id="12-2-碰撞">12.2 碰撞</h3>
+<ul>
+<li>碰撞用于游戏交互，不是复制一份渲染网格。</li>
+<li>尽量使用简单凸体；复杂度由玩法需求决定。</li>
+<li>门、抽屉和活动件的碰撞要考虑动画范围。</li>
+<li>Unreal 的自定义碰撞常使用 UCX_ 等命名；具体前缀必须查项目导入规范。</li>
+</ul>
+<h3 id="12-3-FBX-导出">12.3 FBX 导出</h3>
+<ol>
+<li>只选择需要交付的低模、LOD、骨骼或碰撞体。</li>
+<li>确认单位、轴向、Pivot、位置、旋转和缩放。</li>
+<li>导出平滑组；切线/副法线是否导出由项目切线流程决定。</li>
+<li>使用与烘焙一致的三角化低模。</li>
+<li>关闭不需要的相机、灯光、动画和嵌入媒体。</li>
+<li>将 FBX 重新导入空场景，做一次回读验证。</li>
+</ol>
+<h2 id="13-阶段-10：引擎集成">13. 阶段 10：引擎集成</h2>
+<p>以 Unreal 静态网格为例，官方 FBX 流程支持材质、多个 UV、平滑组、顶点色、LOD 和自定义碰撞；实际公司通常还会增加自动检查脚本。</p>
+<h3 id="13-1-导入后必须检查">13.1 导入后必须检查</h3>
+<ul>
+<li>[ ] 尺度、朝向和 Pivot。</li>
+<li>[ ] 三角面数、材质槽和 UV 通道。</li>
+<li>[ ] 法线、切线与接缝。</li>
+<li>[ ] Base Color、Normal、Mix 等贴图颜色空间。</li>
+<li>[ ] 通道打包节点是否对应。</li>
+<li>[ ] LOD 数量、屏幕切换与轮廓跳变。</li>
+<li>[ ] 碰撞是否阻挡正确、是否过度复杂。</li>
+<li>[ ] 光照贴图通道与分辨率；仅在项目需要时。</li>
+<li>[ ] Nanite、虚拟纹理或项目特有功能设置；仅按项目要求启用。</li>
+</ul>
+<h3 id="13-2-必须在真实场景中验证">13.2 必须在真实场景中验证</h3>
+<ul>
+<li>中性光、强光、背光和较暗环境。</li>
+<li>最近与最远实际游戏距离。</li>
+<li>不同曝光、天气或时间段。</li>
+<li>与附近资产的纹素密度和材质尺度是否一致。</li>
+</ul>
+<h2 id="14-公司级-QA-清单">14. 公司级 QA 清单</h2>
+<h3 id="14-1-几何">14.1 几何</h3>
+<ul>
+<li>[ ] 无重面、破面、反法线、孤立点和非流形错误。</li>
+<li>[ ] 轮廓预算合理，隐藏区域没有无意义面数。</li>
+<li>[ ] 三角化与烘焙版本一致。</li>
+<li>[ ] Pivot、单位、轴向和变换正确。</li>
+<li>[ ] LOD 与碰撞通过游戏测试。</li>
+</ul>
+<h3 id="14-2-UV-与烘焙">14.2 UV 与烘焙</h3>
+<ul>
+<li>[ ] 纹素密度符合项目表。</li>
+<li>[ ] 镜像、堆叠和重叠均为有意设计。</li>
+<li>[ ] Padding 足够，Mipmap 下不串色。</li>
+<li>[ ] 法线无明显接缝、波浪、投射或漏烘。</li>
+<li>[ ] 硬边、UV 缝和切线空间一致。</li>
+</ul>
+<h3 id="14-3-PBR-材质">14.3 PBR 材质</h3>
+<ul>
+<li>[ ] Base Color 没有烘死灯光与高光。</li>
+<li>[ ] 金属度符合材料，而不是凭视觉随意填灰。</li>
+<li>[ ] 粗糙度承担主要材质变化。</li>
+<li>[ ] 所有污渍、磨损和锈迹都有成因。</li>
+<li>[ ] 在多套 HDR 与目标引擎中表现稳定。</li>
+</ul>
+<h3 id="14-4-文件与提交">14.4 文件与提交</h3>
+<ul>
+<li>[ ] 命名、目录、后缀和版本号符合任务卡。</li>
+<li>[ ] 没有丢失贴图、绝对路径和无用测试文件。</li>
+<li>[ ] 源文件、导出文件和最终贴图分层清楚。</li>
+<li>[ ] 提交前做过回读测试。</li>
+<li>[ ] 交付说明记录软件版本、特殊设置和待解决问题。</li>
+</ul>
+<h2 id="15-推荐交付目录">15. 推荐交付目录</h2>
+<p>以下只是通用示例，仓库结构以公司规定为准：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Asset_Name/</span><br><span class="line">├─ Source/</span><br><span class="line">│  ├─ Max/</span><br><span class="line">│  ├─ ZBrush/</span><br><span class="line">│  └─ Painter/</span><br><span class="line">├─ Export/</span><br><span class="line">│  ├─ Mesh/</span><br><span class="line">│  └─ Textures/</span><br><span class="line">├─ Reference/</span><br><span class="line">├─ Review/</span><br><span class="line">└─ README.md</span><br></pre></td></tr></table></figure>
+<p>建议源文件递增保存，例如 <strong>asset_hp_v001.ztl</strong>、<strong>asset_lp_v003.max</strong>，不要长期覆盖唯一文件。</p>
+<h2 id="16-最容易导致返工的问题">16. 最容易导致返工的问题</h2>
+<ol>
+<li>完成建模后才第一次导入引擎检查尺度。</li>
+<li>烘焙后又改变低模三角化、硬边或 UV。</li>
+<li>不确认法线方向，见到凹凸反了就随手 Flip Y。</li>
+<li>把 AO、高光和灯光重度画进 Base Color。</li>
+<li>只在 Painter 或 Toolbag 中好看，没有在目标引擎验证。</li>
+<li>用“公司都这样”代替具体任务卡数值。</li>
+<li>只有最终文件，没有可回退的源文件与版本记录。</li>
+</ol>
+<h2 id="17-本套笔记的软件分工">17. 本套笔记的软件分工</h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>对应 PBR 阶段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.ibanqin.com/posts/70ffbee9.html">01-3ds Max｜建模与视口操作</a></td>
+<td>Blockout、低模、Pivot、LOD、碰撞、导出</td>
+</tr>
+<tr>
+<td><a href="https://www.ibanqin.com/posts/5776c3a2.html">02-RizomUV｜展开与缝合</a></td>
+<td>UV 接缝、展开、纹素密度、排布、UV QA</td>
+</tr>
+<tr>
+<td><a href="https://www.ibanqin.com/posts/21471ded.html">03-Marmoset Toolbag｜烘焙与渲染</a></td>
+<td>高低模烘焙、材质验证、作品展示</td>
+</tr>
+<tr>
+<td><a href="https://www.ibanqin.com/posts/aa63755a.html">04-Substance 3D Painter｜贴图制作与导出</a></td>
+<td>PBR 材质、Mesh Maps、通道打包、导出</td>
+</tr>
+<tr>
+<td><a href="https://www.ibanqin.com/posts/360bbe0a.html">05-ZBrush｜基础操作与模型管理</a></td>
+<td>高模雕刻、SubTool、Polygroup、Mask、导出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="待确认术语表">待确认术语表</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三角面、纹素密度、贴图分辨率</td>
+<td>必须由目标平台和资产等级决定</td>
+</tr>
+<tr>
+<td>通道打包顺序</td>
+<td>原笔记 Mix 与常见 ORM 不同，必须查项目 Shader</td>
+</tr>
+<tr>
+<td>LOD 数量与减面比例</td>
+<td>必须以引擎测试和项目预算为准</td>
+</tr>
+<tr>
+<td>碰撞命名</td>
+<td>Unreal 与自研引擎可能不同</td>
+</tr>
+<tr>
+<td>光照 UV</td>
+<td>动态光照、烘焙光照和项目渲染方案要求不同</td>
+</tr>
+<tr>
+<td>Toolbag 中文标签</td>
+<td>5.02 的汉化来源未明确，保留中英对照</td>
+</tr>
+</tbody>
+</table>
+<h2 id="官方核对资料">官方核对资料</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/unreal-engine/fbx-static-mesh-pipeline-in-unreal-engine?lang=en-US">Epic：FBX Static Mesh Pipeline</a></li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/unreal-engine/physically-based-materials-in-unreal-engine">Epic：Physically Based Materials</a></li>
+<li><a target="_blank" rel="noopener" href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/getting-started/project-creation">Adobe：Painter Project Creation</a></li>
+<li><a target="_blank" rel="noopener" href="https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/baking">Adobe：Painter Baking</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.marmoset.co/docs/baking-attributes/">Marmoset：Baking Attributes</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>游戏 PBR 资产制作流程</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.ibanqin.com/posts/acad7c.html">https://www.ibanqin.com/posts/acad7c.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>坂琴</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2026-08-16</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2026-08-16</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/3D/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>3D</a><a class="post-meta__tags" href="/tags/%E5%85%A8%E6%B5%81%E7%A8%8B/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>全流程</a></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂作者</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fwechat_daqian.webp" target="_blank"><img decoding="async" class="post-qr-code-img" src="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fwechat_daqian.webp" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fzhifubao_daqian.webp" target="_blank"><img decoding="async" class="post-qr-code-img" src="https://sukibanqinblog.s3.bitiful.net/images%2Fothers%2Fzhifubao_daqian.webp" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/50a871b3.html"><img decoding="async" class="prev-cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/%E6%B5%B7%E8%BE%B9%E5%92%96%E5%95%A1%E5%BA%97.webp" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">使用AI Vibe Coding 了一个“舟“味课表 APP</div></div></a></div><div class="next-post pull-right"><a href="/posts/360bbe0a.html"><img loading="lazy" decoding="async" class="next-cover" src="https://coscdn.ibanqin.com/images%2Fcoverimages%2F%E9%BB%84%E6%98%8F%E8%A1%97%E9%81%93.webp" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ZBrush｜基础操作与模型管理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/bd4086d7.html" title="学习建模所记录的一些笔记"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/%E6%B5%B7%E8%BE%B9%E5%92%96%E5%95%A1%E5%BA%97.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">学习建模所记录的一些笔记</div></div></a></div><div><a href="/posts/70ffbee9.html" title="3ds Max｜建模与视口操作"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/5-14/ailisi.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">3ds Max｜建模与视口操作</div></div></a></div><div><a href="/posts/1fda3ab1.html" title="如何提升审美？"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/122244716_p0.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-07-23</div><div class="title">如何提升审美？</div></div></a></div><div><a href="/posts/aa63755a.html" title="Substance 3D Painter｜贴图制作与导出"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11-2/63092957_p0.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">Substance 3D Painter｜贴图制作与导出</div></div></a></div><div><a href="/posts/21471ded.html" title="Marmoset Toolbag｜烘焙与渲染"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/101722519_p0.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">Marmoset Toolbag｜烘焙与渲染</div></div></a></div><div><a href="/posts/5776c3a2.html" title="RizomUV｜展开与缝合"><img loading="lazy" decoding="async" class="cover" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/129636433_p0.webp" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-08-16</div><div class="title">RizomUV｜展开与缝合</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">游戏 PBR 资产制作流程｜从需求到引擎交付</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%88%E7%90%86%E8%A7%A3%EF%BC%9A%E5%85%AC%E5%8F%B8%E8%A6%81%E7%9A%84%E4%B8%8D%E6%98%AF%E2%80%9C%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9C%8B%E7%9A%84%E6%A8%A1%E5%9E%8B%E2%80%9D"><span class="toc-text">1. 先理解：公司要的不是“一个好看的模型”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%85%A8%E6%B5%81%E7%A8%8B%E9%98%B6%E6%AE%B5%E9%97%A8"><span class="toc-text">2. 全流程阶段门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%98%B6%E6%AE%B5-0%EF%BC%9A%E5%BB%BA%E7%AB%8B%E8%B5%84%E4%BA%A7%E8%A7%84%E6%A0%BC%E8%A1%A8"><span class="toc-text">3. 阶段 0：建立资产规格表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%BC%80%E5%B7%A5%E5%89%8D%E9%80%89%E6%8B%A9%E8%B5%84%E4%BA%A7%E4%B8%8E%E7%BA%B9%E7%90%86%E7%AD%96%E7%95%A5"><span class="toc-text">3.1 开工前选择资产与纹理策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%98%B6%E6%AE%B5-1%EF%BC%9A%E5%8F%82%E8%80%83%E4%B8%8E-PBR-%E6%9D%90%E8%B4%A8%E6%8B%86%E8%A7%A3"><span class="toc-text">4. 阶段 1：参考与 PBR 材质拆解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8F%82%E8%80%83%E6%9D%BF%E5%BF%85%E9%A1%BB%E5%8C%85%E5%90%AB"><span class="toc-text">4.1 参考板必须包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%AF%8F%E7%A7%8D%E6%9D%90%E8%B4%A8%E5%85%88%E5%9B%9E%E7%AD%94%E4%BA%94%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-text">4.2 每种材质先回答五个问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%98%B6%E6%AE%B5-2%EF%BC%9A3ds-Max-Blockout"><span class="toc-text">5. 阶段 2：3ds Max Blockout</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%93%8D%E4%BD%9C%E9%A1%BA%E5%BA%8F"><span class="toc-text">5.1 操作顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Blockout-%E8%AF%84%E5%AE%A1%E9%97%A8"><span class="toc-text">5.2 Blockout 评审门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%98%B6%E6%AE%B5-3%EF%BC%9A%E9%AB%98%E6%A8%A1%E5%88%B6%E4%BD%9C"><span class="toc-text">6. 阶段 3：高模制作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%BD%A2%E4%BD%93%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">6.1 形体优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E9%AB%98%E6%A8%A1%E5%B8%B8%E8%A7%81%E5%85%AC%E5%8F%B8%E8%A6%81%E6%B1%82"><span class="toc-text">6.2 高模常见公司要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E9%AB%98%E6%A8%A1%E8%AF%84%E5%AE%A1%E9%97%A8"><span class="toc-text">6.3 高模评审门</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%98%B6%E6%AE%B5-4%EF%BC%9A%E4%BD%8E%E6%A8%A1%E3%80%81%E6%8B%93%E6%89%91%E4%B8%8E%E4%B8%89%E8%A7%92%E5%8C%96"><span class="toc-text">7. 阶段 4：低模、拓扑与三角化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E4%BD%8E%E6%A8%A1%E5%8E%9F%E5%88%99"><span class="toc-text">7.1 低模原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%9C%A8%E7%83%98%E7%84%99%E5%89%8D%E5%9B%BA%E5%AE%9A%E4%B8%89%E8%A7%92%E5%8C%96"><span class="toc-text">7.2 为什么要在烘焙前固定三角化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E6%9D%90%E8%B4%A8%E6%A7%BD"><span class="toc-text">7.3 材质槽</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E9%98%B6%E6%AE%B5-5%EF%BC%9AUV"><span class="toc-text">8. 阶段 5：UV</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-UV0-%E6%93%8D%E4%BD%9C%E9%A1%BA%E5%BA%8F"><span class="toc-text">8.1 UV0 操作顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E7%A1%AC%E8%BE%B9%E4%B8%8E-UV-%E7%BC%9D"><span class="toc-text">8.2 硬边与 UV 缝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-UV1-%E6%88%96%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE%E9%80%9A%E9%81%93"><span class="toc-text">8.3 UV1 或光照贴图通道</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%98%B6%E6%AE%B5-6%EF%BC%9A%E9%AB%98%E4%BD%8E%E6%A8%A1%E7%83%98%E7%84%99"><span class="toc-text">9. 阶段 6：高低模烘焙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E7%83%98%E7%84%99%E5%89%8D%E6%A3%80%E6%9F%A5"><span class="toc-text">9.1 烘焙前检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%83%98%E7%84%99%E9%A1%BA%E5%BA%8F"><span class="toc-text">9.2 烘焙顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E7%83%98%E7%84%99%E5%9B%BE%E7%94%A8%E9%80%94"><span class="toc-text">9.3 烘焙图用途</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%98%B6%E6%AE%B5-7%EF%BC%9APBR-%E8%B4%B4%E5%9B%BE%E5%88%B6%E4%BD%9C"><span class="toc-text">10. 阶段 7：PBR 贴图制作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E9%87%91%E5%B1%9E%E5%BA%A6%E2%80%94%E7%B2%97%E7%B3%99%E5%BA%A6%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-text">10.1 金属度—粗糙度工作流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E8%B4%B4%E5%9B%BE%E5%88%86%E5%B1%82%E9%A1%BA%E5%BA%8F"><span class="toc-text">10.2 贴图分层顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E6%9D%90%E8%B4%A8%E9%80%BB%E8%BE%91%E7%A4%BA%E4%BE%8B"><span class="toc-text">10.3 材质逻辑示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E9%98%B6%E6%AE%B5-8%EF%BC%9A%E8%B4%B4%E5%9B%BE%E5%AF%BC%E5%87%BA%E3%80%81%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E4%B8%8E%E9%80%9A%E9%81%93%E6%89%93%E5%8C%85"><span class="toc-text">11. 阶段 8：贴图导出、颜色空间与通道打包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4"><span class="toc-text">11.1 颜色空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E6%B3%95%E7%BA%BF%E6%96%B9%E5%90%91"><span class="toc-text">11.2 法线方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E9%80%9A%E9%81%93%E6%89%93%E5%8C%85"><span class="toc-text">11.3 通道打包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E9%98%B6%E6%AE%B5-9%EF%BC%9ALOD%E3%80%81%E7%A2%B0%E6%92%9E%E4%B8%8E-FBX-%E5%AF%BC%E5%87%BA"><span class="toc-text">12. 阶段 9：LOD、碰撞与 FBX 导出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-LOD"><span class="toc-text">12.1 LOD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E7%A2%B0%E6%92%9E"><span class="toc-text">12.2 碰撞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-3-FBX-%E5%AF%BC%E5%87%BA"><span class="toc-text">12.3 FBX 导出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E9%98%B6%E6%AE%B5-10%EF%BC%9A%E5%BC%95%E6%93%8E%E9%9B%86%E6%88%90"><span class="toc-text">13. 阶段 10：引擎集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E5%AF%BC%E5%85%A5%E5%90%8E%E5%BF%85%E9%A1%BB%E6%A3%80%E6%9F%A5"><span class="toc-text">13.1 导入后必须检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E5%BF%85%E9%A1%BB%E5%9C%A8%E7%9C%9F%E5%AE%9E%E5%9C%BA%E6%99%AF%E4%B8%AD%E9%AA%8C%E8%AF%81"><span class="toc-text">13.2 必须在真实场景中验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%85%AC%E5%8F%B8%E7%BA%A7-QA-%E6%B8%85%E5%8D%95"><span class="toc-text">14. 公司级 QA 清单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-%E5%87%A0%E4%BD%95"><span class="toc-text">14.1 几何</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-UV-%E4%B8%8E%E7%83%98%E7%84%99"><span class="toc-text">14.2 UV 与烘焙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-PBR-%E6%9D%90%E8%B4%A8"><span class="toc-text">14.3 PBR 材质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-4-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%8F%90%E4%BA%A4"><span class="toc-text">14.4 文件与提交</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%8E%A8%E8%8D%90%E4%BA%A4%E4%BB%98%E7%9B%AE%E5%BD%95"><span class="toc-text">15. 推荐交付目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E6%9C%80%E5%AE%B9%E6%98%93%E5%AF%BC%E8%87%B4%E8%BF%94%E5%B7%A5%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">16. 最容易导致返工的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E6%9C%AC%E5%A5%97%E7%AC%94%E8%AE%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%88%86%E5%B7%A5"><span class="toc-text">17. 本套笔记的软件分工</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%85%E7%A1%AE%E8%AE%A4%E6%9C%AF%E8%AF%AD%E8%A1%A8"><span class="toc-text">待确认术语表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E6%A0%B8%E5%AF%B9%E8%B5%84%E6%96%99"><span class="toc-text">官方核对资料</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>宇宙沙漏中的一粒晶芒，盛放着：母亲摇过的摇篮，诗人折断的羽毛笔，战士生锈的勋章，和所有来不及说出口的再见✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://robertsspaceindustries.com/en/">点击开启星辰之旅（迫真）</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1G84y1B7NH?spm_id_from=333.788.videopod.sections&amp;vd_source=4ec8181be82d7b99207d264eb28032e9">网站教程</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">友情链接</a><a href="/comments/">留言板</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/gallery/">我的画廊</a><a target="_blank" rel="noopener" href="https://www.takagisan.top">老博客地址</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://misakishiki.site/" title="来点后现代"><img loading="lazy" decoding="async" src="https://misakishiki.site/aquced.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.takagisan.top/" title="坂琴的老博客"><img loading="lazy" decoding="async" src="https://coscdn.ibanqin.com/images/laoboke.webp" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="生活明朗，万物可爱"><img loading="lazy" decoding="async" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://akilar.top/" title="期待您的光临"><img loading="lazy" decoding="async" src="https://npm.elemecdn.com/akilar-friends@latest/avatar/akilar.top.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.xiowo.net/" title="万年鸽王，哈哈OvO"><img loading="lazy" decoding="async" src="https://blog.xiowo.net/img/avatar.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://leoblog.cc/" title="玻璃晴朗，橘子辉煌~✨"><img loading="lazy" decoding="async" src="https://bu.dusays.com/2025/05/30/6838a5699eec2.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://www.ububan.com/" title="Future is now 🔍🔍🔍"><img loading="lazy" decoding="async" src="https://ts4.tc.mm.bing.net/th/id/OIP-C._b9bMXovF8C88jhNT9ut3wHaHa?rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img loading="lazy" decoding="async" src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2022-2026</b></span><span><b>&nbsp;&nbsp;By 坂琴</b></span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.mps.gov.cn/#/query/webSearch"><img loading="lazy" decoding="async" class="icp-icon" src="https://coscdn.ibanqin.com/images/others/gonganbeian.webp"><span>渝公网安备50011802011289号</span></a>&nbsp|&nbsp<a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index"><span>渝ICP备2023009623号-2</span></a>&nbsp|&nbsp<a href="https://icp.gov.moe/?keyword=20250729" target="_blank">萌ICP备20250729号</a></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析由51la提供"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Analytics-51la-brightgreen?style=flat&amp;logo=googleanalytics" alt=""/></a><a class="github-badge" target="_blank" href="https://console.cloud.tencent.com/cos" style="margin-inline:5px" title="本网站使用腾讯云COS存储分流静态文件"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Bucket-腾讯云COS-blue?style=flat&amp;logo=buffer" alt=""/></a><a class="github-badge" target="_blank" href="https://console.cloud.tencent.com/cdn" style="margin-inline:5px" title="本站使用腾讯云内容分发网络CDN加速与防护"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/CDN-腾讯云CDN-blue?style=flat&amp;logo=rclone" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img loading="lazy" decoding="async" src="https://img.shields.io/badge/Copyright-CCBYSA4.0-white?style=flat&amp;logo=C" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" id="menu-readmode" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><script>(() => {
+  const postSelector = '#post #article-container'
+  const scriptId = 'tianli-gpt-script'
+  const styleId = 'tianli-gpt-style'
+
+  const runTianliGPT = () => {
+    if (!document.querySelector(postSelector)) return
+
+    window.tianliGPT_postSelector = postSelector
+    window.tianliGPT_key = '76ce95971f5221de1cae'
+
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('link')
+      style.id = styleId
+      style.rel = 'stylesheet'
+      style.href = 'https://ai.tianli0.top/static/public/tianli_gpt.min.css'
+      document.head.appendChild(style)
+    }
+
+    const initialize = () => {
+      if (window.tianliGPT && typeof window.tianliGPT.checkURLAndRun === 'function') {
+        window.tianliGPT.checkURLAndRun()
+      }
+    }
+
+    if (window.tianliGPT) {
+      initialize()
+      return
+    }
+
+    const existingScript = document.getElementById(scriptId)
+    if (existingScript) {
+      existingScript.addEventListener('load', initialize, { once: true })
+      return
+    }
+
+    const script = document.createElement('script')
+    script.id = scriptId
+    script.src = 'https://ai.tianli0.top/static/public/tianli_gpt.min.js'
+    script.onload = initialize
+    script.onerror = () => script.remove()
+    document.head.appendChild(script)
+  }
+
+  window.loadTianliGPT = runTianliGPT
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runTianliGPT, { once: true })
+  } else {
+    runTianliGPT()
+  }
+
+  document.addEventListener('pjax:complete', () => {
+    window.setTimeout(runTianliGPT, 0)
+  })
+})()
+</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.ibanqin.com/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.ibanqin.com/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script>(()=>{const d=new Date(),m=d.getMonth()+1,day=d.getDate();if((m===1&&day>=20)||(m===2&&day<=20)){const s=document.createElement('script');s.async=true;s.src='https://cdn.wpon.cn/2022-sucai/Gold-ingot.js';document.head.appendChild(s)}})()</script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/banqin.js"></script><script async src="//at.alicdn.com/t/c/font_4899107_gayaz0mokg5.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/canvas-nest.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/site/charts/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/其他学习笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍥 学习笔记 (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/生活记录/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🗼 奇奇怪怪的生活记录 (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/网络安全和编程学习笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🥑 网安和编程 (4)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.ibanqin.com/categories/3D建模和渲染/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍆 3D建模和渲染 (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.ibanqin.com/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/7bf55b19.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-10/%E9%BB%84%E6%98%8F%E4%BA%91%E5%BD%A9.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2026-03-22</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/7bf55b19.html&quot;);" href="javascript:void(0);" alt="">2026年所记录所想的一些事情和心情</a><div class="blog-slider__text">🍞我自己的2026年所记录的一些事情和心情总的来说算是2026年的日记</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/7bf55b19.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/792b5c3e.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/122866150_p0.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-04-18</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/792b5c3e.html&quot;);" href="javascript:void(0);" alt="">2025年所记录所想的一些事情和心情</a><div class="blog-slider__text">🌸我自己的2025年所记录的一些事情和心情总的来说算是2025年的日记</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/792b5c3e.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11/123508291_p0.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法与外挂标签写法汇总</a><div class="blog-slider__text">🥧本文汇总Markdown格式以及外挂标签在网页端的渲染效果，可作为文档进行查询</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/20c7b744.html&quot;);" href="javascript:void(0);" alt=""><img loading="lazy" decoding="async" width="48" height="48" src="https://coscdn.ibanqin.com/images/coverimages/2025/2025-5-11-2/122979688_p0.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2025-05-12</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/20c7b744.html&quot;);" href="javascript:void(0);" alt="">新博客上线!!!</a><div class="blog-slider__text">🍇记录本博客从老博客换到新博客的更换</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/20c7b744.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><!-- hexo injector body_end end --></body></html>

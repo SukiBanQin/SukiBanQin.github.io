@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>使用AI Vibe Coding 了一个“舟“味课表 APP</title>
+      <link href="/posts/50a871b3.html"/>
+      <url>/posts/50a871b3.html</url>
+      
+        <content type="html"><![CDATA[<h1>前言</h1><p>我先把项目地址贴出来</p><blockquote><p><em>Github项目地址：<a href="https://github.com/SukiBanQin/QingKeSchedule">https://github.com/SukiBanQin/QingKeSchedule</a></em></p><p><em>详细功能介绍可以在 项目地址看见</em></p></blockquote><p>下图是软件的的截图</p><blockquote><p>IOS 版本和安卓版本略有不同，但是问题不大</p></blockquote><p><img src="https://coscdn.ibanqin.com/images/articleimage/2026/2026-9/2026-9-24/IMG_0175.webp" alt=""></p><p><img src="https://coscdn.ibanqin.com/images/articleimage/2026/2026-9/2026-9-24/IMG_0176.webp" alt=""></p><p><img src="https://coscdn.ibanqin.com/images/articleimage/2026/2026-9/2026-9-24/IMG_0177.webp" alt=""></p><p><img src="https://coscdn.ibanqin.com/images/articleimage/2026/2026-9/2026-9-24/IMG_0178.webp" alt=""></p><p><img src="https://coscdn.ibanqin.com/images/articleimage/2026/2026-9/2026-9-24/IMG_0179.webp" alt=""></p><h2 id="一-使用的工具">一.使用的工具</h2><p>使用了 Codex + DeepSeekHarness 配合 V4.1 FLASH 还有一个 GPT 中转站。</p><h2 id="二-经过历程">二.经过历程</h2><p>最开始开学了我们学校没有把课表更新到企业微信上居然还是只发了 Excel 课表一点都不方便，然后市面上的课表软件自己也不是很喜欢，再加上最近在学习 AI 的一些东西，就有一个大胆的想法，Vibe 一个课表出来，这 UI 和平面设计这些全是自己找的参考图喂给了 AI，搓出来还是不错的。</p><p>最开始使用的模型是 GPT5.6 Sol 来做分析和执行，后来发现 Plus 的额度完全遭不住就变成了 5.6Sol 做审查分析 + Terra 执行，后来还是发现贵了，Terra 模型好像也不咋地就变成了 Sol + Luna，但是问题来了五小时额度没了怎么办呢？就试了一下 DSH，让 Sol 来做审查和分析 DSH 做执行，非常的便宜！于是到了后面用的最多的就是 Sol + DSH 的组合。</p><p>到昨天也就是（9 月 23 日） GPT6 Sol 和 GPT Luna 发布，Luna 比 DS 还便宜，尝试了一下 GPT6 Sol + GPT6 Luna，其实我这样测下来用Plus 的额度也够用了特别是 Luna 可以随便登。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全和编程学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VibeCoding </tag>
+            
+            <tag> Codex </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> DeepSeekHarness </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>游戏 PBR 资产制作流程</title>
       <link href="/posts/acad7c.html"/>
       <url>/posts/acad7c.html</url>
@@ -232,9 +263,9 @@
       
         <tags>
             
-            <tag> 日记 </tag>
-            
             <tag> 杂谈 </tag>
+            
+            <tag> 日记 </tag>
             
             <tag> 想法 </tag>
             
@@ -261,9 +292,9 @@
       
         <tags>
             
-            <tag> 日记 </tag>
-            
             <tag> 杂谈 </tag>
+            
+            <tag> 日记 </tag>
             
             <tag> 想法 </tag>
             
@@ -442,9 +473,9 @@
       
         <tags>
             
-            <tag> 日记 </tag>
-            
             <tag> 杂谈 </tag>
+            
+            <tag> 日记 </tag>
             
         </tags>
       
@@ -494,9 +525,9 @@
       
         <tags>
             
-            <tag> 日记 </tag>
-            
             <tag> 杂谈 </tag>
+            
+            <tag> 日记 </tag>
             
         </tags>
       
