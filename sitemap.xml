@@ -20,24 +20,6 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/life/movies/index.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/life/talk/index.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/personal/about/index.html</loc>
     
     <lastmod>2026-10-05</lastmod>
@@ -128,6 +110,33 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/life/movies/index.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/life/talk/index.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/box/personalgallery/photograph_2026/index.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/box/gallery/index.html</loc>
     
     <lastmod>2026-10-05</lastmod>
@@ -182,15 +191,6 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/box/personalgallery/photograph_2026/index.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/box/gallery/xr/index.html</loc>
     
     <lastmod>2026-10-05</lastmod>
@@ -200,7 +200,52 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/792b5c3e.html</loc>
+    <loc>https://www.ibanqin.com/posts/360bbe0a.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/acad7c.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/50a871b3.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/3b0b7231.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/86be10b9.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/8115ed09.html</loc>
     
     <lastmod>2026-10-05</lastmod>
     
@@ -219,6 +264,15 @@
   
   <url>
     <loc>https://www.ibanqin.com/posts/7896669f.html</loc>
+    
+    <lastmod>2026-10-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/posts/792b5c3e.html</loc>
     
     <lastmod>2026-10-05</lastmod>
     
@@ -354,51 +408,6 @@
   
   <url>
     <loc>https://www.ibanqin.com/posts/aa63755a.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/360bbe0a.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/acad7c.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/50a871b3.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/86be10b9.html</loc>
-    
-    <lastmod>2026-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/8115ed09.html</loc>
     
     <lastmod>2026-10-05</lastmod>
     
