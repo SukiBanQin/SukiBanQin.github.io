@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>测试文章</title>
+      <link href="/posts/7a6a6b5a.html"/>
+      <url>/posts/7a6a6b5a.html</url>
+      
+        <content type="html"><![CDATA[<p>测试测试</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用AI Vibe Coding 了一个“舟“味课表 APP</title>
       <link href="/posts/50a871b3.html"/>
       <url>/posts/50a871b3.html</url>
