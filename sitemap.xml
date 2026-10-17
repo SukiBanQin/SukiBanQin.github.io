@@ -38,43 +38,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/manifest.json</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/tags/index.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/site/census/index.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/site/time/index.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/personal/about/index.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -101,7 +65,43 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/manifest.json</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/life/music/index.html</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/personal/about/index.html</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/site/time/index.html</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/site/census/index.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -137,6 +137,15 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/box/gallery/photograph_2025/index.html</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/box/gallery/photograph_2026/index.html</loc>
     
     <lastmod>2026-10-17</lastmod>
@@ -155,15 +164,6 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/box/gallery/photograph_2025/index.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ibanqin.com/box/astronomy/index.html</loc>
     
     <lastmod>2026-10-17</lastmod>
@@ -174,15 +174,6 @@
   
   <url>
     <loc>https://www.ibanqin.com/posts/7896669f.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/e1e5706b.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -218,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/ff1760a1.html</loc>
+    <loc>https://www.ibanqin.com/posts/c26cb7ed.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -227,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/84c4d9d5.html</loc>
+    <loc>https://www.ibanqin.com/posts/e1e5706b.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -245,6 +236,15 @@
   </url>
   
   <url>
+    <loc>https://www.ibanqin.com/posts/e0171cb8.html</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ibanqin.com/posts/bd4086d7.html</loc>
     
     <lastmod>2026-10-17</lastmod>
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/e0171cb8.html</loc>
+    <loc>https://www.ibanqin.com/posts/1fda3ab1.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/c26cb7ed.html</loc>
+    <loc>https://www.ibanqin.com/posts/ff1760a1.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/aa63755a.html</loc>
+    <loc>https://www.ibanqin.com/posts/84c4d9d5.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -335,16 +335,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/posts/7a6a6b5a.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/posts/1fda3ab1.html</loc>
+    <loc>https://www.ibanqin.com/posts/aa63755a.html</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -438,7 +429,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/MikuMikuDance-MMD/</loc>
+    <loc>https://www.ibanqin.com/tags/%E6%91%A9%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -466,7 +457,7 @@
   </url>
   
   <url>
-    <loc>https://www.ibanqin.com/tags/%E6%91%A9%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81/</loc>
+    <loc>https://www.ibanqin.com/tags/MikuMikuDance-MMD/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -481,13 +472,6 @@
   
   <url>
     <loc>https://www.ibanqin.com/tags/RizomUV/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ibanqin.com/tags/Substance-3D-Painter/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -530,6 +514,13 @@
   
   <url>
     <loc>https://www.ibanqin.com/tags/DeepSeekHarness/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ibanqin.com/tags/Substance-3D-Painter/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
