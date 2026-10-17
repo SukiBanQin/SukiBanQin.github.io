@@ -1,0 +1,6 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ibanqin.com/sitemap.xml
+Sitemap: https://www.ibanqin.com/baidusitemap.xml

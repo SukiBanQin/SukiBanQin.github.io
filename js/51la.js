@@ -1,0 +1,1 @@
+try{LA.init({id:"3Lv1nvnRA9AxBBhO",ck:"3Lv1nvnRA9AxBBhO",hashMode:!0}),(new LingQue.Monitor).init({id:"3Lv27RXjduoNKWlu",sendSpaPv:!0})}catch(n){}
